@@ -160,7 +160,8 @@ const Navbar = () => {
                                                 </div>
                                             </a>
                                             <Tooltip anchorSelect="#not-clickable">
-                                                <div className="px-2 py-1 rounded text-sm">
+                                                <div className="px-2 py-1 rounded text-sm" referrerPolicy="no-referrer"
+                                                >
                                                     {user?.displayName}
                                                 </div>
                                             </Tooltip>

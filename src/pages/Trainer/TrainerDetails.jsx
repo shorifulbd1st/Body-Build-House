@@ -13,31 +13,18 @@ const TrainerDetails = () => {
     useEffect(() => {
         const trainerFun = async () => {
             const { data } = await axiosPublic.get(`/trainer/${id}`);
-            console.log(data)
+            // console.log(data)
             setTrainer(data)
         }
         trainerFun()
     }, [])
-    console.log(trainer)
+    // console.log(trainer)
     if (!trainer) {
         <LoadingSpinner></LoadingSpinner>
     }
-    const {
+    const { photoURL, name, age, experience, skill, availableDays, availableTime, biography, slotName, slotTime, selectClass, socialMedia } = trainer;
 
-        photoURL,
-        name,
-        age,
-        experience,
-        skill,
-        availableDays,
-        availableTime,
-        biography,
-        slotName,
-        slotTime,
-        selectClass,
-        socialMedia,
-    } = trainer;
-    console.log(photoURL)
+    // console.log(photoURL)
     return (
         <div className='w-11/12 mx-auto my-8 '>
             <section className="bg-white dark:bg-gray-900 border-2 border-blue-500 rounded-lg overflow-hidden">
@@ -94,7 +81,7 @@ const TrainerDetails = () => {
                                 <div className="w-full flex flex-col gap-2 text-center h-64 ">
                                     {
                                         slotName?.map((i, j) =>
-                                            <Link key={j} to={`/trainer-booking/${id}`}
+                                            <Link key={j} to={`/trainer-booking/${i}/${id}`}
                                                 className="px-2 py-2 w-full text-lg font-semibold text-white capitalize transition-colors duration-300 transform bg-gray-800 rounded hover:bg-gray-700 dark:hover:bg-gray-600 focus:bg-gray-700 dark:focus:bg-gray-600 focus:outline-none"
                                             >
                                                 {i}

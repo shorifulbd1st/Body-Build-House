@@ -6,3 +6,10 @@ html {
     overflow-x: hidden;
     overflow-y: scroll;
 }
+
+.card {
+    border-radius: 18px;
+    background: linear-gradient(225deg, #cacaca, #f0f0f0);
+    box-shadow: -24px 24px 44px #a1a1a1,
+        24px -24px 44px #ffffff;
+}

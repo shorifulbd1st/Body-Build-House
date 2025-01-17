@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import Card from '../../components/Shared/Card'
 
 const AllTrainer = () => {
     // const [allTrainer, setTrainer] = useState([]);

@@ -1,9 +1,15 @@
 import React from 'react'
+import Dashboard from '../pages/Dashboard/Dashboard'
+import { Outlet } from 'react-router-dom'
 
 const DashboardLayout = () => {
     return (
-        <div>
-            <h1>This is dashboard</h1>
+        <div className='flex'>
+            <Dashboard></Dashboard>
+            {/* <Sidebar></Sidebar> */}
+            <div>
+                <Outlet></Outlet>
+            </div>
         </div>
     )
 }

@@ -4,7 +4,10 @@ import registerLottieAnimation from '../../../public/register.json'
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
 import SocialLogin from './SocialLogin';
+import { Helmet } from 'react-helmet-async';
+import useAxiosPublic from '../../hooks/useAxiosPublic';
 const Register = () => {
+    const axiosPublic = useAxiosPublic();
     const { handleRegister, user, setUser, updateUserProfile, notify } = useContext(AuthContext);
     const [error, setError] = useState({});
     const navigate = useNavigate();
@@ -35,24 +38,27 @@ const Register = () => {
             setError({ length: 'must be more than 6 character' });
             return;
         }
-        // if (password != cPassword) {
-        //     setError({ password: "password and confirm password don't match" });
-        //     return;
-        // }
 
         handleRegister(email, password)
             .then(result => {
-                const newUser = result.user;
-                notify('success', `Welcome ${name} your registration successful`);
-
                 updateUserProfile({ displayName: name, photoURL: photo })
-                    .then(() => navigate('/'))
+                    .then(() => {
+                        const userInfo = { name, email, photo, role: 'member' }
+                        axiosPublic.post('/users', userInfo)
+                            .then(res => {
+                                notify('success', `Welcome ${name} your registration successful`);
+                                navigate('/')
+                            })
+                    })
             })
             .catch(error => notify('error', 'Your account was not created successfully'))
 
     }
     return (
         <div className='w-11/12 mx-auto'>
+            <Helmet>
+                <title> Body Build House | Register </title>
+            </Helmet>
             <div className="border-2 border-blue-500 flex w-full max-w-sm mx-auto overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800 lg:max-w-4xl">
                 <div
                     className="hidden bg-cover lg:block lg:w-1/2"

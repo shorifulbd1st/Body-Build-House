@@ -1,0 +1,467 @@
+[
+    {
+        "email": "john.doe@example.com",
+        "name": "John Doe",
+        "photoURL": "https://images.pexels.com/photos/6684836/pexels-photo-6684836.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "age": 35,
+        "experience": 5,
+        "skill": [
+            "HiIT Blast",
+            "Yoga Flow",
+            "Spin Cycle",
+            "Barre Fitness",
+            "Meditation",
+            "Kettlebell",
+            "Stretching",
+            "Boxing Fundamentals",
+            "Dance Cardio",
+            "Agility and Speed Training",
+            "Injury Prevention and Recovery"
+        ],
+        "availableDays": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Friday"
+        ],
+        "availableTime": 6,
+        "biography": "John is a certified fitness trainer with over 5 years of experience. He specializes in high-intensity workouts and functional fitness, helping clients achieve their health goals through personalized training programs.",
+        "slotName": [
+            "morning",
+            "afternoon",
+            "evening"
+        ],
+        "slotTime": 2,
+        "selectClass": [
+            "HiIT Blast",
+            "Yoga Flow",
+            "Spin Cycle",
+            "Meditation",
+            "Powerfitting"
+        ],
+        "socialMedia": {
+            "facebook": "https://www.facebook.com",
+            "linkedin": "https://www.linkedin.com",
+            "twitter": "https://x.com/?lang=en&mx=2"
+        },
+        "roll": "trainer"
+    },
+    {
+        "email": "jane.smith@example.com",
+        "name": "Jane Smith",
+        "photoURL": "https://images.pexels.com/photos/10765194/pexels-photo-10765194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "age": 42,
+        "experience": 7,
+        "skill": [
+            "Yoga Flow",
+            "Pilates Core",
+            "Meditation",
+            "Stretching",
+            "Mindful Breathing Techniques",
+            "Dance Cardio",
+            "Injury Prevention and Recovery",
+            "Cardio Kickboxing",
+            "Zumba Dance",
+            "Core Blast"
+        ],
+        "availableDays": [
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Saturday"
+        ],
+        "availableTime": 4,
+        "biography": "Jane is a yoga and meditation expert with a passion for mindfulness and holistic wellness. She helps clients achieve balance through personalized yoga and meditation sessions.",
+        "slotName": [
+            "morning",
+            "afternoon",
+            "evening"
+        ],
+        "slotTime": 2,
+        "selectClass": [
+            "Yoga Flow",
+            "Pilates Core",
+            "CrossFit Fundamentals",
+            "Stretching",
+            "Mindful Breathing Techniques"
+        ],
+        "socialMedia": {
+            "facebook": "https://www.facebook.com",
+            "linkedin": "https://www.linkedin.com",
+            "twitter": "https://x.com/?lang=en&mx=2"
+        },
+        "roll": "trainer"
+    },
+    {
+        "email": "mike.johnson@example.com",
+        "name": "Mike Johnson",
+        "photoURL": "https://images.pexels.com/photos/6050426/pexels-photo-6050426.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "age": 38,
+        "experience": 6,
+        "skill": [
+            "CrossFit Fundamentals",
+            "Strength Training",
+            "Functional Fitness",
+            "Kettlebell",
+            "Body Combat",
+            "Tabata Intervals",
+            "Boxing Fundamentals",
+            "Agility and Speed Training",
+            "Injury Prevention and Recovery",
+            "Core Blast"
+        ],
+        "availableDays": [
+            "Monday",
+            "Wednesday",
+            "Friday",
+            "Sunday"
+        ],
+        "availableTime": 6,
+        "biography": "Mike is a CrossFit coach and strength training specialist with 6 years of experience. He focuses on helping clients build strength and endurance through effective training programs.",
+        "slotName": [
+            "morning",
+            "afternoon",
+            "evening"
+        ],
+        "slotTime": 2,
+        "selectClass": [
+            "CrossFit Fundamentals",
+            "Strength Training",
+            "Functional Fitness",
+            "Kettlebell",
+            "Body Combat",
+            "Powerfitting"
+        ],
+        "socialMedia": {
+            "facebook": "https://www.facebook.com",
+            "linkedin": "https://www.linkedin.com",
+            "twitter": "https://x.com/?lang=en&mx=2"
+        },
+        "roll": "trainer"
+    },
+    {
+        "email": "sarah.wilson@example.com",
+        "name": "Sarah Wilson",
+        "photoURL": "https://images.pexels.com/photos/26903608/pexels-photo-26903608/free-photo-of-portrait-of-man-in-black-shirt.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "age": 45,
+        "experience": 8,
+        "skill": [
+            "Zumba Dance",
+            "Spin Cycle",
+            "Barre Fitness",
+            "Core Blast",
+            "Dance Cardio",
+            "Agility and Speed Training",
+            "Meditation",
+            "Stretching",
+            "Mindful Breathing Techniques",
+            "Injury Prevention and Recovery"
+        ],
+        "availableDays": [
+            "Monday",
+            "Tuesday",
+            "Thursday",
+            "Saturday"
+        ],
+        "availableTime": 4,
+        "biography": "Sarah is a Zumba and dance fitness instructor who loves to make workouts fun and energetic. She helps clients stay active and healthy through dance-based fitness programs.",
+        "slotName": [
+            "morning",
+            "afternoon",
+            "evening"
+        ],
+        "slotTime": 2,
+        "selectClass": [
+            "Zumba Dance",
+            "Spin Cycle",
+            "Barre Fitness",
+            "Core Blast",
+            "Dance Cardio"
+        ],
+        "socialMedia": {
+            "facebook": "https://www.facebook.com",
+            "linkedin": "https://www.linkedin.com",
+            "twitter": "https://x.com/?lang=en&mx=2"
+        },
+        "roll": "trainer"
+    },
+    {
+        "email": "david.brown@example.com",
+        "name": "David Brown",
+        "photoURL": "https://images.pexels.com/photos/18726863/pexels-photo-18726863/free-photo-of-model-in-a-brown-double-breasted-overcoat-by-the-fountain.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "age": 50,
+        "experience": 10,
+        "skill": [
+            "Strength Training",
+            "Functional Fitness",
+            "Kettlebell",
+            "Boxing Fundamentals",
+            "Injury Prevention and Recovery",
+            "Tabata Intervals",
+            "Agility and Speed Training",
+            "Core Blast",
+            "Body Combat",
+            "CrossFit Fundamentals"
+        ],
+        "availableDays": [
+            "Tuesday",
+            "Wednesday",
+            "Friday",
+            "Sunday"
+        ],
+        "availableTime": 6,
+        "biography": "David is a strength and conditioning coach with over 10 years of experience. He specializes in helping clients build muscle, improve endurance, and achieve peak physical performance.",
+        "slotName": [
+            "morning",
+            "afternoon",
+            "evening"
+        ],
+        "slotTime": 2,
+        "selectClass": [
+            "Strength Training",
+            "Functional Fitness",
+            "Kettlebell",
+            "Boxing Fundamentals",
+            "Injury Prevention and Recovery"
+        ],
+        "socialMedia": {
+            "facebook": "https://www.facebook.com",
+            "linkedin": "https://www.linkedin.com",
+            "twitter": "https://x.com/?lang=en&mx=2"
+        },
+        "roll": "trainer"
+    },
+    {
+        "email": "emily.davis@example.com",
+        "name": "Emily Davis",
+        "photoURL": "https://images.pexels.com/photos/8330435/pexels-photo-8330435.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "age": 33,
+        "experience": 4,
+        "skill": [
+            "Pilates Core",
+            "Barre Fitness",
+            "Meditation",
+            "Stretching",
+            "Mindful Breathing Techniques",
+            "Yoga Flow",
+            "Core Blast",
+            "Dance Cardio",
+            "Injury Prevention and Recovery",
+            "Agility and Speed Training"
+        ],
+        "availableDays": [
+            "Monday",
+            "Wednesday",
+            "Friday",
+            "Saturday"
+        ],
+        "availableTime": 4,
+        "biography": "Emily is a Pilates and barre instructor who focuses on core strength and flexibility. She helps clients improve posture, balance, and overall fitness through targeted exercises.",
+        "slotName": [
+            "morning",
+            "afternoon",
+            "evening"
+        ],
+        "slotTime": 2,
+        "selectClass": [
+            "Pilates Core",
+            "Barre Fitness",
+            "Meditation",
+            "Stretching",
+            "Mindful Breathing Techniques"
+        ],
+        "socialMedia": {
+            "facebook": "https://www.facebook.com",
+            "linkedin": "https://www.linkedin.com",
+            "twitter": "https://x.com/?lang=en&mx=2"
+        },
+        "roll": "trainer"
+    },
+    {
+        "email": "chris.miller@example.com",
+        "name": "Chris Miller",
+        "photoURL": "https://images.pexels.com/photos/5380431/pexels-photo-5380431.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "age": 40,
+        "experience": 9,
+        "skill": [
+            "Cardio Kickboxing",
+            "Body Combat",
+            "Tabata Intervals",
+            "Boxing Fundamentals",
+            "Agility and Speed Training",
+            "Injury Prevention and Recovery",
+            "Core Blast",
+            "Strength Training",
+            "Functional Fitness",
+            "Kettlebell"
+        ],
+        "availableDays": [
+            "Tuesday",
+            "Thursday",
+            "Friday",
+            "Sunday"
+        ],
+        "availableTime": 6,
+        "biography": "Chris is a cardio kickboxing and combat fitness trainer with 9 years of experience. He helps clients improve cardiovascular health and build strength through high-energy workouts.",
+        "slotName": [
+            "morning",
+            "afternoon",
+            "evening"
+        ],
+        "slotTime": 2,
+        "selectClass": [
+            "Cardio Kickboxing",
+            "Body Combat",
+            "Tabata Intervals",
+            "Boxing Fundamentals",
+            "Agility and Speed Training",
+            "Zumba Dance"
+        ],
+        "socialMedia": {
+            "facebook": "https://www.facebook.com",
+            "linkedin": "https://www.linkedin.com",
+            "twitter": "https://x.com/?lang=en&mx=2"
+        },
+        "roll": "trainer"
+    },
+    {
+        "email": "laura.white@example.com",
+        "name": "Laura White",
+        "photoURL": "https://images.pexels.com/photos/14391922/pexels-photo-14391922.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "age": 37,
+        "experience": 5,
+        "skill": [
+            "Yoga Flow",
+            "Meditation",
+            "Stretching",
+            "Mindful Breathing Techniques",
+            "Injury Prevention and Recovery",
+            "Pilates Core",
+            "Barre Fitness",
+            "Core Blast",
+            "Dance Cardio",
+            "Agility and Speed Training"
+        ],
+        "availableDays": [
+            "Monday",
+            "Tuesday",
+            "Thursday",
+            "Saturday"
+        ],
+        "availableTime": 4,
+        "biography": "Laura is a yoga and mindfulness coach who helps clients achieve mental and physical balance. She focuses on holistic wellness through yoga, meditation, and breathing techniques.",
+        "slotName": [
+            "morning",
+            "afternoon",
+            "evening"
+        ],
+        "slotTime": 2,
+        "selectClass": [
+            "Yoga Flow",
+            "Meditation",
+            "Stretching",
+            "Mindful Breathing Techniques",
+            "Injury Prevention and Recovery"
+        ],
+        "socialMedia": {
+            "facebook": "https://www.facebook.com",
+            "linkedin": "https://www.linkedin.com",
+            "twitter": "https://x.com/?lang=en&mx=2"
+        },
+        "roll": "trainer"
+    },
+    {
+        "email": "ryan.taylor@example.com",
+        "name": "Ryan Taylor",
+        "photoURL": "https://images.pexels.com/photos/18580753/pexels-photo-18580753/free-photo-of-bearded-old-man.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "age": 48,
+        "experience": 12,
+        "skill": [
+            "Functional Fitness",
+            "Kettlebell",
+            "Tabata Intervals",
+            "Agility and Speed Training",
+            "Injury Prevention and Recovery",
+            "Strength Training",
+            "Boxing Fundamentals",
+            "Core Blast",
+            "Body Combat",
+            "CrossFit Fundamentals"
+        ],
+        "availableDays": [
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Sunday"
+        ],
+        "availableTime": 6,
+        "biography": "Ryan is a functional fitness expert with over 12 years of experience in training athletes. He helps clients improve overall body function and reduce the risk of injury.",
+        "slotName": [
+            "morning",
+            "afternoon",
+            "evening"
+        ],
+        "slotTime": 2,
+        "selectClass": [
+            "Functional Fitness",
+            "Kettlebell",
+            "Tabata Intervals",
+            "Agility and Speed Training",
+            "Injury Prevention and Recovery",
+            "Pilates Core"
+        ],
+        "socialMedia": {
+            "facebook": "https://www.facebook.com",
+            "linkedin": "https://www.linkedin.com",
+            "twitter": "https://x.com/?lang=en&mx=2"
+        },
+        "roll": "trainer"
+    },
+    {
+        "email": "sophia.martinez@example.com",
+        "name": "Sophia Martinez",
+        "photoURL": "https://images.pexels.com/photos/20591481/pexels-photo-20591481/free-photo-of-portrait-of-brunette-man-in-red-shirt.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "age": 31,
+        "experience": 3,
+        "skill": [
+            "Dance Cardio",
+            "Zumba Dance",
+            "Spin Cycle",
+            "Barre Fitness",
+            "Core Blast",
+            "Meditation",
+            "Stretching",
+            "Mindful Breathing Techniques",
+            "Injury Prevention and Recovery",
+            "Agility and Speed Training"
+        ],
+        "availableDays": [
+            "Monday",
+            "Tuesday",
+            "Thursday",
+            "Friday"
+        ],
+        "availableTime": 4,
+        "biography": "Sophia is a dance fitness instructor who loves to make workouts fun and energetic. She helps clients stay active and healthy through dance-based fitness programs.",
+        "slotName": [
+            "morning",
+            "afternoon",
+            "evening"
+        ],
+        "slotTime": 2,
+        "selectClass": [
+            "Dance Cardio",
+            "Zumba Dance",
+            "Spin Cycle",
+            "Barre Fitness",
+            "Core Blast",
+            "Cardio Kickboxing"
+        ],
+        "socialMedia": {
+            "facebook": "https://www.facebook.com",
+            "linkedin": "https://www.linkedin.com",
+            "twitter": "https://x.com/?lang=en&mx=2"
+        },
+        "roll": "trainer"
+    }
+]

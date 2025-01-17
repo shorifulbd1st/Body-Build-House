@@ -1,0 +1,116 @@
+[
+    {
+        "className": "Pilates Core",
+        "image": "https://images.pexels.com/photos/11036674/pexels-photo-11036674.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "classDetails": "Strengthen your core muscles with Pilates exercises that improve posture, stability, and overall body strength. Ideal for toning and enhancing muscle definition.",
+        "count": 0
+    },
+    {
+        "className": "Cardio Kickboxing",
+        "image": "https://images.pexels.com/photos/28098115/pexels-photo-28098115/free-photo-of-a-man-is-punching-a-punching-bag-in-front-of-a-nikon-logo.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "classDetails": "A high-energy workout combining cardio and kickboxing techniques to improve endurance, strength, and coordination. Great for stress relief and full-body conditioning.",
+        "count": 0
+    },
+    {
+        "className": "Zumba Dance",
+        "image": "https://images.pexels.com/photos/3340318/pexels-photo-3340318.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "classDetails": "Dance your way to fitness with fun and energetic Zumba routines. This class combines Latin and international music with easy-to-follow dance moves for all levels.",
+        "count": 0
+    },
+    {
+        "className": "Barre Fitness",
+        "image": "https://images.pexels.com/photos/9302192/pexels-photo-9302192.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "classDetails": "A unique blend of ballet, yoga, and Pilates that focuses on small, isometric movements to tone muscles, improve flexibility, and enhance overall body strength.",
+        "count": 0
+    },
+    {
+        "className": "Meditation",
+        "image": "https://images.pexels.com/photos/4327043/pexels-photo-4327043.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "classDetails": "Guided meditation sessions to help you relax, reduce stress, and improve mental clarity. Learn mindfulness techniques to enhance focus and emotional well-being.",
+        "count": 0
+    },
+    {
+        "className": "CrossFit Fundamentals",
+        "image": "https://images.pexels.com/photos/9806/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "classDetails": "An introduction to CrossFit, focusing on functional movements, strength training, and high-intensity workouts. Perfect for building endurance and overall fitness.",
+        "count": 0
+    },
+    {
+        "className": "Powerfitting",
+        "image": "https://images.pexels.com/photos/3838339/pexels-photo-3838339.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "classDetails": "A beginner-friendly class that combines powerlifting and bodyweight exercises to build strength, improve mobility, and enhance overall fitness levels.",
+        "count": 0
+    },
+    {
+        "className": "Core Blast",
+        "image": "https://images.pexels.com/photos/4720776/pexels-photo-4720776.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "classDetails": "Target your core muscles with intense exercises designed to improve strength, stability, and posture. Ideal for anyone looking to strengthen their midsection.",
+        "count": 0
+    },
+    {
+        "className": "Body Combat",
+        "image": "https://images.pexels.com/photos/8612032/pexels-photo-8612032.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "classDetails": "A high-energy martial arts-inspired workout that combines punches, kicks, and cardio moves to improve fitness, agility, and coordination.",
+        "count": 0
+    },
+    {
+        "className": "Strength Training",
+        "image": "https://images.pexels.com/photos/5327498/pexels-photo-5327498.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "classDetails": "Learn the basics of strength training with a focus on proper form, technique, and building muscle. Suitable for beginners and those looking to refine their skills.",
+        "count": 0
+    },
+    {
+        "className": "Functional Fitness",
+        "image": "https://images.pexels.com/photos/6046978/pexels-photo-6046978.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "classDetails": "Improve your ability to perform everyday activities with exercises that enhance strength, balance, and flexibility. Perfect for all fitness levels.",
+        "count": 0
+    },
+    {
+        "className": "Tabata Intervals",
+        "image": "https://images.pexels.com/photos/17211446/pexels-photo-17211446/free-photo-of-an-empty-gym.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "classDetails": "Short, intense interval training sessions that maximize calorie burn and improve cardiovascular fitness. Ideal for those with limited time for workouts.",
+        "count": 0
+    },
+    {
+        "className": "Kettlebell",
+        "image": "https://images.pexels.com/photos/4720254/pexels-photo-4720254.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "classDetails": "A full-body workout using kettlebells to improve strength, endurance, and coordination. Suitable for all levels with modifications available.",
+        "count": 0
+    },
+    {
+        "className": "Stretching",
+        "image": "https://images.pexels.com/photos/2995480/pexels-photo-2995480.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "classDetails": "Improve your range of motion and reduce muscle tension with guided stretching exercises. Perfect for recovery and enhancing overall flexibility.",
+        "count": 0
+    },
+    {
+        "className": "Mindful Breathing Techniques",
+        "image": "https://images.pexels.com/photos/8939832/pexels-photo-8939832.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "classDetails": "Learn breathing exercises to reduce stress, improve focus, and enhance relaxation. Ideal for anyone looking to incorporate mindfulness into their daily routine.",
+        "count": 0
+    },
+    {
+        "className": "Boxing Fundamentals",
+        "image": "https://images.pexels.com/photos/23109977/pexels-photo-23109977/free-photo-of-man-wearing-boxing-gloves-posing-in-gym.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "classDetails": "An introduction to boxing techniques, including punches, footwork, and defensive moves. Great for building strength, coordination, and confidence.",
+        "count": 0
+    },
+    {
+        "className": "Dance Cardio",
+        "image": "https://images.pexels.com/photos/28428786/pexels-photo-28428786/free-photo-of-acrobats.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "classDetails": "A fun and energetic cardio workout that combines dance moves with fitness routines. Perfect for burning calories while having a great time.",
+        "count": 0
+    },
+    {
+        "className": "Agility and Speed Training",
+        "image": "https://images.pexels.com/photos/3764580/pexels-photo-3764580.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "classDetails": "Improve your speed, agility, and reaction time with drills and exercises designed for athletes and fitness enthusiasts of all levels.",
+        "count": 0
+    },
+    {
+        "className": "Injury Prevention and Recovery",
+        "image": "https://images.pexels.com/photos/20860619/pexels-photo-20860619/free-photo-of-physiotherapist-and-patient-exercising.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "classDetails": "Learn techniques to prevent injuries and recover faster with stretching, strengthening, and mobility exercises. Ideal for athletes and active individuals.",
+        "count": 0
+    }
+]

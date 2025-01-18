@@ -13,6 +13,7 @@ import AllTrainer from "../pages/Trainer/AllTrainer";
 import AddTrainer from "../pages/Trainer/AddTrainer";
 import TrainerDetails from "../pages/Trainer/TrainerDetails";
 import TrainerBooking from "../pages/Trainer/TrainerBooking";
+import Payment from "../pages/Payment/Payment";
 
 const router = createBrowserRouter([
     {
@@ -55,6 +56,10 @@ const router = createBrowserRouter([
             {
                 path: '/user-profile',
                 element: <PrivateRoute><UserProfile></UserProfile></PrivateRoute>
+            },
+            {
+                path: '/payment/:p/:i/:id',
+                element: <Payment></Payment>
             }
         ]
     },

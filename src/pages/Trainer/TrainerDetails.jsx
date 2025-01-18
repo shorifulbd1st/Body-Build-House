@@ -9,7 +9,6 @@ import useAxiosSecure from '../../hooks/useAxiosSecure';
 
 const TrainerDetails = () => {
     const { id } = useParams();
-    // const axiosPublic = useAxiosPublic();
     const axiosSecure = useAxiosSecure();
     const [trainer, setTrainer] = useState([])
     useEffect(() => {

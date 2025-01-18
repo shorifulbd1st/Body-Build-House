@@ -17,7 +17,8 @@ const Trainer = ({ trainer }) => {
                     />
                 </div>
                 <div className="flex items-center px-6 py-3 bg-gray-900">
-                    <div className="mx-3 text-lg font-semibold text-white flex justify-start items-center -ml-3"><span className='text-3xl'><MdSportsGymnastics /></span> <p>{name} </p>
+                    <div className="mx-3 text-lg font-semibold text-white flex justify-start items-center -ml-3">
+                        <span className='text-3xl'><MdSportsGymnastics /></span> <p>{name} </p>
                         <div>
                             <a href="http://facebook.com" target="_blank" rel="noopener noreferrer"><i className=" text-3xl ml-4 fab fa-facebook text-[#1877F2] hover:text-white"></i></a>
                             <a href="http://twitter.com" target="_blank" rel="noopener noreferrer"><i className=" text-3xl ml-4 fab fa-twitter text-[#1877F2] hover:text-white"></i></a>

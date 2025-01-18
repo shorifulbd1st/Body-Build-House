@@ -10,10 +10,10 @@ const SingleClass = ({ item }) => {
     const trainer = allTrainer.filter(trainer => trainer.selectClass.includes(className))
 
     return (
-        <div className=" w-full max-w-sm overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">
+        <div className="card w-full max-w-sm overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800  border-b-4 border-blue-500">
 
             <img
-                className="cursor-pointer object-cover object-center w-full h-56 hover:scale-110 transition"
+                className="cursor-pointer object-cover object-center w-full h-56 hover:scale-110 transition  duration-1000 ease-in-out"
                 src={image}
                 alt={name}
             />
@@ -45,7 +45,7 @@ const SingleClass = ({ item }) => {
 
                 <div className="flex gap-2 flex-wrap mb-2">
                     {trainer &&
-                        trainer.map((i, idx) => (
+                        trainer.slice(0, 5).map((i, idx) => (
                             <Link to={`/trainerDetails/${i._id}`}
                                 key={idx}
                                 type="button"

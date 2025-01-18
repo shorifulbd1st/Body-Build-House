@@ -9,7 +9,15 @@ html {
 
 .card {
     border-radius: 18px;
-    background: linear-gradient(225deg, #cacaca, #f0f0f0);
-    box-shadow: -24px 24px 44px #a1a1a1,
-        24px -24px 44px #ffffff;
+    background: linear-gradient(225deg, white, white);
+    box-shadow: -10px 10px -10px white,
+        5px -5px 2px white;
+}
+
+.image-area {
+    width: 100%;
+    /* border-radius: px; */
+    object-fit: none;
+    object-position: 50% 10%;
+    zoom: 80%;
 }

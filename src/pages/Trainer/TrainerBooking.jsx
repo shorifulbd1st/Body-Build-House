@@ -26,11 +26,13 @@ const TrainerBooking = () => {
                         >
                             Trainer
                         </div>
-                        <img
-                            className="object-cover w-20 h-20 border-2 border-red-500 rounded-full dark:border-blue-400"
-                            alt="Testimonial avatar"
-                            src={trainer?.photoURL}
-                        />
+                        <div className='w-20 h-20'>
+                            <img
+                                className="object-cover object-[40%_8%] w-full h-full border-2 border-red-500 rounded-full dark:border-blue-400"
+                                alt="Testimonial avatar"
+                                src={trainer?.photoURL}
+                            />
+                        </div>
                     </div>
                 </div>
 
@@ -73,11 +75,13 @@ const TrainerBooking = () => {
                         >
                             Trainer
                         </div>
-                        <img
-                            className="object-cover w-20 h-20 border-2 border-red-500 rounded-full dark:border-blue-400"
-                            alt="Testimonial avatar"
-                            src={trainer?.photoURL}
-                        />
+                        <div className='w-20 h-20'>
+                            <img
+                                className="object-cover object-[40%_8%] w-full h-full border-2 border-red-500 rounded-full dark:border-blue-400"
+                                alt="Testimonial avatar"
+                                src={trainer?.photoURL}
+                            />
+                        </div>
                     </div>
                 </div>
 
@@ -119,11 +123,13 @@ const TrainerBooking = () => {
                         >
                             Trainer
                         </div>
-                        <img
-                            className="object-cover w-20 h-20 border-2 border-red-500 rounded-full dark:border-blue-400"
-                            alt="Testimonial avatar"
-                            src={trainer?.photoURL}
-                        />
+                        <div className='w-20 h-20'>
+                            <img
+                                className="object-cover object-[40%_8%] w-full h-full border-2 border-red-500 rounded-full dark:border-blue-400"
+                                alt="Testimonial avatar"
+                                src={trainer?.photoURL}
+                            />
+                        </div>
                     </div>
                 </div>
                 <h2 className="mt-2 text-xl font-semibold text-gray-800 dark:text-white md:mt-0">

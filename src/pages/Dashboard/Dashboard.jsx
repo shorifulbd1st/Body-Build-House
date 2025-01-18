@@ -4,17 +4,19 @@ import { AuthContext } from '../../providers/AuthProvider'
 
 const Dashboard = () => {
     const { user } = useContext(AuthContext)
+    console.log(user)
     return (
         <div>
             <aside className="flex flex-col w-64 h-full px-4 py-8 overflow-y-auto bg-white border-r-2  dark:bg-gray-900 dark:border-gray-700">
-                <a href="#" className="mx-auto">
-                    <img
-                        className="w-auto h-6 sm:h-7"
-                        src="https://merakiui.com/images/full-logo.svg"
-                        alt=""
-                    />
-                </a>
 
+                <h1 className="text-center flex">
+                    <span className="text-2xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 drop-shadow-lg">
+                        Body Build House
+                    </span>
+
+
+
+                </h1>
                 <div className="flex flex-col items-center mt-6 -mx-2">
                     <img referrerPolicy="no-referrer"
                         className="object-cover w-24 h-24 mx-2 rounded-full"

@@ -4,13 +4,15 @@ import { IoStarSharp } from "react-icons/io5";
 import { MdSportsGymnastics } from "react-icons/md";
 import { useQuery } from '@tanstack/react-query';
 import useAxiosPublic from '../../hooks/useAxiosPublic';
+import useAxiosSecure from '../../hooks/useAxiosSecure';
 const TrainerBooking = () => {
     const { i, id } = useParams()
-    const axiosPublic = useAxiosPublic();
+    // const axiosPublic = useAxiosPublic();
+    const axiosSecure = useAxiosSecure();
     const [trainer, setTrainer] = useState([])
     useEffect(() => {
         const trainerFun = async () => {
-            const { data } = await axiosPublic.get(`/trainer/${id}`);
+            const { data } = await axiosSecure.get(`/trainer/${id}`);
             // console.log(data)
             setTrainer(data)
         }

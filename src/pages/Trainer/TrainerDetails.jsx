@@ -5,14 +5,16 @@ import { useQuery } from '@tanstack/react-query';
 import LoadingSpinner from '../../components/Shared/LoadingSpinner';
 import SocialButtons from '../../components/Shared/SocialButtons';
 import { CgGym } from "react-icons/cg";
+import useAxiosSecure from '../../hooks/useAxiosSecure';
 
 const TrainerDetails = () => {
     const { id } = useParams();
-    const axiosPublic = useAxiosPublic();
+    // const axiosPublic = useAxiosPublic();
+    const axiosSecure = useAxiosSecure();
     const [trainer, setTrainer] = useState([])
     useEffect(() => {
         const trainerFun = async () => {
-            const { data } = await axiosPublic.get(`/trainer/${id}`);
+            const { data } = await axiosSecure.get(`/trainer/${id}`);
             // console.log(data)
             setTrainer(data)
         }

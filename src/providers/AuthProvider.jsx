@@ -5,6 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { createUserWithEmailAndPassword, GoogleAuthProvider, onAuthStateChanged, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import auth from '../firebase/firebase.config';
 import axios from 'axios';
+import useAxiosPublic from '../hooks/useAxiosPublic';
 
 
 export const AuthContext = createContext();
@@ -60,13 +61,28 @@ const AuthProvider = ({ children }) => {
         console.log('user--->', user)
     }, [user])
 
+    const axiosPublic = useAxiosPublic();
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
             setUser(currentUser);
-            setLoading(false);
+            if (currentUser) {
+                const userInfo = { email: currentUser.email };
+                axiosPublic.post('/jwt', userInfo)
+                    .then(res => {
+                        if (res.data.token) {
+                            localStorage.setItem('access-token', res.data.token)
+                            setLoading(false)
+                        }
+                    })
+            }
+            else {
+                localStorage.removeItem('access-token')
+                setLoading(false);
+            }
+
         })
         return () => { unsubscribe() }
-    }, [])
+    }, [axiosPublic])
 
 
 

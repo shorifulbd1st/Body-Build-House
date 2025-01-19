@@ -97,6 +97,19 @@ const TrainerDetails = () => {
                     <div></div>
                 </div>
             </section>
+            <div className='my-5'>
+                <div className="card max-w-xl border border-red-500 overflow-hidden bg-white rounded-lg shadow-xl dark:bg-gray-800 border-b-4 " >
+
+
+                    <div className='my-4 text-center '>
+                        <Link to={`/dashboard/addTrainer`}
+                            className="hover:scale-110 transition duration-1000 ease-in-out  p-2 text-md font-semibold text-white uppercase  transform bg-gray-800 rounded  dark:hover:bg-gray-600 focus:bg-gray-700 dark:focus:bg-gray-600 focus:outline-none"
+                        >
+                            become a trainer
+                        </Link>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }

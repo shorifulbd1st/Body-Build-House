@@ -7,7 +7,15 @@ const SingleClass = ({ item }) => {
     const { image, className, classDetails } = item
     const [allTrainer] = useTrainer();
     const [photo, setPhoto] = useState('');
-    const trainer = allTrainer.filter(trainer => trainer.selectClass.includes(className))
+
+    const trainer = allTrainer.filter(trainer => {
+        // console.log(trainer.selectClass)
+        if (trainer.selectClass) {
+            return trainer.selectClass.includes(className)
+        }
+
+
+    })
 
     return (
         <div className="card w-full max-w-sm overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800  border-b-4 border-blue-500">

@@ -1,11 +1,11 @@
-import React, { useContext, useEffect, useState } from 'react';
-import Select from 'react-select';
-import { colourOptions } from '../../../public/customColor';
-import { AuthContext } from '../../providers/AuthProvider';
-import useAxiosSecure from '../../hooks/useAxiosSecure';
-import LoadingSpinner from '../../components/Shared/LoadingSpinner';
+import { useContext, useEffect, useState } from "react";
+import { AuthContext } from "../../providers/AuthProvider";
+import useAxiosSecure from "../../hooks/useAxiosSecure";
+import LoadingSpinner from "../../components/Shared/LoadingSpinner";
+import Select from "react-select/base";
+import { colourOptions } from "../../../public/customColor";
 
-const AddTrainer = () => {
+const AddSlot = () => {
     const { user, loading, notify } = useContext(AuthContext);
     const [userData, setUserData] = useState([]);
     const axiosSecure = useAxiosSecure();
@@ -13,7 +13,7 @@ const AddTrainer = () => {
 
     useEffect(() => {
         const userFun = async () => {
-            const { data } = await axiosSecure.get(`/user/${user?.email}`);
+            const { data } = await axiosSecure.get(`/trainer/${user?.email}`);
             setUserData(data);
         }
         userFun();
@@ -82,7 +82,7 @@ const AddTrainer = () => {
     return (
         <div className='w-11/12 mx-auto my-5 border-2 border-blue-500 rounded-xl'>
             <div className=" p-4 bg-white shadow-md rounded-lg">
-                <h1 className="text-2xl font-bold mb-4  text-center capitalize">Trainer registration form </h1>
+                <h1 className="text-2xl font-bold mb-4  text-center capitalize">Add slot </h1>
 
                 <form onSubmit={handleSubmitData}>
                     <div className='flex gap-2'>
@@ -206,4 +206,4 @@ const AddTrainer = () => {
     );
 };
 
-export default AddTrainer;
+export default AddSlot;

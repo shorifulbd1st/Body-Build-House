@@ -14,6 +14,10 @@ import AddTrainer from "../pages/Trainer/AddTrainer";
 import TrainerDetails from "../pages/Trainer/TrainerDetails";
 import TrainerBooking from "../pages/Trainer/TrainerBooking";
 import Payment from "../pages/Payment/Payment";
+import ApplyTrainer from "../pages/Trainer/ApplyTrainer";
+import AdminRoute from "./AdminRoute";
+import ApplyTrainerDetails from "../pages/Trainer/ApplyTrainerDetails";
+import AddSlot from "../pages/Trainer/Addslot ";
 
 const router = createBrowserRouter([
     {
@@ -70,7 +74,20 @@ const router = createBrowserRouter([
         children: [
             {
                 path: 'addTrainer',
-                element: <AddTrainer></AddTrainer>
+                element: <PrivateRoute> <AddTrainer></AddTrainer></PrivateRoute>
+            },
+            {
+                path: 'apply-trainer',
+                element: <AdminRoute> <ApplyTrainer></ApplyTrainer></AdminRoute>
+            },
+            {
+                path: 'apply-trainer-details/:id',
+                element: <AdminRoute><ApplyTrainerDetails></ApplyTrainerDetails></AdminRoute>
+            },
+            {
+                path: 'add-slot',
+                element: <AddSlot></AddSlot>
+
             }
         ]
     }

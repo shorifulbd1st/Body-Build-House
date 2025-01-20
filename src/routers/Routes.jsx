@@ -19,6 +19,11 @@ import AdminRoute from "./AdminRoute";
 import ApplyTrainerDetails from "../pages/Trainer/ApplyTrainerDetails";
 import AddSlot from "../pages/Trainer/Addslot ";
 import AddNewSlots from "../pages/Dashboard/Trainer/AddNewSlots";
+import AllTrainers from "../pages/Dashboard/Admin/AllTrainers";
+import Balance from "../pages/Dashboard/Admin/Balance";
+import AddNewClass from "../pages/Dashboard/Admin/AddNewClass";
+import AddNewForum from "../components/Shared/AddNewForum";
+import Subscribers from "../pages/Dashboard/Admin/Subscribers";
 
 const router = createBrowserRouter([
     {
@@ -74,6 +79,10 @@ const router = createBrowserRouter([
         element: <PrivateRoute><DashboardLayout></DashboardLayout></PrivateRoute>,
         children: [
             {
+                path: '/dashboard',
+                element: <Subscribers></Subscribers>
+            },
+            {
                 path: 'addTrainer',
                 element: <PrivateRoute> <AddTrainer></AddTrainer></PrivateRoute>
             },
@@ -88,7 +97,23 @@ const router = createBrowserRouter([
             {
                 path: 'add-slot',
                 element: <AddNewSlots></AddNewSlots>
-
+            }
+            ,
+            {
+                path: 'all-trainer',
+                element: <AllTrainers></AllTrainers>
+            },
+            {
+                path: 'balance',
+                element: <Balance></Balance>
+            },
+            {
+                path: 'add-class',
+                element: <AdminRoute><AddNewClass></AddNewClass></AdminRoute>
+            },
+            {
+                path: 'add-forum',
+                element: <AddNewForum></AddNewForum>
             }
         ]
     }

@@ -23,6 +23,7 @@ const TrainerDetails = () => {
     if (!trainer) {
         <LoadingSpinner></LoadingSpinner>
     }
+    console.log(trainer)
     const { photoURL, name, age, experience, skill, availableDays, availableTime, biography, slotName, slotTime, selectClass, socialMedia } = trainer;
 
     // console.log(photoURL)
@@ -81,7 +82,7 @@ const TrainerDetails = () => {
                             <div className="flex flex-col items-center justify-center w-full  mx-auto">
                                 <div className="w-full flex flex-col gap-2 text-center h-64 ">
                                     {
-                                        slotName?.length > 0 ? slotName?.map((i, j) =>
+                                        Array.isArray(slotName) && slotName.length > 0 ? slotName.map((i, j) =>
                                             <Link key={j} to={`/trainer-booking/${i}/${id}`}
                                                 className="px-2 py-2 w-full text-lg font-semibold text-white capitalize transition-colors duration-300 transform bg-gray-800 rounded hover:bg-gray-700 dark:hover:bg-gray-600 focus:bg-gray-700 dark:focus:bg-gray-600 focus:outline-none"
                                             >

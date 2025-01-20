@@ -18,6 +18,7 @@ import ApplyTrainer from "../pages/Trainer/ApplyTrainer";
 import AdminRoute from "./AdminRoute";
 import ApplyTrainerDetails from "../pages/Trainer/ApplyTrainerDetails";
 import AddSlot from "../pages/Trainer/Addslot ";
+import AddNewSlots from "../pages/Dashboard/Trainer/AddNewSlots";
 
 const router = createBrowserRouter([
     {
@@ -86,7 +87,7 @@ const router = createBrowserRouter([
             },
             {
                 path: 'add-slot',
-                element: <AddSlot></AddSlot>
+                element: <AddNewSlots></AddNewSlots>
 
             }
         ]

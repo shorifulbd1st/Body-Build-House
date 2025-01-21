@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+VN:wght@100..400&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -20,4 +22,18 @@ html {
     object-fit: none;
     object-position: 50% 10%;
     zoom: 80%;
+}
+
+.pacifico-regular {
+    font-family: "Pacifico", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.playwrite-vn-bold {
+    font-family: "Playwrite VN", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    /* Replace with desired weight, e.g., bold or 400 */
+    font-style: normal;
 }

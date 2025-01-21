@@ -1,5 +1,8 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
+import Slider from '../../components/Slider/Slider'
+import FeaturedSection from '../../components/Home/FeaturedSection'
+import AboutUs from '../../components/Home/AboutUs'
 
 const Home = () => {
     return (
@@ -7,7 +10,9 @@ const Home = () => {
             <Helmet>
                 <title> Body Build House | Home Page</title>
             </Helmet>
-            <h1>This is home page</h1>
+            <Slider></Slider>
+            <FeaturedSection></FeaturedSection>
+            <AboutUs></AboutUs>
         </div>
     )
 }

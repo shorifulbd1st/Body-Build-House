@@ -1,3 +1,5 @@
+
+
 import { useRef, useEffect } from "react";
 import "./style.css";
 import { Link } from "react-router-dom";
@@ -5,7 +7,6 @@ import { Link } from "react-router-dom";
 const Slider = () => {
     const sliderRef = useRef(null);
     const thumbnailRef = useRef(null);
-
     const sliderItems = [
         {
             img: 'https://images.pexels.com/photos/5327551/pexels-photo-5327551.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
@@ -34,6 +35,7 @@ const Slider = () => {
             type: "Fitness Class"
         },
     ];
+
 
     // Function to move slider
     const moveSlider = (direction) => {
@@ -73,44 +75,40 @@ const Slider = () => {
     }, []);
 
     return (
-        <div className="">
-            <div className="slider " ref={sliderRef}>
-                {/* Slider List */}
-                <div className="list h-full">
-                    {sliderItems.map((item, index) => (
-                        <div className="item" key={index}>
-                            <div className="h-[450px]">
-                                <img className="h-full w-full" src={item.img} alt={item.type} />
-                            </div>
-                            <div className="content">
-                                <div className="title text-lg md:text-xl lg:text-3xl">{item.title}</div>
-                                <div className="type text-lg md:text-xl lg:text-3xl">{item.type}</div>
-                                <div className="mt-5">
-                                    <Link to="/all-classes" className="px-2 py-3  w-full text-center  mt-4 text-sm font-medium hover:border-b-4  tracking-wide text-white capitalize transition-colors duration-300 transform bg-[#C70039] rounded-md hover:bg-[#C70039] focus:outline-none focus:ring focus:ring-[#C70039]  focus:ring-opacity-40 sm:mt-0 sm:mx-2">SEE MORE</Link>
-                                </div>
+        <div className="slider " ref={sliderRef}>
+            {/* Slider List */}
+            <div className="list">
+                {sliderItems.map((item, index) => (
+                    <div className="item" key={index}>
+                        <img src={item.img} alt={item.type} />
+                        <div className="content">
+                            <div className="title text-xl">{item.title}</div>
+                            <div className="type text-xl">{item.type}</div>
+                            <div className="mt-5">
+                                <Link to="/rooms" className="px-4 w-full text-center py-2.5 mt-5 text-sm font-medium tracking-wide  text-white capitalize transition-colors duration-300 transform bg-[#C70039] rounded-md hover:bg-[#C70039] focus:outline-none focus:ring focus:ring-green-300 focus:ring-opacity-40 sm:mt-0 sm:mx-2">SEE MORE</Link>
                             </div>
                         </div>
-                    ))}
-                </div>
+                    </div>
+                ))}
+            </div>
 
-                {/* Thumbnails */}
-                <div className="thumbnail" ref={thumbnailRef}>
-                    {sliderItems.map((item, index) => (
-                        <div className="item" key={index}>
-                            <img src={item.img} alt={`Thumbnail ${index + 1}`} />
-                        </div>
-                    ))}
-                </div>
+            {/* Thumbnails */}
+            <div className="thumbnail" ref={thumbnailRef}>
+                {sliderItems.map((item, index) => (
+                    <div className="item" key={index}>
+                        <img src={item.img} alt={`Thumbnail ${index + 1}`} />
+                    </div>
+                ))}
+            </div>
 
-                {/* Navigation Buttons */}
-                <div className="nextPrevArrows mt-5">
-                    <button className="prev" onClick={() => moveSlider("prev")}>
-                        &lt;
-                    </button>
-                    <button className="next" onClick={() => moveSlider("next")}>
-                        &gt;
-                    </button>
-                </div>
+            {/* Navigation Buttons */}
+            <div className="nextPrevArrows mt-5">
+                <button className="prev" onClick={() => moveSlider("prev")}>
+                    &lt;
+                </button>
+                <button className="next" onClick={() => moveSlider("next")}>
+                    &gt;
+                </button>
             </div>
         </div>
     );

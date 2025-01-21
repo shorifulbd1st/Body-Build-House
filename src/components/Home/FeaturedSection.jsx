@@ -60,16 +60,7 @@ const FeaturedSection = () => {
 
 
                     </div>
-                    {/* <div className=' grid grid-cols-1 lg:flex '>
-                            <div>
-                                <img src="https://images.pexels.com/photos/6046978/pexels-photo-6046978.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
-                            </div>  <div>
-                                <img src="https://images.pexels.com/photos/6046978/pexels-photo-6046978.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
-                            </div>  <div>
-                                <img src="https://images.pexels.com/photos/6046978/pexels-photo-6046978.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
-                            </div>
 
-                        </div> */}
 
 
                 </div>

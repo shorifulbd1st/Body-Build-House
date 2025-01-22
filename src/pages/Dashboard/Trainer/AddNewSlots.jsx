@@ -12,13 +12,13 @@ const options = [
     { value: 'evening', label: 'evening' },
 ];
 
-const addClass = [
-    { value: 'Hllt Blast', label: 'Hllt Blast' },
-    { value: 'Spin Cycle', label: 'Spin Cycle' },
-    { value: 'Yoga Flow', label: 'Yoga Flow' },
-    { value: 'Pilates Core', label: 'Pilates Core' },
-    { value: 'Cardio Kickboxing', label: 'Cardio Kickboxing' },
-]
+// const addClass = [
+//     { value: 'Hllt Blast', label: 'Hllt Blast' },
+//     { value: 'Spin Cycle', label: 'Spin Cycle' },
+//     { value: 'Yoga Flow', label: 'Yoga Flow' },
+//     { value: 'Pilates Core', label: 'Pilates Core' },
+//     { value: 'Cardio Kickboxing', label: 'Cardio Kickboxing' },
+// ]
 const AddNewSlots = () => {
     const customStyles = {
         control: (provided) => ({
@@ -71,11 +71,12 @@ const AddNewSlots = () => {
     //     { value: 'Pilates Core', label: 'Pilates Core' },
     //     { value: 'Cardio Kickboxing', label: 'Cardio Kickboxing' },
     // ]
+
     const addClass = [];
     skills?.map(checkbox => {
         addClass.push({ value: checkbox, label: checkbox });
     });
-    console.log(skills)
+    // console.log(skills)
 
     const [selectedDays, setSelectedDays] = useState([]);
     useEffect(() => {
@@ -85,14 +86,14 @@ const AddNewSlots = () => {
 
 
     }, [userData])
-    console.log(addClass)
+    // console.log(addClass)
 
     const handleSubmitData = async (e) => {
         e.preventDefault();
 
         const form = new FormData(e.target);
-        console.log(selectedClass)
-        console.log(selectedOption)
+        // console.log(selectedClass)
+        // console.log(selectedOption)
 
         // const name = form.get('name');
         // const email = form.get('email');
@@ -102,7 +103,7 @@ const AddNewSlots = () => {
         // const availableTime = form.get('availableTime');
         // const biography = form.get('biography');
         const slotTime = parseInt(form.get('slotTime'));
-        console.log(slotTime)
+        // console.log(slotTime)
 
         // const skill = [];
         // const skillCheckboxes = document.querySelectorAll('input[name="skill"]:checked');
@@ -119,9 +120,9 @@ const AddNewSlots = () => {
         // };
         // console.log(userInfo)
         const Info = { email, selectClass, slotName, slotTime }
-        console.log(Info)
+        // console.log(Info)
         const res = axiosSecure.patch('/add-slot', Info);
-        console.log("Server Response:", res);
+        // console.log("Server Response:", res);
 
         // if (res.data.insertedId) {
         //     notify('success', 'Your registration successful');

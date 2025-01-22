@@ -5,7 +5,7 @@ import CommonDashboard from './CommonDashboard'
 
 const Dashboard = () => {
     const { user } = useContext(AuthContext)
-    console.log(user)
+    // console.log(user)
     return (
         <div>
             <aside className="flex flex-col h-full px-4 py-8 overflow-y-auto bg-white border-r-2  dark:bg-gray-900 dark:border-gray-700">

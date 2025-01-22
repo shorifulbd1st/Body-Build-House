@@ -35,7 +35,7 @@ const FSingleClass = ({ item }) => {
 
             <div className="p-3 flex flex-col gap-2 ">
                 <div className=" overflow-hidden h-24">
-                    <p className="text-justify text-gray-700 dark:text-gray-400 capitalize"><strong>total number of bookings: </strong> {count}</p>
+                    <p className="text-justify  dark:text-gray-400 capitalize"><strong>total number of bookings: </strong> {count}</p>
                     <p className="text-justify text-gray-700 dark:text-gray-400 ">{classDetails}</p>
                 </div>
 

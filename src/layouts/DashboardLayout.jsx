@@ -24,16 +24,16 @@ const DashboardLayout = () => {
     if (!userData) {
         <LoadingSpinner></LoadingSpinner>
     }
-    console.log(userData.role)
+    // console.log(userData.role)
     return (
-        <div className='lg:grid grid-cols-12 gap-4 border border-red-600'>
-            <div className='col-span-3 border-2 border-green-600 '>
+        <div className='lg:grid grid-cols-12 gap-4 '>
+            <div className='col-span-3 '>
                 {
                     userData && userData.role === 'admin' ? <IsAdmin></IsAdmin> : userData.role === 'member' ? <IsMember></IsMember> : <IsTrainer></IsTrainer>
                 }
             </div>
             {/* <Sidebar></Sidebar> */}
-            <div className=' col-span-9 border-2 border-orange-600'>
+            <div className=' col-span-9 '>
                 <Outlet></Outlet>
             </div>
         </div>

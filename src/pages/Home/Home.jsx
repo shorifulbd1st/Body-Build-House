@@ -5,6 +5,7 @@ import AboutUs from '../../components/Home/AboutUs'
 import Slider from '../../components/Slider/Slider'
 import FeaturedClass from '../../components/Home/FeaturedClass'
 import FSingleClass from '../../components/Home/FSingleClass'
+import TopForum from '../Community/TopForum'
 
 const Home = () => {
     return (
@@ -16,7 +17,7 @@ const Home = () => {
             <FeaturedSection></FeaturedSection>
             <AboutUs></AboutUs>
             <FeaturedClass></FeaturedClass>
-            {/* <FSingleClass></FSingleClass> */}
+            <TopForum></TopForum>
         </div>
     )
 }

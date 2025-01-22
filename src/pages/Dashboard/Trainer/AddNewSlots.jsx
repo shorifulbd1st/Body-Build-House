@@ -5,6 +5,7 @@ import useAxiosSecure from "../../../hooks/useAxiosSecure";
 import LoadingSpinner from "../../../components/Shared/LoadingSpinner";
 import { colourOptions } from "../../../../public/customColor";
 import Select1 from 'react-select';
+import { label } from "motion/react-client";
 const options = [
     { value: 'morning', label: 'morning' },
     { value: 'afternoon', label: 'afternoon' },
@@ -61,15 +62,30 @@ const AddNewSlots = () => {
     }
     // console.log(userData)
     // const daysD = [];
-    const { name, email, photoURL, age, experience, availableTime, biography, skill, availableDays, status } = userData;
+    const { name, email, photoURL, age, experience, availableTime, biography, skill: skills, availableDays, status } = userData;
     // console.log(availableDays)
+    // const addClass = [
+    //     { value: 'Hllt Blast', label: 'Hllt Blast' },
+    //     { value: 'Spin Cycle', label: 'Spin Cycle' },
+    //     { value: 'Yoga Flow', label: 'Yoga Flow' },
+    //     { value: 'Pilates Core', label: 'Pilates Core' },
+    //     { value: 'Cardio Kickboxing', label: 'Cardio Kickboxing' },
+    // ]
+    const addClass = [];
+    skills?.map(checkbox => {
+        addClass.push({ value: checkbox, label: checkbox });
+    });
+    console.log(skills)
+
     const [selectedDays, setSelectedDays] = useState([]);
     useEffect(() => {
         const days = colourOptions.filter((option) => availableDays?.includes(option.value))
-        console.log(days)
+        // console.log(days)
         setSelectedDays(days)
-    }, [userData])
 
+
+    }, [userData])
+    console.log(addClass)
 
     const handleSubmitData = async (e) => {
         e.preventDefault();
@@ -189,17 +205,7 @@ const AddNewSlots = () => {
                                         type="checkbox"
                                         id={`skill-${index}`}
                                         value={skill}
-                                        checked={[
-                                            "Yoga Flow",
-                                            "Spin Cycle",
-                                            "Barre Fitness",
-                                            "Meditation",
-                                            "Strength Training",
-                                            "Kettlebell",
-                                            "Stretching",
-                                            "Dance Cardio",
-                                            "Agility and Speed Training"
-                                        ].includes(skill)}
+                                        checked={skills?.includes(skill)}
                                         readOnly
                                         name='skill'
                                         className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded"

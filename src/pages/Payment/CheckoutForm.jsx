@@ -3,8 +3,8 @@ import React, { useContext, useEffect, useState } from 'react'
 import { AuthContext } from '../../providers/AuthProvider';
 import useAxiosSecure from '../../hooks/useAxiosSecure';
 import { useNavigate } from 'react-router-dom';
-
-const CheckoutForm = ({ trainer, userData, i, p, taka }) => {
+import Select1 from 'react-select';
+const CheckoutForm = ({ trainer, userData, i, p, taka, classID, skills }) => {
     const stripe = useStripe();
     const elements = useElements();
     const [customError, setCustomError] = useState('');
@@ -14,6 +14,29 @@ const CheckoutForm = ({ trainer, userData, i, p, taka }) => {
     const { user, notify } = useContext(AuthContext);
     const axiosSecure = useAxiosSecure();
     const navigate = useNavigate();
+
+
+    const [classData, setClassData] = useState(null);
+    const [selectedClass, setSelectedClass] = useState(null);
+
+    const addClass = [];
+    skills?.map(checkbox => {
+        addClass.push({ value: checkbox, label: checkbox });
+    });
+    console.log(classID)
+    useEffect(() => {
+        if (classID) {
+            axiosSecure.get(`/class/${classID}`)
+                .then(res => {
+                    setClassData(res.data)
+                })
+        }
+        else {
+            setClassData(null)
+        }
+    }, [classID])
+    console.log('classData', classData)
+
     useEffect(() => {
         if (taka > 0) {
             axiosSecure.post('/create-payment-intent', { price: taka })
@@ -67,9 +90,20 @@ const CheckoutForm = ({ trainer, userData, i, p, taka }) => {
                     selectedSlot: i,
                 }
                 const res = await axiosSecure.post('/payment', payment)
-                // console.log(res.data)
+
+                console.log(classID)
+                let id = '';
+                if (classID) {
+                    id = classID
+                } else {
+                    const res = await axiosSecure.get(`/class-name/${selectedClass.value}`)
+                    id = res.data._id;
+                }
+
                 if (res.data.insertedId) {
                     notify('success', 'Your payment successful')
+                    const res1 = await axiosSecure.patch(`/class-update/${id}`)
+                    console.log(res1)
                     navigate('/')
                 }
 
@@ -81,8 +115,21 @@ const CheckoutForm = ({ trainer, userData, i, p, taka }) => {
 
     return (
         <div className=' w-full'>
+
             <form onSubmit={handleSubmit}>
                 <div className="max-w-md mx-auto p-6 bg-white rounded-lg shadow-lg">
+                    {
+                        !classData && <div className="mb-4 flex-1 ">
+                            <label className="block text-sm font-medium text-gray-700">Select class</label>
+                            <Select1
+                                className="mt-1 block w-full text-xl rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+                                options={addClass}
+                                defaultValue={selectedClass}
+                                onChange={setSelectedClass}
+
+                            />
+                        </div>
+                    }
                     <div className="mb-4">
                         <label htmlFor="card-element" className="block text-gray-700 text-sm font-bold mb-2">
                             Card Details

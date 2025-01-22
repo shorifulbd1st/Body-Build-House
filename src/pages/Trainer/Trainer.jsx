@@ -2,9 +2,10 @@ import React from 'react'
 import { CgGym } from "react-icons/cg";
 import { MdSportsGymnastics } from "react-icons/md";
 import SocialButtons from '../../components/Shared/SocialButtons';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Trainer = ({ trainer }) => {
+    const location = useLocation();
     const { _id, photoURL, name, age, experience, skill, availableDays, availableTime, biography, slotName, slotTime, selectClass, socialMedia } = trainer;
     return (
         <div className=''>
@@ -44,6 +45,9 @@ const Trainer = ({ trainer }) => {
                 </div>
                 <div className='my-4 text-center flex justify-center items-end'>
                     <Link to={`/trainerDetails/${_id}`}
+                        state={{
+                            from: location, classID: ''
+                        }}
                         className="hover:scale-110 transition duration-1000 ease-in-out  p-2 text-md font-semibold text-white uppercase  transform bg-gray-800 rounded  dark:hover:bg-gray-600 focus:bg-gray-700 dark:focus:bg-gray-600 focus:outline-none"
                     >
                         know more

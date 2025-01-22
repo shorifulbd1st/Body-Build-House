@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { Link, useLocation, useParams } from 'react-router-dom'
 import useAxiosPublic from '../../hooks/useAxiosPublic';
 import { useQuery } from '@tanstack/react-query';
 import LoadingSpinner from '../../components/Shared/LoadingSpinner';
@@ -11,6 +11,12 @@ const TrainerDetails = () => {
     const { id } = useParams();
     const axiosSecure = useAxiosSecure();
     const [trainer, setTrainer] = useState([])
+    const location = useLocation();
+    const newForm = location.state || '/';
+
+    // console.log('trainerDetails', newForm)
+
+
     useEffect(() => {
         const trainerFun = async () => {
             const { data } = await axiosSecure.get(`/trainer/${id}`);
@@ -23,7 +29,7 @@ const TrainerDetails = () => {
     if (!trainer) {
         <LoadingSpinner></LoadingSpinner>
     }
-    console.log(trainer)
+    // console.log(trainer)
     const { photoURL, name, age, experience, skill, availableDays, availableTime, biography, slotName, slotTime, selectClass, socialMedia } = trainer;
 
     // console.log(photoURL)
@@ -83,7 +89,7 @@ const TrainerDetails = () => {
                                 <div className="w-full flex flex-col gap-2 text-center h-64 ">
                                     {
                                         Array.isArray(slotName) && slotName.length > 0 ? slotName.map((i, j) =>
-                                            <Link key={j} to={`/trainer-booking/${i}/${id}`}
+                                            <Link key={j} to={`/trainer-booking/${i}/${id}`} state={{ from: newForm }}
                                                 className="px-2 py-2 w-full text-lg font-semibold text-white capitalize transition-colors duration-300 transform bg-gray-800 rounded hover:bg-gray-700 dark:hover:bg-gray-600 focus:bg-gray-700 dark:focus:bg-gray-600 focus:outline-none"
                                             >
                                                 {i}

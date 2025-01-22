@@ -7,7 +7,7 @@ const AboutUs = () => {
     return (
         <div className='w-11/12 mx-auto mt-20 mb-10'>
             <div className='lg:flex gap-8 '>
-                <div className='relative  lg:w-1/2 flex justify-center items-center'>
+                <div className='hidden relative  lg:w-1/2 lg:flex justify-center items-center'>
                     <div className='absolute w-96 top-20 left-0 z-20'>
                         <img className='rounded-xl border-l-4 border-b-2 border-[#C70039]' src="https://images.pexels.com/photos/4720254/pexels-photo-4720254.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
                     </div>
@@ -15,6 +15,17 @@ const AboutUs = () => {
                         <img className='rounded-xl border-r-4 border-b-2 border-[#C70039]' src="https://images.pexels.com/photos/2995480/pexels-photo-2995480.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
                     </div>
                     <div className='absolute w-72 bottom-0 right-0'>
+                        <img className='rounded-xl border-b-4 border-r-2 border-[#C70039]' src="https://images.pexels.com/photos/6046978/pexels-photo-6046978.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+                    </div>
+                </div>
+                <div className='grid grid-cols-1 lg:hidden gap-3'>
+                    <div className=''>
+                        <img className='rounded-xl border-l-4 border-b-2 border-[#C70039]' src="https://images.pexels.com/photos/4720254/pexels-photo-4720254.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+                    </div>
+                    <div className=''>
+                        <img className='rounded-xl border-r-4 border-b-2 border-[#C70039]' src="https://images.pexels.com/photos/2995480/pexels-photo-2995480.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
+                    </div>
+                    <div className=''>
                         <img className='rounded-xl border-b-4 border-r-2 border-[#C70039]' src="https://images.pexels.com/photos/6046978/pexels-photo-6046978.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
                     </div>
                 </div>
@@ -32,9 +43,7 @@ const AboutUs = () => {
                 </div>
 
             </div>
-            <div>
-                hello
-            </div>
+
         </div>
     )
 }

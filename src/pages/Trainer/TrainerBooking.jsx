@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { Link, useLocation, useParams } from 'react-router-dom'
 import { IoStarSharp } from "react-icons/io5";
 import { MdSportsGymnastics } from "react-icons/md";
 import { useQuery } from '@tanstack/react-query';
@@ -11,6 +11,16 @@ const TrainerBooking = () => {
     // const axiosPublic = useAxiosPublic();
     const axiosSecure = useAxiosSecure();
     const [trainer, setTrainer] = useState([])
+    const location = useLocation();
+    const from = location.state || { from: { pathname: "/" } };
+
+    // console.log(from)
+    // if (from.from?.classID) {
+    //     console.log(from.from?.classID)
+    // }
+    // else {
+    //     console.log('null')
+    // }
     useEffect(() => {
         const trainerFun = async () => {
             const { data } = await axiosSecure.get(`/trainer/${id}`);
@@ -93,6 +103,7 @@ const TrainerBooking = () => {
                     </div>
                     <div className="flex justify-end mt-4">
                         <Link to={`/payment/${'basic'}/${i}/${id}`}
+                            state={{ from: from.from }}
                             className="text-lg capitalize font-medium text-blue-600 dark:text-blue-300"
                             tabIndex={0}
                             role="link"
@@ -140,6 +151,7 @@ const TrainerBooking = () => {
                     </div>
                     <div className="flex justify-end mt-4">
                         <Link to={`/payment/${'standard'}/${i}/${id}`}
+                            state={{ from: from.from }}
                             className="text-lg capitalize font-medium text-blue-600 dark:text-blue-300"
                             tabIndex={0}
                             role="link"
@@ -185,7 +197,8 @@ const TrainerBooking = () => {
                         </button>
                     </div>
                     <div className="flex justify-end mt-4">
-                        <Link to={`/premium/${'premium'}/${i}/${id}`}
+                        <Link to={`/payment/${'premium'}/${i}/${id}`}
+                            state={{ from: from.from }}
                             className="text-lg  capitalize font-medium text-blue-600 dark:text-blue-300"
                             tabIndex={0}
                             role="link"
@@ -195,7 +208,7 @@ const TrainerBooking = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
 

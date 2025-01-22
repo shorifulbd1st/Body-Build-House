@@ -2,20 +2,19 @@ import React, { useState } from "react";
 import { MdSportsGymnastics } from "react-icons/md";
 import useTrainer from "../../hooks/useTrainer";
 import { Tooltip } from "react-tooltip";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 const SingleClass = ({ item }) => {
-    const { image, className, classDetails } = item
+    const { _id: classId, image, className, classDetails } = item
     const [allTrainer] = useTrainer();
     const [photo, setPhoto] = useState('');
-
+    const location = useLocation();
     const trainer = allTrainer.filter(trainer => {
         // console.log(trainer.selectClass)
         if (trainer.selectClass) {
             return trainer.selectClass.includes(className)
         }
-
-
     })
+    // console.log('classID: ', _id)
 
     return (
         <div className="card w-full max-w-sm overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800  border-b-4 border-blue-500">
@@ -43,6 +42,9 @@ const SingleClass = ({ item }) => {
                     {trainer &&
                         trainer.slice(0, 5).map((i, idx) => (
                             <Link to={`/trainerDetails/${i._id}`}
+                                state={{
+                                    from: location, classID: classId
+                                }}
                                 key={idx}
                                 type="button"
                                 className="flex items-center focus:outline-none"
@@ -68,7 +70,7 @@ const SingleClass = ({ item }) => {
                 </div>
 
             </div>
-        </div>
+        </div >
     );
 };
 

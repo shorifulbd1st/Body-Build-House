@@ -4,7 +4,7 @@ import useTrainer from "../../hooks/useTrainer";
 import { Tooltip } from "react-tooltip";
 import { Link, useLocation } from "react-router-dom";
 const SingleClass = ({ item }) => {
-    const { _id: classId, image, className, classDetails } = item
+    const { _id: classId, image, className, classDetails, count } = item
     const [allTrainer] = useTrainer();
     const [photo, setPhoto] = useState('');
     const location = useLocation();
@@ -34,6 +34,7 @@ const SingleClass = ({ item }) => {
 
             <div className="p-2 flex flex-col gap-2">
                 <div className=" overflow-hidden h-24">
+                    {/* <p className="text-justify text-gray-700 dark:text-gray-400 capitalize"><strong>total number of bookings: </strong> {count}</p> */}
                     <p className="text-justify text-gray-700 dark:text-gray-400 ">{classDetails}</p>
                 </div>
 

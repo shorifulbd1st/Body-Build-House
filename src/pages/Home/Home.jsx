@@ -4,6 +4,7 @@ import FeaturedSection from '../../components/Home/FeaturedSection'
 import AboutUs from '../../components/Home/AboutUs'
 import Slider from '../../components/Slider/Slider'
 import FeaturedClass from '../../components/Home/FeaturedClass'
+import FSingleClass from '../../components/Home/FSingleClass'
 
 const Home = () => {
     return (
@@ -15,6 +16,7 @@ const Home = () => {
             <FeaturedSection></FeaturedSection>
             <AboutUs></AboutUs>
             <FeaturedClass></FeaturedClass>
+            {/* <FSingleClass></FSingleClass> */}
         </div>
     )
 }

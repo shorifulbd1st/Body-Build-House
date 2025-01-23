@@ -7,6 +7,7 @@ import FeaturedClass from '../../components/Home/FeaturedClass'
 import FSingleClass from '../../components/Home/FSingleClass'
 import TopForum from '../Community/TopForum'
 import SubscribeNow from '../../components/SubscribeNow/SubscribeNow'
+import TeamSection from '../../components/Teamsection/Teamsection'
 
 const Home = () => {
     return (
@@ -20,6 +21,7 @@ const Home = () => {
             <FeaturedClass></FeaturedClass>
             <TopForum></TopForum>
             <SubscribeNow></SubscribeNow>
+            <TeamSection></TeamSection>
         </div>
     )
 }

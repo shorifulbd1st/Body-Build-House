@@ -13,15 +13,17 @@ const SubscribeNow = () => {
         const info = {
             name, email
         }
+        console.log(info)
         const res = await axiosPublic.post('/subscribe', info)
         // console.log(res.data)
         if (res.data.insertedId) {
             notify('success', 'your Subscribe successful')
+            e.target.reset();
         }
     }
     return (
         <div className="w-11/12 mx-auto my-8">
-            <header className="bg-white dark:bg-gray-900">
+            <header className="bg-white dark:bg-gray-900 ">
                 <nav className="border-t-4 border-blue-500">
                     {/* <div className="container flex items-center justify-between px-6 py-3 mx-auto">
                         <a href="#">
@@ -52,7 +54,7 @@ const SubscribeNow = () => {
                     </div> */}
                 </nav>
 
-                <div className="container px-6 py-16 mx-auto">
+                <div className="container lg:px-8 mx-auto">
                     <div className="items-center lg:flex">
                         <div className="w-full lg:w-1/2">
                             <div className="lg:max-w-lg">
@@ -68,11 +70,13 @@ const SubscribeNow = () => {
                                         <input
                                             id="name"
                                             type="text"
+                                            name="name"
                                             className="px-4 py-2 border border-[#C70039]  text-gray-700 bg-white  rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40 focus:ring-blue-300"
                                             placeholder="Enter your full name"
                                         /><input
                                             id="email"
                                             type="email"
+                                            name="email"
                                             className="px-4 py-2  border border-[#C70039] text-gray-700 bg-white  rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40 focus:ring-blue-300"
                                             placeholder="Email Address"
                                         />

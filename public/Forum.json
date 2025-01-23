@@ -1,0 +1,92 @@
+[
+    {
+        "forumTitle": "Barbell",
+        "image": "https://images.pexels.com/photos/703014/pexels-photo-703014.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "formDetails": "A barbell is a sturdy metal bar used for strength training, allowing for heavy lifts like squats, bench presses, and deadlifts.",
+        "userName": "John Carter",
+        "UserPhoto": "https://images.pexels.com/photos/26903608/pexels-photo-26903608/free-photo-of-portrait-of-man-in-black-shirt.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "upVote": 9,
+        "downVote": 5
+    },
+    {
+        "forumTitle": "Cable Pulley",
+        "image": "https://images.pexels.com/photos/19025670/pexels-photo-19025670/free-photo-of-a-gym-with-a-variety-of-weights-and-equipment.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "formDetails": "Cable pulleys offer smooth motion for exercises targeting various muscle groups, ensuring controlled movements.",
+        "userName": "Sophia Brown",
+        "UserPhoto": "https://images.pexels.com/photos/6050426/pexels-photo-6050426.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "upVote": 6,
+        "downVote": 5
+    },
+    {
+        "forumTitle": "Bench Pad",
+        "image": "https://images.pexels.com/photos/5327559/pexels-photo-5327559.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "formDetails": "A cushioned bench pad provides comfort and stability during exercises like bench presses and dumbbell workouts.",
+        "userName": "David Lee",
+        "UserPhoto": "https://images.pexels.com/photos/10765194/pexels-photo-10765194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "upVote": 7,
+        "downVote": 6
+    },
+    {
+        "forumTitle": "Handles/Grip",
+        "image": "https://images.pexels.com/photos/16310070/pexels-photo-16310070/free-photo-of-weight-dumbbells-and-skipping-rope-near-legs-of-standing-person.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "formDetails": "Handles or grips ensure a secure hold on dumbbells, barbells, or machines during exercises, improving safety.",
+        "userName": "Emma Watson",
+        "UserPhoto": "https://images.pexels.com/photos/6684836/pexels-photo-6684836.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "upVote": 8,
+        "downVote": 5
+    },
+    {
+        "forumTitle": "Resistance Bands",
+        "image": "https://images.pexels.com/photos/6740821/pexels-photo-6740821.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "formDetails": "Resistance bands are versatile tools for building strength and flexibility through controlled tension exercises.",
+        "userName": "Liam Nelson",
+        "UserPhoto": "https://images.pexels.com/photos/18580753/pexels-photo-18580753/free-photo-of-bearded-old-man.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "upVote": 10,
+        "downVote": 7
+    },
+    {
+        "forumTitle": "Pedals",
+        "image": "https://images.pexels.com/photos/6388974/pexels-photo-6388974.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "formDetails": "Pedals are essential for cardio equipment like bikes, providing a stable base for smooth and efficient motion.",
+        "userName": "Olivia Adams",
+        "UserPhoto": "https://images.pexels.com/photos/26903608/pexels-photo-26903608/free-photo-of-portrait-of-man-in-black-shirt.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "upVote": 7,
+        "downVote": 6
+    },
+    {
+        "forumTitle": "Treadmill Belt",
+        "image": "https://images.pexels.com/photos/7031705/pexels-photo-7031705.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "formDetails": "A treadmill belt provides the running or walking surface, designed for durability and smooth motion.",
+        "userName": "William Harris",
+        "UserPhoto": "https://images.pexels.com/photos/6050426/pexels-photo-6050426.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "upVote": 6,
+        "downVote": 5
+    },
+    {
+        "forumTitle": "Dumbbell Handles",
+        "image": "https://images.pexels.com/photos/4498610/pexels-photo-4498610.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "formDetails": "Dumbbell handles provide grip and allow for interchangeable weight plates for customized strength training.",
+        "userName": "Charlotte Davis",
+        "UserPhoto": "https://images.pexels.com/photos/10765194/pexels-photo-10765194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "upVote": 9,
+        "downVote": 6
+    },
+    {
+        "forumTitle": "Weight Plates",
+        "image": "https://images.pexels.com/photos/1092878/pexels-photo-1092878.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "formDetails": "Weight plates are used with barbells or machines to add adjustable resistance for strength training.",
+        "userName": "Henry Thompson",
+        "UserPhoto": "https://images.pexels.com/photos/6684836/pexels-photo-6684836.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "upVote": 8,
+        "downVote": 5
+    },
+    {
+        "forumTitle": "Adjustable Pins",
+        "image": "https://images.pexels.com/photos/6296103/pexels-photo-6296103.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "formDetails": "Adjustable pins secure weight stacks or set the position on gym machines, ensuring versatility and safety.",
+        "userName": "Amelia Johnson",
+        "UserPhoto": "https://images.pexels.com/photos/18580753/pexels-photo-18580753/free-photo-of-bearded-old-man.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "upVote": 10,
+        "downVote": 7
+    }
+]

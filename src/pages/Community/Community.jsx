@@ -44,7 +44,7 @@ const Community = () => {
                                 alt="avatar"
                             />
                             <div className="flex items-center px-6 py-3 bg-gray-900">
-                                <h1 className="mx-3 text-lg font-semibold text-white">{item.forumTitle}</h1>
+                                <h1 className="-ml-2 text-lg font-semibold text-white">{item.forumTitle}</h1>
                             </div>
 
                             <div className="px-2 py-4">
@@ -59,9 +59,9 @@ const Community = () => {
                                     {item.formDetails.slice(0, 250)}.....
                                 </p>
                                 <div className='flex gap-4'>
-                                    <button onClick={() => handleLike('dislike', item._id)} class="flex items-center px-4 py-1 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-lg hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
+                                    <button onClick={() => handleLike('dislike', item._id)} class="flex items-center px-4 py-1 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-red-600 rounded-lg hover:bg-red-500 focus:outline-none focus:ring focus:ring-red-300 focus:ring-opacity-80">
                                         <p class="mx-1 flex justify-center items-center gap-3"><span className='text-2xl'><BiDislike /></span>  {item.downVote}</p>
-                                    </button><button onClick={() => handleLike('like', item._id)} class="flex items-center px-4 py-1 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-lg hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
+                                    </button><button onClick={() => handleLike('like', item._id)} class="flex items-center px-4 py-1 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-green-600 rounded-lg hover:bg-green-500 focus:outline-none focus:ring focus:ring-green-300 focus:ring-opacity-80">
                                         <p class="mx-1 flex justify-center items-center gap-3"><span className='text-2xl'><BiLike /></span>  {item.upVote} </p>
                                     </button>
 

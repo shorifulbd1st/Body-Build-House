@@ -23,7 +23,7 @@ const CheckoutForm = ({ trainer, userData, i, p, taka, classID, skills }) => {
     skills?.map(checkbox => {
         addClass.push({ value: checkbox, label: checkbox });
     });
-    console.log(classID)
+    // console.log(classID)
     useEffect(() => {
         if (classID) {
             axiosSecure.get(`/class/${classID}`)
@@ -35,7 +35,7 @@ const CheckoutForm = ({ trainer, userData, i, p, taka, classID, skills }) => {
             setClassData(null)
         }
     }, [classID])
-    console.log('classData', classData)
+    // console.log('classData', classData)
 
     useEffect(() => {
         if (taka > 0) {

@@ -27,6 +27,10 @@ const Trainer = ({ trainer }) => {
                         </div>
                     </div>
                 </div>
+                <div className='px-4'>
+                    <h2><strong>Years of Experience : </strong> {experience}</h2>
+                    <h2><strong>Available slots : </strong> {slotName?.map((item, idx) => <span className="hover:scale-110 transition duration-1000 ease-in-out  p-1 text-xs mr-2 text-white uppercase  transform bg-blue-800 rounded  dark:hover:bg-blue-600 focus:bg-blue-700 dark:focus:bg-blue-600 focus:outline-none" >{item}</span>)}</h2>
+                </div>
                 <div className="px-4 py-1 h-24">
                     <h2><strong>Skill : </strong> </h2>
                     <div className='flex flex-wrap gap-2 '>

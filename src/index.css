@@ -37,3 +37,21 @@ html {
     /* Replace with desired weight, e.g., bold or 400 */
     font-style: normal;
 }
+
+.run-image-area {
+    padding: 15px;
+    width: 47%;
+}
+
+.run-image-area-img {
+    /* width: 100%; */
+    border-radius: 30px;
+    /* object-fit: none; */
+    object-position: 72% 25%;
+    zoom: 70%;
+}
+
+.run-image-area-md {
+    width: 100%;
+    zoom: 50%;
+}

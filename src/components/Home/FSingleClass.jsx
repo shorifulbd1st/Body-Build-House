@@ -4,7 +4,7 @@ import useTrainer from "../../hooks/useTrainer";
 import { Tooltip } from "react-tooltip";
 import { Link, useLocation } from "react-router-dom";
 const FSingleClass = ({ item }) => {
-    console.log(item)
+    // console.log(item)
     const { _id, image, className, classDetails, count } = item || {}
     // const [allTrainer] = useTrainer();
     // const [photo, setPhoto] = useState('');

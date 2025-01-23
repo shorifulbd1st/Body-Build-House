@@ -18,13 +18,13 @@ const FeaturedClass = () => {
   if (isPending) {
     <LoadingSpinner></LoadingSpinner>
   }
-  console.log(topClass)
+  // console.log(topClass)
 
   return (
     <div className='w-11/12 mx-auto mt-20 mb-5'>
-      <div className='w-8/12 mx-auto flex flex-col justify-center items-center'>
+      <div className='lg:w-8/12 mx-auto flex flex-col justify-center items-center'>
         <h2 className='text-lg font-extrabold capitalize lg:text-4xl text-[#C70039]'>Our Most Booked Classes</h2>
-        <p className='w-[90%] text-md lg:text-lg font-semibold text-center text-gray-500'>Explore our top six most popular classes, ranked by total bookings. Join the favorites and elevate your fitness journey!</p>
+        <p className='lg:w-[90%] text-md lg:text-lg font-semibold text-center text-gray-500'>Explore our top six most popular classes, ranked by total bookings. Join the favorites and elevate your fitness journey!</p>
       </div>
       <div className='grid grid-cols-1 lg:grid-cols-3 gap-3 my-8'>
         {

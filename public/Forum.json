@@ -2,7 +2,7 @@
     {
         "forumTitle": "Barbell",
         "image": "https://images.pexels.com/photos/703014/pexels-photo-703014.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        "formDetails": "A barbell is a sturdy metal bar used for strength training, allowing for heavy lifts like squats, bench presses, and deadlifts.",
+        "formDetails": "A barbell is a sturdy metal bar used for strength training. It allows for heavy lifts like squats, bench presses, and deadlifts. Barbells are commonly used in weightlifting to target major muscle groups, enhancing muscle strength and endurance. They come in various weights and sizes, ensuring versatility in workout routines for strength athletes and general fitness enthusiasts.",
         "userName": "John Carter",
         "UserPhoto": "https://images.pexels.com/photos/26903608/pexels-photo-26903608/free-photo-of-portrait-of-man-in-black-shirt.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "upVote": 9,
@@ -11,7 +11,7 @@
     {
         "forumTitle": "Cable Pulley",
         "image": "https://images.pexels.com/photos/19025670/pexels-photo-19025670/free-photo-of-a-gym-with-a-variety-of-weights-and-equipment.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        "formDetails": "Cable pulleys offer smooth motion for exercises targeting various muscle groups, ensuring controlled movements.",
+        "formDetails": "Cable pulleys provide smooth and controlled motion for strength exercises targeting various muscle groups. They are essential for exercises such as tricep pushdowns, chest flys, and cable rows. These machines ensure controlled movements, which minimize the risk of injury while improving muscle engagement. Cable pulleys are a versatile tool for both beginners and advanced gym-goers alike.",
         "userName": "Sophia Brown",
         "UserPhoto": "https://images.pexels.com/photos/6050426/pexels-photo-6050426.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "upVote": 6,
@@ -20,7 +20,7 @@
     {
         "forumTitle": "Bench Pad",
         "image": "https://images.pexels.com/photos/5327559/pexels-photo-5327559.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        "formDetails": "A cushioned bench pad provides comfort and stability during exercises like bench presses and dumbbell workouts.",
+        "formDetails": "A cushioned bench pad provides added comfort and stability during exercises like bench presses and dumbbell workouts. It helps protect the back and shoulders from discomfort or injury when lifting heavy weights. Bench pads are a key component in strength training routines, offering support for both beginners and experienced lifters. Their ergonomic design ensures optimal performance and safety.",
         "userName": "David Lee",
         "UserPhoto": "https://images.pexels.com/photos/10765194/pexels-photo-10765194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "upVote": 7,
@@ -29,7 +29,7 @@
     {
         "forumTitle": "Handles/Grip",
         "image": "https://images.pexels.com/photos/16310070/pexels-photo-16310070/free-photo-of-weight-dumbbells-and-skipping-rope-near-legs-of-standing-person.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        "formDetails": "Handles or grips ensure a secure hold on dumbbells, barbells, or machines during exercises, improving safety.",
+        "formDetails": "Handles or grips are essential for maintaining a secure hold on dumbbells, barbells, or exercise machines during workouts. They help improve safety by preventing slips and ensure better control over weights during exercises. Grips are particularly useful during high-intensity training sessions, where a firm grip is necessary for maintaining proper form and minimizing the risk of injury.",
         "userName": "Emma Watson",
         "UserPhoto": "https://images.pexels.com/photos/6684836/pexels-photo-6684836.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "upVote": 8,
@@ -38,7 +38,7 @@
     {
         "forumTitle": "Resistance Bands",
         "image": "https://images.pexels.com/photos/6740821/pexels-photo-6740821.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        "formDetails": "Resistance bands are versatile tools for building strength and flexibility through controlled tension exercises.",
+        "formDetails": "Resistance bands are versatile tools that help build strength, flexibility, and endurance through controlled tension exercises. They are ideal for both beginners and experienced athletes, offering various resistance levels to match individual fitness goals. Resistance bands target muscle groups effectively, assisting in rehabilitation, toning, and overall fitness. Their portability makes them perfect for home workouts and travel.",
         "userName": "Liam Nelson",
         "UserPhoto": "https://images.pexels.com/photos/18580753/pexels-photo-18580753/free-photo-of-bearded-old-man.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "upVote": 10,
@@ -47,7 +47,7 @@
     {
         "forumTitle": "Pedals",
         "image": "https://images.pexels.com/photos/6388974/pexels-photo-6388974.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        "formDetails": "Pedals are essential for cardio equipment like bikes, providing a stable base for smooth and efficient motion.",
+        "formDetails": "Pedals are essential components in cardio machines like exercise bikes. They provide a stable base for smooth, controlled motion, helping users maintain an efficient cycling motion. Pedals can come with adjustable straps for added foot stability and safety. They ensure optimal performance during indoor cycling and cardio workouts, benefiting both beginners and advanced fitness enthusiasts.",
         "userName": "Olivia Adams",
         "UserPhoto": "https://images.pexels.com/photos/26903608/pexels-photo-26903608/free-photo-of-portrait-of-man-in-black-shirt.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "upVote": 7,
@@ -56,7 +56,7 @@
     {
         "forumTitle": "Treadmill Belt",
         "image": "https://images.pexels.com/photos/7031705/pexels-photo-7031705.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        "formDetails": "A treadmill belt provides the running or walking surface, designed for durability and smooth motion.",
+        "formDetails": "The treadmill belt is an integral part of the machine, providing the running or walking surface. Designed for durability, it ensures smooth, consistent motion while withstanding heavy use. The quality of the treadmill belt affects performance, providing comfort, stability, and reducing strain during exercise. It also requires maintenance and lubrication to maintain optimal functionality over time.",
         "userName": "William Harris",
         "UserPhoto": "https://images.pexels.com/photos/6050426/pexels-photo-6050426.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "upVote": 6,
@@ -65,7 +65,7 @@
     {
         "forumTitle": "Dumbbell Handles",
         "image": "https://images.pexels.com/photos/4498610/pexels-photo-4498610.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        "formDetails": "Dumbbell handles provide grip and allow for interchangeable weight plates for customized strength training.",
+        "formDetails": "Dumbbell handles are essential for strength training, providing a secure grip while lifting weights. They allow for interchangeable weight plates, giving users flexibility in adjusting resistance. These handles are often designed with knurling to enhance grip, reducing the risk of slipping during intense exercises. They are ideal for building strength in various muscle groups during workouts.",
         "userName": "Charlotte Davis",
         "UserPhoto": "https://images.pexels.com/photos/10765194/pexels-photo-10765194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "upVote": 9,
@@ -74,7 +74,7 @@
     {
         "forumTitle": "Weight Plates",
         "image": "https://images.pexels.com/photos/1092878/pexels-photo-1092878.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        "formDetails": "Weight plates are used with barbells or machines to add adjustable resistance for strength training.",
+        "formDetails": "Weight plates are used to add adjustable resistance to barbells, dumbbells, or gym machines, making them an essential tool in strength training. They come in various sizes and weights, allowing users to customize their workouts based on their fitness levels. Weight plates help enhance muscle growth and endurance by providing progressive resistance, crucial for building strength and power.",
         "userName": "Henry Thompson",
         "UserPhoto": "https://images.pexels.com/photos/6684836/pexels-photo-6684836.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "upVote": 8,
@@ -83,7 +83,7 @@
     {
         "forumTitle": "Adjustable Pins",
         "image": "https://images.pexels.com/photos/6296103/pexels-photo-6296103.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        "formDetails": "Adjustable pins secure weight stacks or set the position on gym machines, ensuring versatility and safety.",
+        "formDetails": "Adjustable pins are used in gym machines to secure weight stacks or set the position for exercises, providing versatility and safety. They allow users to quickly adjust resistance levels, ensuring a customized workout. These pins are designed for easy insertion and removal, making them an essential feature for multi-function machines. They help prevent accidents during exercises.",
         "userName": "Amelia Johnson",
         "UserPhoto": "https://images.pexels.com/photos/18580753/pexels-photo-18580753/free-photo-of-bearded-old-man.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
         "upVote": 10,

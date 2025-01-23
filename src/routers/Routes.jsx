@@ -24,6 +24,7 @@ import Balance from "../pages/Dashboard/Admin/Balance";
 import AddNewClass from "../pages/Dashboard/Admin/AddNewClass";
 import AddNewForum from "../components/Shared/AddNewForum";
 import Subscribers from "../pages/Dashboard/Admin/Subscribers";
+import ForumDetails from "../pages/Community/ForumDetails";
 
 const router = createBrowserRouter([
     {
@@ -62,6 +63,11 @@ const router = createBrowserRouter([
             {
                 path: '/community',
                 element: <Community></Community>
+            },
+            {
+                path: '/forumDetails/:id',
+                element: <ForumDetails></ForumDetails>
+
             },
             {
                 path: '/user-profile',

@@ -6,6 +6,7 @@ import LoadingSpinner from '../../components/Shared/LoadingSpinner';
 import { BiLike } from "react-icons/bi";
 import { BiDislike } from "react-icons/bi";
 import { AuthContext } from '../../providers/AuthProvider';
+import { Link } from 'react-router-dom';
 const TopForum = () => {
     const axiosSecure = useAxiosSecure();
     const { user } = useContext(AuthContext);
@@ -35,8 +36,8 @@ const TopForum = () => {
     }
     return (
         <div className='w-11/12 mx-auto my-5 '>
-            <h2 className='text-lg font-extrabold capitalize lg:text-4xl text-[#C70039] text-center my-3'>Discover our latest news</h2>
-            <p className='text-gray-500 w-7/12 mx-auto text-center mb-8'>At Body Build House, we’re committed to empowering fitness enthusiasts with cutting-edge tools, inspiring stories, and expert advice. Our mission is to help you achieve your body goals and lead a healthier, stronger life. Today, we’re thrilled to share some exciting updates and initiatives happening within our community.</p>
+            <h2 className='text-2xl font-extrabold capitalize lg:text-4xl text-[#C70039] text-center my-3'>Discover our latest news</h2>
+            <p className='text-gray-500 lg:w-7/12 mx-auto text-center mb-8'>At Body Build House, we’re committed to empowering fitness enthusiasts with cutting-edge tools, inspiring stories, and expert advice. Our mission is to help you achieve your body goals and lead a healthier, stronger life. Today, we’re thrilled to share some exciting updates and initiatives happening within our community.</p>
             {/* <h1 className='text-'></h1> */}
             <div className='grid grid-cols-1 lg:grid-cols-3 gap-4'>
                 {
@@ -48,7 +49,7 @@ const TopForum = () => {
                                 alt="avatar"
                             />
                             <div className="flex items-center px-6 py-3 bg-gray-900">
-                                <h1 className="mx-3 text-lg font-semibold text-white">{item.forumTitle}</h1>
+                                <h1 className="-ml-2 text-lg font-semibold text-white">{item.forumTitle}</h1>
                             </div>
 
                             <div className="px-2 py-4">
@@ -60,7 +61,7 @@ const TopForum = () => {
                                 </div>
 
                                 <p className="py-2 text-gray-700 dark:text-gray-400">
-                                    {item.formDetails.slice(0, 250)}.....
+                                    {item.formDetails.slice(0, 100)} <Link to={`/forumDetails/${item._id}`} className='text-blue-600'>details......</Link>
                                 </p>
                                 <div className='flex gap-4'>
                                     {/* <button onClick={() => handleLike('dislike', item._id)} class="flex items-center px-4 py-1 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-lg hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80">
@@ -68,7 +69,7 @@ const TopForum = () => {
                                     </button> */}
                                     <button
                                         onClick={() => handleLike('dislike', item._id)}
-                                        className={`flex items-center px-4 py-1 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform rounded-lg focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80 ${user ? 'bg-blue-600 hover:bg-blue-500' : 'bg-gray-400 cursor-not-allowed'
+                                        className={`flex items-center px-4 py-1 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform rounded-lg focus:outline-none focus:ring focus:ring-red-300 focus:ring-opacity-80 ${user ? 'bg-red-600 hover:bg-red-500' : 'bg-red-400 cursor-not-allowed'
                                             }`}
                                         disabled={!user}
                                     >
@@ -78,7 +79,7 @@ const TopForum = () => {
                                     </button>
                                     <button
                                         onClick={() => handleLike('like', item._id)}
-                                        className={`flex items-center px-4 py-1 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform rounded-lg focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80 ${user ? 'bg-blue-600 hover:bg-blue-500' : 'bg-gray-400 cursor-not-allowed'
+                                        className={`flex items-center px-4 py-1 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform rounded-lg focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80 ${user ? 'bg-green-600 hover:bg-green-500' : 'bg-green-400 cursor-not-allowed'
                                             }`}
                                         disabled={!user}
                                     >

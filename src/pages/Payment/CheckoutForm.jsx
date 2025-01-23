@@ -91,7 +91,7 @@ const CheckoutForm = ({ trainer, userData, i, p, taka, classID, skills }) => {
                 }
                 const res = await axiosSecure.post('/payment', payment)
 
-                console.log(classID)
+                // console.log(classID)
                 let id = '';
                 if (classID) {
                     id = classID
@@ -103,7 +103,7 @@ const CheckoutForm = ({ trainer, userData, i, p, taka, classID, skills }) => {
                 if (res.data.insertedId) {
                     notify('success', 'Your payment successful')
                     const res1 = await axiosSecure.patch(`/class-update/${id}`)
-                    console.log(res1)
+                    // console.log(res1)
                     navigate('/')
                 }
 

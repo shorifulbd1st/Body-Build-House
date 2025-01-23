@@ -5,7 +5,7 @@ import CommonDashboard from './CommonDashboard'
 
 const IsMember = () => {
     const { user } = useContext(AuthContext)
-    console.log(user)
+    // console.log(user)
     return (
         <div>
             <div>

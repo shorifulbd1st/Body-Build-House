@@ -6,6 +6,7 @@ import Slider from '../../components/Slider/Slider'
 import FeaturedClass from '../../components/Home/FeaturedClass'
 import FSingleClass from '../../components/Home/FSingleClass'
 import TopForum from '../Community/TopForum'
+import SubscribeNow from '../../components/SubscribeNow/SubscribeNow'
 
 const Home = () => {
     return (
@@ -18,6 +19,7 @@ const Home = () => {
             <AboutUs></AboutUs>
             <FeaturedClass></FeaturedClass>
             <TopForum></TopForum>
+            <SubscribeNow></SubscribeNow>
         </div>
     )
 }

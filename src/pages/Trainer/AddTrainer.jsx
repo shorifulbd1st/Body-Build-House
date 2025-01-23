@@ -69,9 +69,9 @@ const AddTrainer = () => {
         const userInfo = {
             name, email, photoURL, age, experience, availableTime, biography, skill, availableDays, status: 'pending'
         };
-        console.log(userInfo)
+        // console.log(userInfo)
         const res = await axiosSecure.post('/trainer-register', userInfo);
-        console.log("Server Response:", res);
+        // console.log("Server Response:", res);
 
         if (res.data.insertedId) {
             notify('success', 'Your registration successful');

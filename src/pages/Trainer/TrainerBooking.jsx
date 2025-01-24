@@ -5,12 +5,13 @@ import { MdSportsGymnastics } from "react-icons/md";
 import { useQuery } from '@tanstack/react-query';
 import useAxiosPublic from '../../hooks/useAxiosPublic';
 import useAxiosSecure from '../../hooks/useAxiosSecure';
+import LoadingSpinner from '../../components/Shared/LoadingSpinner';
 
 const TrainerBooking = () => {
     const { i, id } = useParams()
     // const axiosPublic = useAxiosPublic();
     const axiosSecure = useAxiosSecure();
-    const [trainer, setTrainer] = useState([])
+    // const [trainer, setTrainer] = useState([])
     const location = useLocation();
     const from = location.state || { from: { pathname: "/" } };
 
@@ -21,14 +22,24 @@ const TrainerBooking = () => {
     // else {
     //     console.log('null')
     // }
-    useEffect(() => {
-        const trainerFun = async () => {
-            const { data } = await axiosSecure.get(`/trainer/${id}`);
-            // console.log(data)
-            setTrainer(data)
+    // useEffect(() => {
+    //     const trainerFun = async () => {
+    //         const { data } = await axiosSecure.get(`/trainer/${id}`);
+    //         // console.log(data)
+    //         setTrainer(data)
+    //     }
+    //     trainerFun()
+    // }, [])
+    const { data: trainer = [], isPending } = useQuery({
+        queryKey: ['trainerID'],
+        queryFn: async () => {
+            const res = await axiosSecure.get(`/trainer/${id}`);
+            return res.data
         }
-        trainerFun()
-    }, [])
+    })
+    if (isPending) {
+        return <LoadingSpinner></LoadingSpinner>
+    }
     const { _id, photoURL, name, age, experience, skill, availableDays, availableTime, biography, slotName, slotTime, selectClass, socialMedia } = trainer;
     return (
         <div className='w-11/12 mx-auto my-5 '>

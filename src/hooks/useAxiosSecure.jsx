@@ -4,7 +4,8 @@ import { AuthContext } from '../providers/AuthProvider';
 import axios from 'axios';
 
 const axiosSecure = axios.create({
-    baseURL: 'https://body-build-house-server.vercel.app'
+    // baseURL: 'https://body-build-house-server.vercel.app'
+    baseURL: 'http://localhost:5000'
 })
 const useAxiosSecure = () => {
     const navigate = useNavigate();

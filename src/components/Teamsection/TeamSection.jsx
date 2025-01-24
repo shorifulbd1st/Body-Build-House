@@ -22,7 +22,7 @@ const TeamSection = () => {
                 {
                     allTrainer.slice(0, 3).map((item, idx) =>
 
-                        <div className="w-full border border-[#C70039] max-w-md px-4 py-4 mt-16 bg-white rounded-lg shadow-lg dark:bg-gray-800">
+                        <div key={idx} className="w-full border border-[#C70039] max-w-md px-4 py-4 mt-16 bg-white rounded-lg shadow-lg dark:bg-gray-800">
                             {/* <div className="flex justify-center -mt-16 md:justify-end">
                                 <img
                                     className="object-cover w-20 h-20 border-2 border-[#C70039] rounded-full dark:border-blue-400"

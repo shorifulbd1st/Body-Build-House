@@ -25,6 +25,8 @@ import AddNewClass from "../pages/Dashboard/Admin/AddNewClass";
 import AddNewForum from "../components/Shared/AddNewForum";
 import Subscribers from "../pages/Dashboard/Admin/Subscribers";
 import ForumDetails from "../pages/Community/ForumDetails";
+import BookedTrainer from "../components/Shared/BookedTrainer";
+import ActivityLog from "../pages/Dashboard/Member/ActivityLog";
 
 const router = createBrowserRouter([
     {
@@ -77,6 +79,10 @@ const router = createBrowserRouter([
                 path: '/payment/:p/:i/:id',
                 element: <Payment></Payment>
             },
+            {
+                path: 'addTrainer',
+                element: <PrivateRoute> <AddTrainer></AddTrainer></PrivateRoute>
+            },
 
         ]
     },
@@ -88,23 +94,22 @@ const router = createBrowserRouter([
                 path: '/dashboard',
                 element: <Subscribers></Subscribers>
             },
-            {
-                path: 'addTrainer',
-                element: <PrivateRoute> <AddTrainer></AddTrainer></PrivateRoute>
-            },
+            // {
+            //     path: 'addTrainer',
+            //     element: <PrivateRoute> <AddTrainer></AddTrainer></PrivateRoute>
+            // },
             {
                 path: 'apply-trainer',
                 element: <AdminRoute> <ApplyTrainer></ApplyTrainer></AdminRoute>
             },
             {
                 path: 'apply-trainer-details/:id',
-                element: <AdminRoute><ApplyTrainerDetails></ApplyTrainerDetails></AdminRoute>
+                element: <ApplyTrainerDetails></ApplyTrainerDetails>
             },
             {
                 path: 'add-slot',
                 element: <AddNewSlots></AddNewSlots>
-            }
-            ,
+            },
             {
                 path: 'all-trainer',
                 element: <AllTrainers></AllTrainers>
@@ -120,6 +125,14 @@ const router = createBrowserRouter([
             {
                 path: 'add-forum',
                 element: <AddNewForum></AddNewForum>
+            },
+            {
+                path: 'booked-trainer',
+                element: <BookedTrainer></BookedTrainer>
+            },
+            {
+                path: 'activity-log',
+                element: <ActivityLog></ActivityLog>
             }
         ]
     }

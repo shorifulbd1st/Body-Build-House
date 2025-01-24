@@ -43,7 +43,7 @@ const SignIn = () => {
 
                 <div className="w-full px-6 py-8 md:px-8 lg:w-1/2">
                     <div className="flex justify-center mx-auto">
-                        <img className="w-auto h-7 sm:h-8" src="https://merakiui.com/images/logo.svg" alt="" />
+                        {/* <img className="w-auto h-7 sm:h-8" src="https://merakiui.com/images/logo.svg" alt="" /> */}
                     </div>
 
                     <p className="mt-3 text-xl text-center text-gray-600 dark:text-gray-200">Welcome back!</p>

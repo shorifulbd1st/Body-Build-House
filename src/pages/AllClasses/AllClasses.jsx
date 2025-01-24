@@ -42,7 +42,7 @@ const AllClasses = () => {
     }
     // console.log('newclass', newClass.length)
     return (
-        <div className='w-11/12 mx-auto '>
+        <div className='w-11/12 mx-auto mb-5'>
             <div
                 className="bg-cover bg-center bg-no-repeat py-8 -mt-2 mb-8 rounded-b-xl relative "
                 style={{
@@ -50,7 +50,6 @@ const AllClasses = () => {
                         "url('https://images.pexels.com/photos/16310070/pexels-photo-16310070/free-photo-of-weight-dumbbells-and-skipping-rope-near-legs-of-standing-person.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')",
                 }}
             >
-
                 <div className="absolute inset-0 bg-black bg-opacity-40 rounded-xl"></div>
 
 

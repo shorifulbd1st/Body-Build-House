@@ -192,7 +192,7 @@ const TrainerDetails = () => {
                                 +4
                             </p> */}
                         </div>
-                        <Link to={`/dashboard/addTrainer`}
+                        <Link to={`/addTrainer`}
                             className="hover:scale-110 transition duration-1000 ease-in-out  p-2 text-md font-semibold text-white uppercase  transform bg-gray-800 rounded  dark:hover:bg-gray-600 focus:bg-gray-700 dark:focus:bg-gray-600 focus:outline-none flex justify-center items-center"
                         >
                             become a trainer <span><img width="30" height="30" src="https://img.icons8.com/dusk/64/arrow.png" alt="arrow" /></span>

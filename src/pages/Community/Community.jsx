@@ -62,7 +62,7 @@ const Community = () => {
                                 </div>
 
                                 <p className="py-2 text-gray-700 dark:text-gray-400">
-                                    {item.formDetails.slice(0, 100)}<Link to={`/forumDetails/${item._id}`} className='text-blue-600'>details......</Link>
+                                    {item.formDetails.slice(0, 100)} <Link to={`/forumDetails/${item._id}`} className='text-blue-600'>.....details</Link>
                                 </p>
                                 {/* <div className='flex gap-4'>
                                     <button onClick={() => handleLike('dislike', item._id)} class="flex items-center px-4 py-1 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-red-600 rounded-lg hover:bg-red-500 focus:outline-none focus:ring focus:ring-red-300 focus:ring-opacity-80">

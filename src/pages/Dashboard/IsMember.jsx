@@ -15,9 +15,6 @@ const IsMember = () => {
                         <span className="text-2xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 drop-shadow-lg">
                             Body Build House
                         </span>
-
-
-
                     </h1>
                     <div className="flex flex-col items-center mt-6 -mx-2">
                         <img referrerPolicy="no-referrer"
@@ -56,7 +53,7 @@ const IsMember = () => {
                             </NavLink>
 
                             <NavLink
-                                to="/dashboard/apply-trainer"
+                                to="/dashboard/activity-log"
                                 className={({ isActive }) =>
                                     `flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-lg dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700 ${isActive ? "bg-gray-100 dark:bg-gray-800 dark:text-gray-200" : ""
                                     }`
@@ -87,7 +84,7 @@ const IsMember = () => {
                             </NavLink>
 
                             <NavLink
-                                to="/tickets"
+                                to="/addTrainer"
                                 className={({ isActive }) =>
                                     `flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-lg dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700 ${isActive ? "bg-gray-100 dark:bg-gray-800 dark:text-gray-200" : ""
                                     }`
@@ -111,7 +108,7 @@ const IsMember = () => {
                             </NavLink>
 
                             <NavLink
-                                to="/"
+                                to="/dashboard/booked-trainer"
                                 className={({ isActive }) =>
                                     `flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-lg dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700 ${isActive ? "bg-gray-100 dark:bg-gray-800 dark:text-gray-200" : ""
                                     }`

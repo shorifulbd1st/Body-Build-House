@@ -22,7 +22,7 @@ const DashboardLayout = () => {
         userFun();
     }, [user?.email])
     if (!userData) {
-        <LoadingSpinner></LoadingSpinner>
+        return <LoadingSpinner></LoadingSpinner>
     }
     // console.log(userData.role)
     return (

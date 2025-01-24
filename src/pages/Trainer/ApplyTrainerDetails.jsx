@@ -24,7 +24,7 @@ const ApplyTrainerDetails = () => {
         }
     })
     if (isPending) {
-        <LoadingSpinner></LoadingSpinner>
+        return <LoadingSpinner></LoadingSpinner>
     }
 
     const { name, email, photoURL, age, experience, availableTime, biography, skill, availableDays } = trainer;

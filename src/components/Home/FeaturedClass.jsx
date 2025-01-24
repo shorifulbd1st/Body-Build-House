@@ -16,7 +16,7 @@ const FeaturedClass = () => {
   })
 
   if (isPending) {
-    <LoadingSpinner></LoadingSpinner>
+    return <LoadingSpinner></LoadingSpinner>
   }
   // console.log(topClass)
 

@@ -13,7 +13,7 @@ const SubscribeNow = () => {
         const info = {
             name, email
         }
-        console.log(info)
+        // console.log(info)
         const res = await axiosPublic.post('/subscribe', info)
         // console.log(res.data)
         if (res.data.insertedId) {

@@ -18,13 +18,13 @@ const TopForum = () => {
         }
     })
     if (isPending) {
-        <LoadingSpinner></LoadingSpinner>
+        return <LoadingSpinner></LoadingSpinner>
     }
     const handleLike = async (str, id) => {
         if (str === 'like') {
             const like = true;
             const res = await axiosSecure.patch(`/forum-update/${id}`, { like })
-            console.log(res)
+            // console.log(res)
             refetch();
         }
         else {

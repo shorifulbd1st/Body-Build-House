@@ -28,7 +28,7 @@ const TrainerDetails = () => {
     }, [])
     // console.log(trainer)
     if (!trainer) {
-        <LoadingSpinner></LoadingSpinner>
+        return <LoadingSpinner></LoadingSpinner>
     }
     // console.log(trainer)
     const { photoURL, name, age, experience, skill, availableDays, availableTime, biography, slotName, slotTime, selectClass, socialMedia } = trainer;
@@ -162,7 +162,7 @@ const TrainerDetails = () => {
 
 
                     <div className=' my-4 flex flex-col justify-center items-center gap-4'>
-                        <div className='text-lg'>Turn your passion into a career! Join Body Build House and inspire others on their fitness journey. Start today! 💪</div>
+                        <div className='text-lg px-5'>Turn your passion into a career! Join Body Build House and inspire others on their fitness journey. Start today! 💪</div>
                         <div className="flex items-center">
                             <img
                                 className="object-cover w-16 h-16 -mx-3 border-2 border-white rounded-full dark:border-gray-700 shrink-0"
@@ -185,7 +185,7 @@ const TrainerDetails = () => {
                                 alt="User 4"
                             /> <img
                                 className="object-cover w-16 h-16 -mx-3 border-2 border-white rounded-full dark:border-gray-700 shrink-0"
-                                src="https://images.pexels.com/photos/26903608/pexels-photo-26903608/free-photo-of-portrait-of-man-in-black-shirt.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                src="https://images.pexels.com/photos/20591481/pexels-photo-20591481/free-photo-of-portrait-of-brunette-man-in-red-shirt.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                                 alt="User 4"
                             />
                             {/* <p className="flex items-center justify-center w-16 h-16 -mx-3 text-xs text-blue-600 bg-blue-100 border-2 border-white rounded-full">
@@ -193,9 +193,9 @@ const TrainerDetails = () => {
                             </p> */}
                         </div>
                         <Link to={`/dashboard/addTrainer`}
-                            className="hover:scale-110 transition duration-1000 ease-in-out  p-2 text-md font-semibold text-white uppercase  transform bg-gray-800 rounded  dark:hover:bg-gray-600 focus:bg-gray-700 dark:focus:bg-gray-600 focus:outline-none"
+                            className="hover:scale-110 transition duration-1000 ease-in-out  p-2 text-md font-semibold text-white uppercase  transform bg-gray-800 rounded  dark:hover:bg-gray-600 focus:bg-gray-700 dark:focus:bg-gray-600 focus:outline-none flex justify-center items-center"
                         >
-                            become a trainer
+                            become a trainer <span><img width="30" height="30" src="https://img.icons8.com/dusk/64/arrow.png" alt="arrow" /></span>
                         </Link>
                     </div>
                 </div>

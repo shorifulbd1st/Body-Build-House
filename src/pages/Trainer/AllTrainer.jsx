@@ -7,7 +7,7 @@ import Trainer from './Trainer';
 const AllTrainer = () => {
     const [allTrainer, isPending] = useTrainer();
     if (isPending) {
-        <LoadingSpinner></LoadingSpinner>
+        return <LoadingSpinner></LoadingSpinner>
     }
     return (
         <div className='w-11/12 mx-auto my-5'>

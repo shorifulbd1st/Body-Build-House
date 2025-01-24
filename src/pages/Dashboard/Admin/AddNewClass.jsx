@@ -15,7 +15,7 @@ const AddNewClass = () => {
 
     const handleFileChange = (event) => {
         const selectedFile = event.target.files[0];
-        console.log(selectedFile)
+        // console.log(selectedFile)
         setFile(selectedFile);
     };
     // console.log(file)
@@ -26,13 +26,13 @@ const AddNewClass = () => {
         const classDetails = form.get('classDetails');
 
         const imageFile = { image: file }
-        console.log(imageFile)
+        // console.log(imageFile)
         const res = await axios.post(image_hosting_api, imageFile, {
             headers: {
                 'content-Type': 'multipart/form-data'
             }
         });
-        console.log(res.data)
+        // console.log(res.data)
         if (res.data.success) {
             const classInfo = {
                 className,

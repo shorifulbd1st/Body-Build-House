@@ -1,15 +1,17 @@
 import React, { useContext } from 'react'
 import useAxiosSecure from '../../hooks/useAxiosSecure'
 import { useQuery } from '@tanstack/react-query';
-import LoadingSpinner from '../../components/Shared/LoadingSpinner';
 import SingleForum from './SingleForum';
 import { BiLike } from "react-icons/bi";
 import { BiDislike } from "react-icons/bi";
 import { AuthContext } from '../../providers/AuthProvider';
 import { Link } from 'react-router-dom';
+import LoadingSpinner from '../../components/Shared/LoadingSpinner';
+
 const Community = () => {
     const axiosSecure = useAxiosSecure();
-    const { user } = useContext(AuthContext);
+    const { user, loading } = useContext(AuthContext);
+
     const { data: allForum = [], isPending, refetch } = useQuery({
         queryKey: ['NewForum'],
         queryFn: async () => {
@@ -17,14 +19,15 @@ const Community = () => {
             return res.data;
         }
     })
-    if (isPending) {
-        <LoadingSpinner></LoadingSpinner>
+
+    if (isPending || loading) {
+        return <LoadingSpinner></LoadingSpinner>
     }
     const handleLike = async (str, id) => {
         if (str === 'like') {
             const like = true;
             const res = await axiosSecure.patch(`/forum-update/${id}`, { like })
-            console.log(res)
+            // console.log(res)
             refetch();
         }
         else {

@@ -14,7 +14,7 @@ const ApplyTrainer = () => {
     const [applyTrainer, applyIsPending, refetch] = useApplyTrainer();
 
     if (applyIsPending) {
-        <LoadingSpinner></LoadingSpinner>
+        return <LoadingSpinner></LoadingSpinner>
     }
 
     return (

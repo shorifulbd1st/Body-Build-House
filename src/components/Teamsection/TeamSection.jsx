@@ -7,9 +7,9 @@ import { div } from 'motion/react-client';
 const TeamSection = () => {
     const [allTrainer, isPending] = useTrainer();
     if (isPending) {
-        <LoadingSpinner></LoadingSpinner>
+        return <LoadingSpinner></LoadingSpinner>
     }
-    console.log(allTrainer.length)
+    // console.log(allTrainer.length)
     return (
         <div className='w-11/12 mx-auto my-8'>
             <div className='lg:w-8/12 mx-auto flex flex-col justify-center items-center'>

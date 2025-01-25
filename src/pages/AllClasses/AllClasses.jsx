@@ -42,7 +42,6 @@ const AllClasses = () => {
         }
     })
 
-
     const { data, isPending: loading, refetch } = useQuery({
         queryKey: ['search'],
         queryFn: async () => {
@@ -55,7 +54,6 @@ const AllClasses = () => {
     useEffect(() => {
         refetch()
     }, [search])
-
 
 
     if (isPending || isPendingL) {
@@ -92,7 +90,7 @@ const AllClasses = () => {
     }
 
 
-    console.log(allData)
+    // console.log(allData)
 
     return (
         <div className='w-11/12 mx-auto mb-5'>

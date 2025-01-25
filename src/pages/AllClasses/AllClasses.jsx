@@ -9,9 +9,39 @@ import useAxiosSecure from '../../hooks/useAxiosSecure';
 const AllClasses = () => {
     const [allClass, isPending] = useClass();
 
+    const [currentPage, setCurrentPage] = useState(0);
+    // const [itemsPerPage, setItemPerPage] = useState(6)
     const [search, setSearch] = useState('');
     const axiosSecure = useAxiosSecure();
     const [searchData, setSearchData] = useState([])
+
+    // const [totalCount, setTotalCount] = useState({});
+
+
+
+    // const { data: allClassl = [], isPending: isPendingll } = useQuery({
+    //     queryKey: ['all-class'],
+    //     queryFn: async () => {
+    //         const res = await axiosSecure.get(`/all-class?page=${currentPage}&size=${6}`);
+    //         return res.data
+    //     }
+    // })
+    const [allData, setData] = useState([]);
+    useEffect(() => {
+        const pageData = async () => {
+            const res = await axiosSecure.get(`/all-class?page=${currentPage}&size=${6}`);
+            setData(res.data)
+        }
+        pageData();
+    }, [currentPage])
+    const { data: totalCount = {}, isPending: isPendingL } = useQuery({
+        queryKey: ['totalCount'],
+        queryFn: async () => {
+            const res = await axiosSecure.get('/class-page');
+            return res.data
+        }
+    })
+
 
     const { data, isPending: loading, refetch } = useQuery({
         queryKey: ['search'],
@@ -28,7 +58,7 @@ const AllClasses = () => {
 
 
 
-    if (isPending) {
+    if (isPending || isPendingL) {
         return <LoadingSpinner></LoadingSpinner>
     }
     // console.log(searchData)
@@ -38,9 +68,32 @@ const AllClasses = () => {
         newClass = searchData;
     }
     else {
-        newClass = allClass
+        newClass = allData
     }
     // console.log('newclass', newClass.length)
+
+    // console.log(totalCount.result)
+
+
+    const totalPage = totalCount.result;
+
+    const numberOfPage = Math.ceil(totalPage / 6)
+    const pages = [...Array(numberOfPage)?.keys()];
+    console.log(currentPage)
+    const handleNextPage = () => {
+        if (currentPage < pages.length - 1) {
+            setCurrentPage(currentPage + 1)
+        }
+    }
+    const handlePrevPage = () => {
+        if (currentPage > 0) {
+            setCurrentPage(currentPage - 1)
+        }
+    }
+
+
+    console.log(allData)
+
     return (
         <div className='w-11/12 mx-auto mb-5'>
             <div
@@ -77,6 +130,31 @@ const AllClasses = () => {
                 {
                     newClass.map((item, idx) => <SingleClass key={idx} item={item}></SingleClass>)
                 }
+            </div>
+
+            <div className='my-8'>
+                <div className="flex justify-center">
+                    {/* <p>current page:{currentPage} </p> */}
+                    <button onClick={handlePrevPage}
+                        class="px-6 py-2 font-medium tracking-wide text-blue-600 capitalize transition-colors duration-300 transform bg-white border border-blue-600 rounded-lg hover:bg-blue-600 hover:text-white focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80 mr-2">
+
+                        Prev</button>
+                    {pages.map((page) => (
+                        <button
+                            key={page}
+                            onClick={() => setCurrentPage(page)}
+
+                            className={`px-6 py-2 font-medium tracking-wide  capitalize transition-colors duration-300 transform bg-white border  rounded-lg hover:text-white focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80 ${currentPage === page ? 'bg-[#FF9900]' : 'bg-green-500'
+                                }`}
+                        >
+                            {page + 1}
+                        </button>
+                    ))}
+                    <button onClick={handleNextPage} class="px-6 py-2 font-medium tracking-wide text-blue-600 capitalize transition-colors duration-300 transform bg-white border border-blue-600 rounded-lg hover:bg-blue-600 hover:text-white focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80 ml-2">
+                        Next</button>
+                </div>
+
+
             </div>
         </div>
     )

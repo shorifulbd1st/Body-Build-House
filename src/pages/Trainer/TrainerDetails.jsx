@@ -17,7 +17,6 @@ const TrainerDetails = () => {
 
     // console.log('trainerDetails', newForm)
 
-
     useEffect(() => {
         const trainerFun = async () => {
             const { data } = await axiosSecure.get(`/trainer/${id}`);

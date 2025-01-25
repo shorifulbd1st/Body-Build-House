@@ -55,3 +55,22 @@ html {
     width: 100%;
     zoom: 50%;
 }
+
+/* .pagination {
+    border: 2px solid red;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination>button {
+    border: 1px solid;
+    margin-left: 15px;
+    background-color: green;
+    color: white;
+}
+
+.pagination .selected {
+    background-color: #FF9900;
+} */

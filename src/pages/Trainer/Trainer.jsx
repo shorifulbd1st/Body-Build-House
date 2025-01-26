@@ -35,7 +35,7 @@ const Trainer = ({ trainer }) => {
                     <h2><strong>Skill : </strong> </h2>
                     <div className='flex flex-wrap gap-2 '>
                         {
-                            skill?.slice(0, 8)?.map((i, j) =>
+                            skill?.slice(0, 5)?.map((i, j) =>
                                 i.length <= 20 ?
                                     <div key={j}
                                         className=" p-1  text-xs font-semibold text-white capitalize transition-colors duration-300 transform bg-green-800 rounded hover:bg-green-700 dark:hover:bg-green-600 focus:bg-green-700 dark:focus:bg-green-600 focus:outline-none"

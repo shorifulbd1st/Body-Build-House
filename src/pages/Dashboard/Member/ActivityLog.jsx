@@ -401,10 +401,10 @@ const ActivityLog = () => {
                                                     </td>
                                                     <td class="px-4 py-4 text-sm text-gray-500 dark:text-gray-300 whitespace-nowrap">{member1.email}</td>
                                                     <td class="px-12 py-4 text-sm font-medium text-gray-700 whitespace-nowrap">
-                                                        <div class="inline-flex items-center px-3 py-1 rounded-full gap-x-2 bg-emerald-100/60 dark:bg-gray-800">
-                                                            <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
+                                                        <div class="">
+                                                            {/* <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span> */}
 
-                                                            <button onClick={openModal} className={`text-sm font-normal ${member1.status === 'reject' && 'text-red-500'}`}> {member1.status} </button>
+                                                            <button onClick={openModal} className={`text-lg px-3 bg-red-600 py-2 rounded-xl text-white font-semibold ${member1.status === 'reject' && 'text-red-500'}`}> {member1.status} </button>
                                                         </div>
                                                     </td>
                                                 </tr>

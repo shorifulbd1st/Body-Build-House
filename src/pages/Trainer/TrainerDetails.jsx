@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Link, Links, useLocation, useParams } from 'react-router-dom'
 import useAxiosPublic from '../../hooks/useAxiosPublic';
 import { useQuery } from '@tanstack/react-query';
@@ -8,12 +8,17 @@ import { CgGym } from "react-icons/cg";
 import useAxiosSecure from '../../hooks/useAxiosSecure';
 
 import { MdSportsGymnastics } from "react-icons/md";
+import { AuthContext } from '../../providers/AuthProvider';
+import { div } from 'motion/react-client';
+
 const TrainerDetails = () => {
     const { id } = useParams();
     const axiosSecure = useAxiosSecure();
     const [trainer, setTrainer] = useState([])
+    const [userData, setUser] = useState([])
     const location = useLocation();
     const newForm = location.state || '/';
+    const { user } = useContext(AuthContext);
 
     // console.log('trainerDetails', newForm)
 
@@ -25,11 +30,20 @@ const TrainerDetails = () => {
         }
         trainerFun()
     }, [])
-    // console.log(trainer)
-    if (!trainer) {
+    useEffect(() => {
+        const userFun = async () => {
+            const { data } = await axiosSecure.get(`/user/${user?.email}`);
+            // console.log(data)
+            setUser(data)
+        }
+        userFun()
+    }, [])
+    // console.log(user)
+    if (!trainer || !userData) {
         return <LoadingSpinner></LoadingSpinner>
     }
-    // console.log(trainer)
+
+    console.log(userData)
     const { photoURL, name, age, experience, skill, availableDays, availableTime, biography, slotName, slotTime, selectClass, socialMedia } = trainer;
 
     // console.log(photoURL)
@@ -156,49 +170,52 @@ const TrainerDetails = () => {
                     </div>
                 </div>
             </div>
-            <div className='lg:w-6/12 mx-auto my-5 flex flex-col justify-center items-center text-center'>
-                <div className="card  border border-red-500 overflow-hidden bg-white rounded-lg shadow-xl dark:bg-gray-800 border-b-4 " >
+            {
+                userData?.role === 'member' ?
+                    <div className='lg:w-6/12 mx-auto my-5 flex flex-col justify-center items-center text-center'>
+                        <div className="card  border border-red-500 overflow-hidden bg-white rounded-lg shadow-xl dark:bg-gray-800 border-b-4 " >
 
 
-                    <div className=' my-4 flex flex-col justify-center items-center gap-4'>
-                        <div className='text-lg px-5'>Turn your passion into a career! Join Body Build House and inspire others on their fitness journey. Start today! 💪</div>
-                        <div className="flex items-center">
-                            <img
-                                className="object-cover w-16 h-16 -mx-3 border-2 border-white rounded-full dark:border-gray-700 shrink-0"
-                                src="https://images.pexels.com/photos/10765194/pexels-photo-10765194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                                alt="User 1"
-                            />
-                            <img
-                                className="object-cover w-16 h-16 -mx-3 border-2 border-white rounded-full dark:border-gray-700 shrink-0"
-                                src="https://images.pexels.com/photos/6684836/pexels-photo-6684836.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                                alt="User 2"
-                            />
-                            <img
-                                className="object-cover w-16 h-16 -mx-3 border-2 border-white rounded-full dark:border-gray-700 shrink-0"
-                                src="https://images.pexels.com/photos/6050426/pexels-photo-6050426.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                                alt="User 3"
-                            />
-                            <img
-                                className="object-cover w-16 h-16 -mx-3 border-2 border-white rounded-full dark:border-gray-700 shrink-0"
-                                src="https://images.pexels.com/photos/26903608/pexels-photo-26903608/free-photo-of-portrait-of-man-in-black-shirt.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                                alt="User 4"
-                            /> <img
-                                className="object-cover w-16 h-16 -mx-3 border-2 border-white rounded-full dark:border-gray-700 shrink-0"
-                                src="https://images.pexels.com/photos/20591481/pexels-photo-20591481/free-photo-of-portrait-of-brunette-man-in-red-shirt.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                                alt="User 4"
-                            />
-                            {/* <p className="flex items-center justify-center w-16 h-16 -mx-3 text-xs text-blue-600 bg-blue-100 border-2 border-white rounded-full">
+                            <div className=' my-4 flex flex-col justify-center items-center gap-4'>
+                                <div className='text-lg px-5'>Turn your passion into a career! Join Body Build House and inspire others on their fitness journey. Start today! 💪</div>
+                                <div className="flex items-center">
+                                    <img
+                                        className="object-cover w-16 h-16 -mx-3 border-2 border-white rounded-full dark:border-gray-700 shrink-0"
+                                        src="https://images.pexels.com/photos/10765194/pexels-photo-10765194.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                        alt="User 1"
+                                    />
+                                    <img
+                                        className="object-cover w-16 h-16 -mx-3 border-2 border-white rounded-full dark:border-gray-700 shrink-0"
+                                        src="https://images.pexels.com/photos/6684836/pexels-photo-6684836.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                        alt="User 2"
+                                    />
+                                    <img
+                                        className="object-cover w-16 h-16 -mx-3 border-2 border-white rounded-full dark:border-gray-700 shrink-0"
+                                        src="https://images.pexels.com/photos/6050426/pexels-photo-6050426.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                        alt="User 3"
+                                    />
+                                    <img
+                                        className="object-cover w-16 h-16 -mx-3 border-2 border-white rounded-full dark:border-gray-700 shrink-0"
+                                        src="https://images.pexels.com/photos/26903608/pexels-photo-26903608/free-photo-of-portrait-of-man-in-black-shirt.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                        alt="User 4"
+                                    /> <img
+                                        className="object-cover w-16 h-16 -mx-3 border-2 border-white rounded-full dark:border-gray-700 shrink-0"
+                                        src="https://images.pexels.com/photos/20591481/pexels-photo-20591481/free-photo-of-portrait-of-brunette-man-in-red-shirt.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                        alt="User 4"
+                                    />
+                                    {/* <p className="flex items-center justify-center w-16 h-16 -mx-3 text-xs text-blue-600 bg-blue-100 border-2 border-white rounded-full">
                                 +4
                             </p> */}
+                                </div>
+                                <Link to={`/addTrainer`}
+                                    className="hover:scale-110 transition duration-1000 ease-in-out  p-2 text-md font-semibold text-white uppercase  transform bg-gray-800 rounded  dark:hover:bg-gray-600 focus:bg-gray-700 dark:focus:bg-gray-600 focus:outline-none flex justify-center items-center"
+                                >
+                                    become a trainer <span><img width="30" height="30" src="https://img.icons8.com/dusk/64/arrow.png" alt="arrow" /></span>
+                                </Link>
+                            </div>
                         </div>
-                        <Link to={`/addTrainer`}
-                            className="hover:scale-110 transition duration-1000 ease-in-out  p-2 text-md font-semibold text-white uppercase  transform bg-gray-800 rounded  dark:hover:bg-gray-600 focus:bg-gray-700 dark:focus:bg-gray-600 focus:outline-none flex justify-center items-center"
-                        >
-                            become a trainer <span><img width="30" height="30" src="https://img.icons8.com/dusk/64/arrow.png" alt="arrow" /></span>
-                        </Link>
                     </div>
-                </div>
-            </div>
+                    : ''}
         </div>
 
 

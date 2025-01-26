@@ -12,7 +12,7 @@ import { AuthContext } from '../../providers/AuthProvider';
 
 const ApplyTrainerDetails = () => {
     const { id } = useParams();
-    const { notify } = useContext(AuthContext);
+    const { user, notify } = useContext(AuthContext);
     const axiosSecure = useAxiosSecure();
     const [applyTrainer, applyIsPending, refetch] = useApplyTrainer()
     const [isOpen, setIsOpen] = useState(false);
@@ -63,7 +63,10 @@ const ApplyTrainerDetails = () => {
             status: 'reject'
         }
         const res = axiosSecure.post('/review', info)
-        console.log(res)
+        if (res.data.insertedId) {
+            notify('success', 'Review successful for reject')
+            navigate('/community')
+        }
         closeModal();
     }
     return (

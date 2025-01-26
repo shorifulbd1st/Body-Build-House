@@ -27,6 +27,7 @@ import Subscribers from "../pages/Dashboard/Admin/Subscribers";
 import ForumDetails from "../pages/Community/ForumDetails";
 import BookedTrainer from "../components/Shared/BookedTrainer";
 import ActivityLog from "../pages/Dashboard/Member/ActivityLog";
+import Profile from "../components/Shared/Profile";
 
 const router = createBrowserRouter([
     {
@@ -133,6 +134,10 @@ const router = createBrowserRouter([
             {
                 path: 'activity-log',
                 element: <ActivityLog></ActivityLog>
+            },
+            {
+                path: 'profile',
+                element: <Profile></Profile>
             }
         ]
     }

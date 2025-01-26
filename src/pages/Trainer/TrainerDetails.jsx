@@ -42,7 +42,7 @@ const TrainerDetails = () => {
                     {/* Left Column: Image and Description */}
                     <div>
                         <img
-                            className="object-cover w-full h-96 rounded-xl p-2 run-image-area-img"
+                            className="object-cover w-full h-[650px] rounded-xl p-2 run-image-area-img"
                             src={photoURL}
                             alt="Article"
                         />

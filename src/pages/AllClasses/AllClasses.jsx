@@ -77,7 +77,7 @@ const AllClasses = () => {
 
     const numberOfPage = Math.ceil(totalPage / 6)
     const pages = [...Array(numberOfPage)?.keys()];
-    console.log(currentPage)
+    // console.log(typeof (currentPage))
     const handleNextPage = () => {
         if (currentPage < pages.length - 1) {
             setCurrentPage(currentPage + 1)
@@ -141,9 +141,7 @@ const AllClasses = () => {
                         <button
                             key={page}
                             onClick={() => setCurrentPage(page)}
-
-                            className={`px-6 py-2 font-medium tracking-wide  capitalize transition-colors duration-300 transform bg-white border  rounded-lg hover:text-white focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80 ${currentPage === page ? 'bg-[#FF9900]' : 'bg-green-500'
-                                }`}
+                            className={`px-6 py-1 border border-red-400 ml-2 rounded-xl text-lg font-semibold ${currentPage == page ? 'bg-green-500' : 'bg-orange-400'}`}
                         >
                             {page + 1}
                         </button>
@@ -154,7 +152,7 @@ const AllClasses = () => {
 
 
             </div>
-        </div>
+        </div >
     )
 }
 

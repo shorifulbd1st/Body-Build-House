@@ -43,10 +43,17 @@ const AuthProvider = ({ children }) => {
 
     }
 
-    const handleLogout = () => {
+
+    const handleLogout = (v) => {
         setLoading(true);
         signOut(auth).then(() => {
-            notify('success', 'logout successfully');
+            if (v === 's') {
+                notify('success', 'logout successfully');
+            }
+            else {
+                notify('error', 'login first');
+            }
+
         }).catch((error) => {
         });
     }

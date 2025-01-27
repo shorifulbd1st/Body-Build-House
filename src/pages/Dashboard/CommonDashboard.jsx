@@ -1,7 +1,15 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
-
+import React, { useContext } from 'react'
+import { NavLink, useNavigate } from 'react-router-dom'
+import { AuthContext } from '../../providers/AuthProvider'
+import { CiLogout } from "react-icons/ci";
+import { FaHome } from "react-icons/fa";
 const CommonDashboard = () => {
+    const { user, handleLogout } = useContext(AuthContext);
+    const navigate = useNavigate();
+    const handleLogout1 = () => {
+        handleLogout('s')
+        navigate('/')
+    }
     return (
         <div>
             <div>
@@ -13,7 +21,7 @@ const CommonDashboard = () => {
                         }`
                     }
                 >
-                    <svg
+                    {/* <svg
                         className="w-5 h-5"
                         viewBox="0 0 24 24"
                         fill="none"
@@ -33,9 +41,11 @@ const CommonDashboard = () => {
                             strokeLinecap="round"
                             strokeLinejoin="round"
                         />
-                    </svg>
-                    <span className="mx-4 font-medium">Home</span>
-                </NavLink>  <NavLink
+                    </svg> */}
+
+                    <h2 className="mx-4 font-medium flex justify-center items-center gap-2 py-2"> <span className='text-xl'><FaHome /></span> Home</h2>
+                </NavLink>
+                {/* <NavLink
                     to="/"
                     className={({ isActive }) =>
                         `flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-lg dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700 ${isActive ? "bg-gray-100 dark:bg-gray-800 dark:text-gray-200" : ""
@@ -64,7 +74,8 @@ const CommonDashboard = () => {
                         />
                     </svg>
                     <span className="mx-4 font-medium">Trainers</span>
-                </NavLink>  <NavLink
+                </NavLink>  
+                <NavLink
                     to="/"
                     className={({ isActive }) =>
                         `flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-lg dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700 ${isActive ? "bg-gray-100 dark:bg-gray-800 dark:text-gray-200" : ""
@@ -123,11 +134,11 @@ const CommonDashboard = () => {
                         />
                     </svg>
                     <span className="mx-4 font-medium">Community</span>
-                </NavLink>
-                <button
-                    className="px-4 py-3 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-700 transform bg-blue-600 rounded-lg hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80"
+                </NavLink> */}
+                <button onClick={handleLogout1}
+                    className="px-8 ml-5 py-3 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-700 transform bg-blue-600 rounded-lg hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80"
                 >
-                    Logout
+                    <span className='text-xl text-white'><CiLogout /></span>
                 </button>
             </div>
         </div>

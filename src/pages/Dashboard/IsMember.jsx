@@ -12,7 +12,7 @@ const IsMember = () => {
                 <aside className="flex flex-col h-full px-4 py-8 overflow-y-auto bg-white border-r-2  dark:bg-gray-900 dark:border-gray-700">
 
                     <h1 className="text-center flex">
-                        <span className="text-2xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 drop-shadow-lg">
+                        <span className="text-2xl font-semibold text-center text-transparent bg-clip-text bg-[#C70039] drop-shadow-lg">
                             Body Build House
                         </span>
                     </h1>

@@ -24,17 +24,17 @@ const BookedTrainer = () => {
         return <LoadingSpinner></LoadingSpinner>
     }
     // console.log(allTrainer)
-    console.log(trainerData)
+    // console.log(trainerData)
     const newTrainer = [...allTrainer];
-    console.log('newTrainer', newTrainer)
+    // console.log('newTrainer', newTrainer)
     const emails = trainerData.map(trainer => trainer.TrainerEmail)
-    console.log(emails)
+    // console.log(emails)
     const bookTrainer = newTrainer?.filter(trainer =>
         // console.log(trainer)
         emails?.includes(trainer.email)
     );
 
-    console.log(bookTrainer);
+    // console.log(bookTrainer);
 
     return (
         <div className='w-11/12 mx-auto my-5'>

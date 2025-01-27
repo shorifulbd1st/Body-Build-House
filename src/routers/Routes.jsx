@@ -83,15 +83,20 @@ const router = createBrowserRouter([
                 element: <Payment></Payment>
             },
             {
-                path: 'addTrainer',
+                path: '/addTrainer',
                 element: <PrivateRoute> <AddTrainer></AddTrainer></PrivateRoute>
             },
+            {
+                path: '/profile',
+                element: <Profile></Profile>
+
+            }
 
         ]
     },
     {
         path: 'dashboard',
-        element: <PrivateRoute><DashboardLayout></DashboardLayout></PrivateRoute>,
+        element: <DashboardLayout></DashboardLayout>,
         children: [
             {
                 path: 'subscribe',
@@ -137,10 +142,10 @@ const router = createBrowserRouter([
                 path: 'activity-log',
                 element: <ActivityLog></ActivityLog>
             },
-            {
-                path: 'profile',
-                element: <Profile></Profile>
-            },
+            // {
+            //     path: 'profile',
+            //     element: <Profile></Profile>
+            // },
             {
                 path: 'manage-slot',
                 element: <ManageSlot></ManageSlot>

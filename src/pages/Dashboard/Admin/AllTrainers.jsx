@@ -38,7 +38,7 @@ const AllTrainers = () => {
 
                 });
                 refetch()
-                console.log(res)
+                // console.log(res)
             }
         });
 

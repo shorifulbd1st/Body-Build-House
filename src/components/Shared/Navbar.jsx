@@ -37,7 +37,7 @@ const Navbar = () => {
                                     loading="lazy"
                                 />
                                 <h1 className="text-center flex">
-                                    <span className="text-2xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 drop-shadow-lg">
+                                    <span className="text-2xl font-semibold text-center text-transparent bg-clip-text bg-[#C70039] drop-shadow-lg">
                                         Body Build House
                                     </span>
 
@@ -135,13 +135,13 @@ const Navbar = () => {
                                 </NavLink>
                                 {user?.email && <>
                                     <NavLink
-                                        to="/user-profile"
+                                        to="/profile"
                                         className={({ isActive }) =>
                                             `inline-block px-2 py-2 mx-3 mt-2 text-gray-700 transition-colors duration-700 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-green-500 dark:hover:bg-gray-700 ${isActive ? "bg-[#C70039] text-white" : ""
                                             }`
                                         }
                                     >
-                                        User Profile
+                                        Profile
                                     </NavLink>
                                     {
                                         userData?.role === 'member' ? <NavLink
@@ -204,7 +204,7 @@ const Navbar = () => {
                                         </button>
 
                                         <button
-                                            onClick={handleLogout}
+                                            onClick={() => handleLogout('s')}
                                             className="px-4 py-3 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-700 transform bg-blue-600 rounded-lg hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80"
                                         >
                                             Logout

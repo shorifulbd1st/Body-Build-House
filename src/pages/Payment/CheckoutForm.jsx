@@ -114,7 +114,7 @@ const CheckoutForm = ({ trainer, userData, i, p, taka, classID, skills }) => {
 
 
     return (
-        <div className=' w-full'>
+        <div className='my-2'>
 
             <form onSubmit={handleSubmit}>
                 <div className="max-w-md mx-auto p-6 bg-white rounded-lg shadow-lg">
@@ -134,7 +134,7 @@ const CheckoutForm = ({ trainer, userData, i, p, taka, classID, skills }) => {
                         <label htmlFor="card-element" className="block text-gray-700 text-sm font-bold mb-2">
                             Card Details
                         </label>
-                        <div className="p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        <div className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
                             <CardElement
                                 options={{
                                     style: {

@@ -57,8 +57,8 @@ const Payment = () => {
         <div className='w-11/12 mx-auto my-5'>
             <h1 className='text-center text-xl font-semibold italic'>Payment Page</h1>
             <div className='w-full flex flex-col justify-center items-center'>
-                <div className="card w-[45%] border border-red-500 overflow-hidden bg-white rounded-lg shadow-xl dark:bg-gray-800 border-b-4 " >
-                    <div className="flex justify-between items-center px-6 py-3 bg-gray-900 text-white ">
+                <div className="card w-full lg:w-[45%] border border-red-500 overflow-hidden bg-white rounded-lg shadow-xl dark:bg-gray-800 border-b-4 " >
+                    <div className=" lg:flex justify-between items-center px-6 py-3 bg-gray-900 text-white ">
                         <div>
                             <p><strong>Trainer Name : </strong> <span className='text-lg'>{name}</span> </p>
                             <p className='capitalize'><strong>Selected slot : </strong> <span className='text-lg '>{i}</span> </p>

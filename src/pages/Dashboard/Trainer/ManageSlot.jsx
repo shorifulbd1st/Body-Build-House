@@ -4,6 +4,7 @@ import { AuthContext } from '../../../providers/AuthProvider'
 import { useQuery } from '@tanstack/react-query'
 import LoadingSpinner from '../../../components/Shared/LoadingSpinner'
 import { h1 } from 'motion/react-client'
+import Swal from 'sweetalert2'
 
 const ManageSlot = () => {
     const { user, notify, loading } = useContext(AuthContext)
@@ -18,19 +19,38 @@ const ManageSlot = () => {
     if (isPending || loading) {
         return <LoadingSpinner></LoadingSpinner>
     }
-    console.log(userData)
+    // console.log(userData)
     const { _id } = userData;
-    console.log(_id)
+    // console.log(_id)
     const maxSlots = Math.min(
         userData.slotName?.length,
         userData.selectClass?.length
     );
-    const handleSlot = async (value) => {
-        const info = { _id, value }
-        console.log(info)
-        const res = await axiosSecure.patch(`/slot-delete`, info)
-        console.log(res)
-        refetch()
+    const handleSlot = (value) => {
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then(async (result) => {
+            if (result.isConfirmed) {
+                const info = { _id, value }
+                // console.log(info)
+                const res = await axiosSecure.patch(`/slot-delete`, info)
+                // console.log(res)
+                refetch()
+                Swal.fire({
+                    title: "Deleted!",
+                    text: "Your file has been deleted.",
+                    icon: "success"
+                });
+            }
+        });
+
+
     }
 
     return (

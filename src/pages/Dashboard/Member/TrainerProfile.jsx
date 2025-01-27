@@ -54,12 +54,6 @@ const TrainerProfile = ({ trainer }) => {
         // closeModal();
     }
 
-
-
-
-
-
-
     return (
         <div>
             <div className="card w-full overflow-hidden bg-white rounded-lg shadow-xl dark:bg-gray-800 border-b-4 border-blue-500" >

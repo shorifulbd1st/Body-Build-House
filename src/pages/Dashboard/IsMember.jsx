@@ -29,7 +29,7 @@ const IsMember = () => {
                     <div className="flex flex-col justify-between flex-1 mt-6">
                         <nav>
                             <NavLink
-                                to="/dashboard/profile"
+                                to="/dashboard/user-profile"
                                 className={({ isActive }) =>
                                     `flex items-center px-4 py-2 text-gray-700 transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 ${isActive ? "bg-gray-100 dark:bg-gray-800" : ""
                                     }`
@@ -49,7 +49,7 @@ const IsMember = () => {
                                         strokeLinejoin="round"
                                     />
                                 </svg>
-                                <span className="mx-4 font-medium">User Profile</span>
+                                <span className="mx-4 font-medium"> Profile</span>
                             </NavLink>
 
                             <NavLink

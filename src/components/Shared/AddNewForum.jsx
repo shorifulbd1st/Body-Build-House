@@ -3,6 +3,8 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import useAxiosSecure from '../../hooks/useAxiosSecure';
 import { AuthContext } from '../../providers/AuthProvider';
+import { useQuery } from '@tanstack/react-query';
+import LoadingSpinner from './LoadingSpinner';
 
 const image_hosting_key = import.meta.env.VITE_IMAGE_HOSTING_KEY
 const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`
@@ -12,6 +14,19 @@ const AddNewForum = () => {
     const axiosSecure = useAxiosSecure();
     const { user, loading, notify } = useContext(AuthContext);
     const navigate = useNavigate();
+
+    const { data: userData = [], isPending } = useQuery({
+        queryKey: ['add-forum'],
+        queryFn: async () => {
+            const res = await axiosSecure.get(`/user/${user?.email}`);
+            return res.data;
+        }
+    })
+    if (isPending) {
+        return <LoadingSpinner></LoadingSpinner>
+    }
+
+
 
     const handleFileChange = (event) => {
         const selectedFile = event.target.files[0];
@@ -41,6 +56,7 @@ const AddNewForum = () => {
                 formDetails,
                 userName: res1.data.name,
                 UserPhoto: res1.data.photo,
+                role: userData.role,
                 upVote: 0,
                 downVote: 0,
             }

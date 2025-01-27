@@ -1,14 +1,27 @@
-import React, { useContext, useState, useCallback } from "react";
+import React, { useContext, useState, useCallback, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Tooltip } from "react-tooltip";
 import { AuthContext } from "../../providers/AuthProvider";
+import useAxiosSecure from "../../hooks/useAxiosSecure";
+import LoadingSpinner from "./LoadingSpinner";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const { user, handleLogout } = useContext(AuthContext);
-
+    const axiosSecure = useAxiosSecure();
     const toggleMenu = useCallback(() => setIsOpen(!isOpen), [isOpen]);
-
+    const [userData, setUserData] = useState(null);
+    useEffect(() => {
+        const userFun = async () => {
+            const res = await axiosSecure.get(`/user/${user?.email}`);
+            setUserData(res.data)
+        }
+        userFun();
+    }, [user?.email, axiosSecure])
+    // if (!userData) {
+    //     return <LoadingSpinner></LoadingSpinner>
+    // }
+    // console.log(userData.role)
     return (
         <div className="sticky top-0 z-[900]">
             <nav className="relative bg-white shadow dark:bg-gray-800">
@@ -130,15 +143,35 @@ const Navbar = () => {
                                     >
                                         User Profile
                                     </NavLink>
-                                    <NavLink
-                                        to="/dashboard"
-                                        className={({ isActive }) =>
-                                            `inline-block px-2 py-2 mx-3 mt-2 text-gray-700 transition-colors duration-700 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-green-500 dark:hover:bg-gray-700 ${isActive ? "bg-[#C70039] text-white" : ""
-                                            }`
-                                        }
-                                    >
-                                        Dashboard
-                                    </NavLink>
+                                    {
+                                        userData?.role === 'member' ? <NavLink
+                                            to="/dashboard/user-profile"
+                                            className={({ isActive }) =>
+                                                `inline-block px-2 py-2 mx-3 mt-2 text-gray-700 transition-colors duration-700 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-green-500 dark:hover:bg-gray-700 ${isActive ? "bg-[#C70039] text-white" : ""
+                                                }`
+                                            }
+                                        >
+                                            Dashboard
+                                        </NavLink> : '' ||
+                                            userData?.role === 'admin' ? <NavLink
+                                                to="/dashboard/subscribe"
+                                                className={({ isActive }) =>
+                                                    `inline-block px-2 py-2 mx-3 mt-2 text-gray-700 transition-colors duration-700 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-green-500 dark:hover:bg-gray-700 ${isActive ? "bg-[#C70039] text-white" : ""
+                                                    }`
+                                                }
+                                            >
+                                            Dashboard
+                                        </NavLink> : '' ||
+                                            userData?.role === 'trainer' ? <NavLink
+                                                to="/dashboard/manage-slot"
+                                                className={({ isActive }) =>
+                                                    `inline-block px-2 py-2 mx-3 mt-2 text-gray-700 transition-colors duration-700 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-green-500 dark:hover:bg-gray-700 ${isActive ? "bg-[#C70039] text-white" : ""
+                                                    }`
+                                                }
+                                            >
+                                            Dashboard
+                                        </NavLink> : ''
+                                    }
                                 </>
                                 }
                             </div>

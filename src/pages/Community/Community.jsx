@@ -59,6 +59,9 @@ const Community = () => {
                                     <h1 className="text-xl font-semibold text-gray-800 dark:text-white">
                                         {item.userName}
                                     </h1>
+                                    {
+                                        item.role === 'admin' ? <img width="48" height="48" src="https://img.icons8.com/color/48/warranty.png" alt="warranty" /> : ''
+                                    }
                                 </div>
 
                                 <p className="py-2 text-gray-700 dark:text-gray-400">

@@ -4,12 +4,14 @@ import { colourOptions } from '../../../public/customColor';
 import { AuthContext } from '../../providers/AuthProvider';
 import useAxiosSecure from '../../hooks/useAxiosSecure';
 import LoadingSpinner from '../../components/Shared/LoadingSpinner';
+import { useNavigate } from 'react-router-dom';
 
 const AddTrainer = () => {
     const { user, loading, notify } = useContext(AuthContext);
     const [userData, setUserData] = useState([]);
     const axiosSecure = useAxiosSecure();
     const [selectedDays, setSelectedDays] = useState([]);
+    const navigate = useNavigate();
 
     useEffect(() => {
         const userFun = async () => {
@@ -17,7 +19,7 @@ const AddTrainer = () => {
             setUserData(data);
         }
         userFun();
-    }, [user?.email]);
+    }, [user?.email, axiosSecure]);
 
     if (loading || !userData) {
         return <LoadingSpinner />;
@@ -55,7 +57,7 @@ const AddTrainer = () => {
         const photoURL = form.get('photo');
         const age = form.get('age');
         const experience = form.get('experience');
-        const availableTime = form.get('availableTime');
+        const availableTime = parseInt(form.get('availableTime'));
         const biography = form.get('biography');
 
         const skill = [];
@@ -74,8 +76,9 @@ const AddTrainer = () => {
         // console.log("Server Response:", res);
 
         if (res.data.insertedId) {
-            notify('success', 'Your registration successful');
+            notify('success', 'become a trainer registration successful');
             e.target.reset();
+            navigate('/dashboard/activity-log')
         }
     };
 

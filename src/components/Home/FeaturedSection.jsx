@@ -5,7 +5,7 @@ const FeaturedSection = () => {
         <div className='w-11/12 mx-auto my-5'>
             <div>
                 <div className='lg:w-8/12 mx-auto flex flex-col justify-center items-center'>
-                    <h2 className='text-md font-extrabold capitalize lg:text-4xl text-[#C70039]'>How We Help You Achieve Your Fitness Goals</h2>
+                    <h2 className='text-md font-extrabold capitalize lg:text-3xl text-[#C70039]'>How We Help You Achieve Your Fitness Goals</h2>
                     <p className='lg:w-[90%] text-md lg:text-lg font-semibold text-center text-gray-500'>"How We Help You Achieve Your Fitness Goals" emphasizes personalized plans, expert guidance, and proven strategies to empower your journey toward a healthier lifestyle.</p>
                 </div>
                 <div className='my-5'>

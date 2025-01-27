@@ -30,17 +30,18 @@ const ApplyTrainerDetails = () => {
     }
 
     const { name, email, photoURL, age, experience, availableTime, biography, skill, availableDays } = trainer;
-    const userInfo = {
-        name, email, photoURL, age, experience, availableTime, biography, skill, availableDays, status: 'accepted'
-    };
+
     const acceptRequest = () => {
+        const userInfo = {
+            name, email, photoURL, age, experience, availableTime, biography, skill, availableDays, status: 'accepted'
+        };
         axiosSecure.patch(`/user/${email}`)
             .then(res => {
                 if (res.data.modifiedCount) {
                     notify('success', 'This user is now a trainer');
                     axiosSecure.delete(`/apply-trainers/${id}`)
                     axiosSecure.post('/trainer', userInfo)
-                    refetch();
+                    // refetch();
                     navigate('/dashboard')
                 }
             })
@@ -65,9 +66,10 @@ const ApplyTrainerDetails = () => {
         const res = axiosSecure.post('/review', info)
         if (res.data.insertedId) {
             notify('success', 'Review successful for reject')
-            navigate('/community')
+            closeModal();
+            navigate('/')
         }
-        closeModal();
+
     }
     return (
         <div className='w-11/12 mx-auto my-8 '>
@@ -220,7 +222,7 @@ const ApplyTrainerDetails = () => {
                                             }
                                         </span>
 
-                                    </h2> <div className="py-1 h-24">
+                                    </h2> <div className="py-1 h-40">
                                         <h2><strong>Skills : </strong>
                                             <span className=' flex flex-wrap gap-2'>
                                                 {
@@ -246,7 +248,7 @@ const ApplyTrainerDetails = () => {
                                     </div> */}
                                 </div>
                                 <form onSubmit={handleReview}>
-                                    <div className="mb-4 col-span-2 px-3">
+                                    <div className="mb-5 col-span-2 px-3">
                                         <label className="block text-lg font-medium text-gray-700 capitalize">
                                             rejection feedback
                                         </label>

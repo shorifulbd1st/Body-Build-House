@@ -6,6 +6,7 @@ import LoadingSpinner from "../../../components/Shared/LoadingSpinner";
 import { colourOptions } from "../../../../public/customColor";
 import Select1 from 'react-select';
 import { label } from "motion/react-client";
+import { useNavigate } from "react-router-dom";
 const options = [
     { value: 'morning', label: 'morning' },
     { value: 'afternoon', label: 'afternoon' },
@@ -20,6 +21,13 @@ const options = [
 //     { value: 'Cardio Kickboxing', label: 'Cardio Kickboxing' },
 // ]
 const AddNewSlots = () => {
+    const { user, loading, notify } = useContext(AuthContext);
+    const [userData, setUserData] = useState([]);
+    const axiosSecure = useAxiosSecure();
+    // const [selectedDays, setSelectedDays] = useState([]);
+    const [selectedOption, setSelectedOption] = useState(null);
+    const [selectedClass, setSelectedClass] = useState(null);
+    const navigate = useNavigate()
     const customStyles = {
         control: (provided) => ({
             ...provided,
@@ -42,12 +50,6 @@ const AddNewSlots = () => {
             cursor: 'pointer',
         }),
     };
-    const { user, loading, notify } = useContext(AuthContext);
-    const [userData, setUserData] = useState([]);
-    const axiosSecure = useAxiosSecure();
-    // const [selectedDays, setSelectedDays] = useState([]);
-    const [selectedOption, setSelectedOption] = useState(null);
-    const [selectedClass, setSelectedClass] = useState(null);
 
     useEffect(() => {
         const userFun = async () => {
@@ -55,7 +57,7 @@ const AddNewSlots = () => {
             setUserData(data);
         }
         userFun();
-    }, [user?.email]);
+    }, [user?.email, axiosSecure]);
 
     if (loading || !userData) {
         return <LoadingSpinner />;
@@ -103,6 +105,10 @@ const AddNewSlots = () => {
         // const availableTime = form.get('availableTime');
         // const biography = form.get('biography');
         const slotTime = parseInt(form.get('slotTime'));
+        if (slotTime > availableTime) {
+            notify('error', 'Your available time is grater than slot Time. You cannot book any more slots.')
+            navigate('/')
+        }
         // console.log(slotTime)
 
         // const skill = [];
@@ -111,18 +117,23 @@ const AddNewSlots = () => {
         //     skill.push(checkbox.value);
         // });
 
-        const selectClass = selectedClass.value;
-        const slotName = selectedOption.value;
-        // console.log(selectClass)
-        // console.log(slotName)
-        // const userInfo = {
-        //     name, email, photoURL, age, experience, availableTime, biography, skill, availableDays, status: 'pending'
-        // };
-        // console.log(userInfo)
-        const Info = { email, selectClass, slotName, slotTime }
-        // console.log(Info)
-        const res = axiosSecure.patch('/add-slot', Info);
-        // console.log("Server Response:", res);
+        else {
+            const selectClass = selectedClass.value;
+            const slotName = selectedOption.value;
+            // console.log(selectClass)
+            // console.log(slotName)
+            // const userInfo = {
+            //     name, email, photoURL, age, experience, availableTime, biography, skill, availableDays, status: 'pending'
+            // };
+            // console.log(userInfo)
+            const Info = { email, selectClass, slotName, slotTime }
+            // console.log(Info)
+            const res = axiosSecure.patch('/add-slot', Info);
+            // console.log("Server Response:", res);
+            // if (res.data.modifiedCount) {
+            navigate('/dashboard/manage-slot')
+            // }
+        }
 
         // if (res.data.insertedId) {
         //     notify('success', 'Your registration successful');

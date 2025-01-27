@@ -20,7 +20,7 @@ const DashboardLayout = () => {
             setUserData(res.data);
         }
         userFun();
-    }, [user?.email])
+    }, [user?.email, axiosSecure])
     if (!userData) {
         return <LoadingSpinner></LoadingSpinner>
     }

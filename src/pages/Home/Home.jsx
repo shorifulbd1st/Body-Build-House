@@ -8,6 +8,7 @@ import FSingleClass from '../../components/Home/FSingleClass'
 import TopForum from '../Community/TopForum'
 import SubscribeNow from '../../components/SubscribeNow/SubscribeNow'
 import TeamSection from '../../components/Teamsection/Teamsection'
+import Testimonial from '../../components/Home/Testimonial'
 
 const Home = () => {
     return (
@@ -19,6 +20,7 @@ const Home = () => {
             <FeaturedSection></FeaturedSection>
             <AboutUs></AboutUs>
             <FeaturedClass></FeaturedClass>
+            <Testimonial></Testimonial>
             <TopForum></TopForum>
             <SubscribeNow></SubscribeNow>
             <TeamSection></TeamSection>

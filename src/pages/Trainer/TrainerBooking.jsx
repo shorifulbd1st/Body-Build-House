@@ -109,7 +109,7 @@ const TrainerBooking = () => {
                         <button
                             className=" p-2 text-lg font-semibold text-white uppercase transition-colors duration-300 transform bg-gray-800 rounded  dark:hover:bg-gray-600 focus:bg-gray-700 dark:focus:bg-gray-600 focus:outline-none"
                         >
-                            Price: $10
+                            Price: $10 / month
                         </button>
                     </div>
                     <div className="flex justify-end mt-4">
@@ -157,7 +157,7 @@ const TrainerBooking = () => {
                         <button
                             className=" p-2 text-lg font-semibold text-white uppercase transition-colors duration-300 transform bg-gray-800 rounded  dark:hover:bg-gray-600 focus:bg-gray-700 dark:focus:bg-gray-600 focus:outline-none"
                         >
-                            Price: $50
+                            Price: $50 / month
                         </button>
                     </div>
                     <div className="flex justify-end mt-4">
@@ -204,7 +204,7 @@ const TrainerBooking = () => {
                         <button
                             className=" p-2 text-lg font-semibold text-white uppercase transition-colors duration-300 transform bg-gray-800 rounded  dark:hover:bg-gray-600 focus:bg-gray-700 dark:focus:bg-gray-600 focus:outline-none"
                         >
-                            Price: $100
+                            Price: $100 / month
                         </button>
                     </div>
                     <div className="flex justify-end mt-4">

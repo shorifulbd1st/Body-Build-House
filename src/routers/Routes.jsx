@@ -28,6 +28,8 @@ import ForumDetails from "../pages/Community/ForumDetails";
 import BookedTrainer from "../components/Shared/BookedTrainer";
 import ActivityLog from "../pages/Dashboard/Member/ActivityLog";
 import Profile from "../components/Shared/Profile";
+import ManageSlot from "../pages/Dashboard/Trainer/ManageSlot";
+import ProfilePage from "../pages/Dashboard/Member/ProfilePage";
 
 const router = createBrowserRouter([
     {
@@ -92,7 +94,7 @@ const router = createBrowserRouter([
         element: <PrivateRoute><DashboardLayout></DashboardLayout></PrivateRoute>,
         children: [
             {
-                path: '/dashboard',
+                path: 'subscribe',
                 element: <Subscribers></Subscribers>
             },
             // {
@@ -138,6 +140,14 @@ const router = createBrowserRouter([
             {
                 path: 'profile',
                 element: <Profile></Profile>
+            },
+            {
+                path: 'manage-slot',
+                element: <ManageSlot></ManageSlot>
+            },
+            {
+                path: 'user-profile',
+                element: <PrivateRoute><ProfilePage></ProfilePage></PrivateRoute>
             }
         ]
     }

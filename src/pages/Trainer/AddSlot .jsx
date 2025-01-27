@@ -10,6 +10,9 @@ const AddSlot = () => {
     const [userData, setUserData] = useState([]);
     const axiosSecure = useAxiosSecure();
     const [selectedDays, setSelectedDays] = useState([]);
+    const [trainerData, setTrainerData] = useState(null)
+
+
 
     useEffect(() => {
         const userFun = async () => {
@@ -17,11 +20,12 @@ const AddSlot = () => {
             setUserData(data);
         }
         userFun();
-    }, [user?.email]);
+    }, [user?.email, axiosSecure]);
 
     if (loading || !userData) {
         return <LoadingSpinner />;
     }
+    console.log(userData.availableTime)
 
     const customStyles = {
         control: (provided) => ({
@@ -81,6 +85,7 @@ const AddSlot = () => {
 
     return (
         <div className='w-11/12 mx-auto my-5 border-2 border-blue-500 rounded-xl'>
+
             <div className=" p-4 bg-white shadow-md rounded-lg">
                 <h1 className="text-2xl font-bold mb-4  text-center capitalize">Add slot </h1>
 

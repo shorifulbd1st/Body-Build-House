@@ -43,7 +43,7 @@ const TrainerDetails = () => {
         return <LoadingSpinner></LoadingSpinner>
     }
 
-    console.log(userData)
+    // console.log(userData)
     const { photoURL, name, age, experience, skill, availableDays, availableTime, biography, slotName, slotTime, selectClass, socialMedia } = trainer;
 
     // console.log(photoURL)

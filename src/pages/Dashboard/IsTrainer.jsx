@@ -9,10 +9,10 @@ const IsTrainer = () => {
     return (
         <div>
             <div>
-                <aside className="flex flex-col h-full px-4 py-8 overflow-y-auto bg-white border-r-2  dark:bg-gray-900 dark:border-gray-700">
+                <aside className="bg-[#0A273D] flex flex-col h-full px-4 py-8 overflow-y-auto  border-r-2  dark:bg-gray-900 dark:border-gray-700">
 
                     <h1 className="text-center flex">
-                        <span className="text-2xl font-semibold text-center text-transparent bg-clip-text bg-[#C70039] drop-shadow-lg">
+                        <span className="text-3xl font-bold text-center text-transparent bg-clip-text bg-white drop-shadow-lg">
                             Body Build House
                         </span>
 
@@ -37,7 +37,7 @@ const IsTrainer = () => {
                                 <NavLink
                                     to="/dashboard/manage-slot"
                                     className={({ isActive }) =>
-                                        `flex items-center px-4 py-2 text-gray-700 transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 ${isActive ? "bg-gray-100 dark:bg-gray-800" : ""
+                                        `flex items-center px-4 py-2 text-gray-700 transition-colors duration-300 transform rounded-lg hover:bg-white hover:text-black ${isActive ? "text-white bg-green-500" : "text-white"
                                         }`
                                     }
                                 >
@@ -61,7 +61,7 @@ const IsTrainer = () => {
                                 <NavLink
                                     to="/dashboard/add-slot"
                                     className={({ isActive }) =>
-                                        `flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-lg dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700 ${isActive ? "bg-gray-100 dark:bg-gray-800 dark:text-gray-200" : ""
+                                        `flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-lg hover:bg-white hover:text-black ${isActive ? "text-white bg-green-500" : "text-white"
                                         }`
                                     }
                                 >
@@ -93,7 +93,7 @@ const IsTrainer = () => {
                                 <NavLink
                                     to="/dashboard/add-forum"
                                     className={({ isActive }) =>
-                                        `flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-lg dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700 ${isActive ? "bg-gray-100 dark:bg-gray-800 dark:text-gray-200" : ""
+                                        `flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-lg hover:bg-white hover:text-black ${isActive ? "text-white bg-green-500" : "text-white"
                                         }`
                                     }
                                 >

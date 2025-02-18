@@ -41,8 +41,8 @@ const ApplyTrainerDetails = () => {
                     notify('success', 'This user is now a trainer');
                     axiosSecure.delete(`/apply-trainers/${id}`)
                     axiosSecure.post('/trainer', userInfo)
-                    // refetch();
-                    navigate('/dashboard')
+                    refetch();
+                    navigate('/dashboard/apply-trainer')
                 }
             })
     }

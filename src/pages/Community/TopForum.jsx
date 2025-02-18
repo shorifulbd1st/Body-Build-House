@@ -36,13 +36,17 @@ const TopForum = () => {
     }
     return (
         <div className='w-11/12 mx-auto my-5 '>
-            <h2 className='text-2xl font-extrabold capitalize lg:text-4xl text-[#C70039] text-center my-3'>Discover our latest news</h2>
-            <p className='text-gray-500 lg:w-7/12 mx-auto text-center mb-8'>At Body Build House, we’re committed to empowering fitness enthusiasts with cutting-edge tools, inspiring stories, and expert advice. Our mission is to help you achieve your body goals and lead a healthier, stronger life. Today, we’re thrilled to share some exciting updates and initiatives happening within our community.</p>
+            <div data-aos="zoom-in" data-aos-duration="3000">
+                <h2 className='text-2xl font-extrabold capitalize lg:text-4xl text-[#C70039] text-center my-3'>Discover our latest news</h2>
+                <p className='text-gray-500 lg:w-7/12 mx-auto text-center mb-8'>At Body Build House, we’re committed to empowering fitness enthusiasts with cutting-edge tools, inspiring stories, and expert advice. Our mission is to help you achieve your body goals and lead a healthier, stronger life. Today, we’re thrilled to share some exciting updates and initiatives happening within our community.</p>
+            </div>
+
             {/* <h1 className='text-'></h1> */}
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
                 {
                     topForum.map((item, idx) =>
-                        <div key={idx} className="w-full max-w-sm overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">
+                        <div data-aos="fade-up"
+                            data-aos-duration="3000" key={idx} className="w-full max-w-sm overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">
                             <img
                                 className="object-cover object-center w-full h-56"
                                 src={item.image}

@@ -57,7 +57,8 @@ const SubscribeNow = () => {
                 <div className="container lg:px-8 mx-auto">
                     <div className="items-center lg:flex">
                         <div className="w-full lg:w-1/2">
-                            <div className="lg:max-w-lg">
+                            <div data-aos="fade-left"
+                                data-aos-duration="3000" className="lg:max-w-lg">
                                 <h1 className="text-3xl font-semibold text-gray-800 dark:text-white lg:text-4xl">
                                     Subscribe To The <span className="text-[#C70039]">Newsletter</span>
                                 </h1>
@@ -91,7 +92,8 @@ const SubscribeNow = () => {
                             </div>
                         </div>
 
-                        <div className="flex items-center justify-center w-full mt-6 lg:mt-0 lg:w-1/2">
+                        <div data-aos="fade-right"
+                            data-aos-duration="3000" className="flex items-center justify-center w-full mt-6 lg:mt-0 lg:w-1/2">
                             <img
                                 className="w-full h-full max-w-md"
                                 src="https://merakiui.com/images/components/Email-campaign-bro.svg"

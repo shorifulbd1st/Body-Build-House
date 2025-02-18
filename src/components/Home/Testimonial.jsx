@@ -28,7 +28,8 @@ export default function Testimonial() {
     }
 
     return (
-        <div className='w-11/12 mx-auto my-5'>
+        <div data-aos="fade-up"
+            data-aos-duration="3000" className='w-11/12 mx-auto my-8'>
             <div>
                 <h1 className='text-center font-bold text-[#C70039] text-3xl my-5'>Testimonial section</h1>
             </div>

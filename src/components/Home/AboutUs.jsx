@@ -38,19 +38,15 @@ const AboutUs = () => {
                         <img className='rounded-xl border-b-4 border-r-2 border-[#C70039]' src="https://images.pexels.com/photos/6046978/pexels-photo-6046978.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" />
                     </div>
                 </div>
-                <div data-aos="fade-left"
-                    data-aos-offset="300"
-                    data-aos-easing="ease-in-sine" className='lg:w-1/2 flex flex-col gap-3 p-2'>
-                    <h2 className='text-4xl text-[#C70039] font-semibold animate__animated animate__backInRight animate__delay-2s '>About Us</h2>
+                <div data-aos="fade-up" data-aos-duration="3000" className='lg:w-1/2 flex flex-col gap-3 p-2'>
+                    <h2 className='text-4xl text-[#C70039] font-semibold '>About Us</h2>
                     <p className='text-xl font-extrabold'> Giving Good health To Good People</p>
                     <p className='text-gray-600 ml-3'>Once you choose to begin your training journey, we'll ensure you receive the best fitness program tailored to your needs. Our team of sports experts, combined with the latest fitness equipment, creates the perfect environment for achieving your gym goals</p>
                     <p className='text-gray-600 flex items-center gap-2 ml-3'><span className='text-[#C70039]'><FaArrowRight /></span> 2,000+ locations open (and we're just getting started!)</p>
                     <p className='text-gray-600 flex items-center gap-2 ml-3'><span className='text-[#C70039]'><FaArrowRight /></span> Unique concept that combines fitness and technology</p>
                     <p className='text-gray-600 flex items-center gap-2 ml-3'><span className='text-[#C70039]'><FaArrowRight /></span> We have small studios designed for the large groups</p>
                     <p className='text-gray-600 flex items-center gap-2 ml-3'><span className='text-[#C70039]'><FaArrowRight /></span> 1800+ franchises awarded in 30 countries worldwide</p>
-                    <div data-aos="fade-right"
-                        data-aos-offset="300"
-                        data-aos-easing="ease-in-sine" className="mt-5">
+                    <div className="mt-5">
                         <Link to="/all-classes" className="px-2 py-3  w-full text-center  mt-4 text-sm font-medium hover:border-b-4  tracking-wide text-white capitalize transition-colors duration-300 transform bg-[#C70039] rounded-md hover:bg-[#C70039] focus:outline-none focus:ring focus:ring-[#C70039]  focus:ring-opacity-40 sm:mt-0 sm:mx-2">Explore our all class</Link>
                     </div>
                 </div>

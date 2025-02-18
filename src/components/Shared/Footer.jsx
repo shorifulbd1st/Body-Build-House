@@ -11,47 +11,54 @@ const Footer = () => {
                         {/* Blog Section */}
                         <div className="w-full sm:w-1/3 mb-6">
                             <h3 className="uppercase font-bold">Blog</h3>
-                            <Link
-                                href="#"
+                            <a
+                                href="https://www.bodybuilding.com/fun/beginning_training_guide.htm"
+                                target="_blank"
                                 className="block mt-2 text-sm font-semibold text-gray-400 hover:underline"
                             >
                                 Resources
-                            </Link>
-                            <Link
-                                href="#"
+                            </a>
+                            <a
+                                href="https://www.bodybuilding.com/category/build-muscle"
+                                target="_blank"
                                 className="block mt-2 text-sm font-semibold text-gray-400 hover:underline"
                             >
                                 Document Services
-                            </Link>
-                            <Link
-                                href="#"
+                            </a>
+                            <a
+                                href="https://www.bodybuilding.com/content/one-tip-to-transform-your-bench-press.html"
+                                target="_blank"
                                 className="block mt-2 text-sm font-semibold text-gray-400 hover:underline"
                             >
                                 Services
-                            </Link>
+                            </a>
                         </div>
 
                         {/* About Section */}
                         <div className="w-full sm:w-1/3 mb-6">
                             <h3 className="uppercase font-bold">About</h3>
-                            <Link
-                                href="#"
+                            <a
+                                href="https://shop.bodybuilding.com/"
+                                target="_blank"
+
                                 className="block mt-2 text-sm font-semibold text-gray-400 hover:underline"
                             >
                                 Company
-                            </Link>
-                            <Link
-                                href="#"
+                            </a>
+                            <a
+                                href="https://shop.bodybuilding.com/pages/podcasts"
+                                target="_blank"
                                 className="block mt-2 text-sm font-semibold text-gray-400 hover:underline"
                             >
                                 Community
-                            </Link>
-                            <Link
-                                href="#"
+                            </a>
+                            <a
+                                href="https://shop.bodybuilding.com/pages/join-the-team"
+                                target="_blank"
                                 className="block mt-2 text-sm font-semibold text-gray-400 hover:underline"
                             >
                                 Careers
-                            </Link>
+                            </a>
                         </div>
 
                         {/* Contact Section */}
@@ -64,10 +71,9 @@ const Footer = () => {
                                 abc@email.com
                             </span>
                             <div className="flex space-x-4 cursor-pointer mt-3">
-                                <i className="animate__animated animate__bounce animate__infinite text-3xl fab fa-facebook text-[#1877F2]"></i>
-                                <i className="text-3xl fab fa-twitter text-[#1DA1F2]"></i>
-                                <i className="text-3xl fab fa-instagram text-[#e92d6be1]"></i>
-                                <i className="text-3xl fab fa-linkedin text-[#0077B5]"></i>
+                                <a href="https://www.facebook.com" target="_blank" className="text-3xl fab fa-facebook text-[#1877F2]"></a>
+                                <a href="https://x.com" target="_blank" className="text-3xl fab fa-twitter text-[#1DA1F2]"></a>
+                                <a href="https://linkedin.com" target="_blank" className="text-3xl fab fa-linkedin text-[#0077B5]"></a>
                             </div>
                         </div>
                     </div>

@@ -12,7 +12,8 @@ const TeamSection = () => {
     // console.log(allTrainer.length)
     return (
         <div className='w-11/12 mx-auto my-8'>
-            <div className='lg:w-8/12 mx-auto flex flex-col justify-center items-center'>
+            <div data-aos="zoom-in"
+                data-aos-duration="3000" className='lg:w-8/12 mx-auto flex flex-col justify-center items-center'>
                 <h2 className=' font-extrabold capitalize text-4xl text-[#C70039]'>our top trainer</h2>
                 <p className='lg:w-[90%] text-md lg:text-lg font-semibold text-center text-gray-500'>Our top trainer inspires success, motivates growth, delivers exceptional knowledge, fosters progress, and ensures results through dedicated guidance</p>
             </div>
@@ -22,7 +23,8 @@ const TeamSection = () => {
                 {
                     allTrainer.slice(0, 3).map((item, idx) =>
 
-                        <div key={idx} className="w-full border border-[#C70039] max-w-md px-4 py-4 mt-16 bg-white rounded-lg shadow-lg dark:bg-gray-800">
+                        <div data-aos="fade-up"
+                            data-aos-duration="3000" key={idx} className="w-full border border-[#C70039] max-w-md px-4 py-4 mt-16 bg-white rounded-lg shadow-lg dark:bg-gray-800">
                             {/* <div className="flex justify-center -mt-16 md:justify-end">
                                 <img
                                     className="object-cover w-20 h-20 border-2 border-[#C70039] rounded-full dark:border-blue-400"

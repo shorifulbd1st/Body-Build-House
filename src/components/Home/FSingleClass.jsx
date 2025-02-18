@@ -18,7 +18,7 @@ const FSingleClass = ({ item }) => {
     // console.log('classID: ', _id)
 
     return (
-        <div className="card w-full max-w-sm overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800  border-b-4 border-[#C70039]">
+        <div data-aos="fade-up" data-aos-duration="1500" className="transition-all duration-1000 ease-in-out  card w-full max-w-sm overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800  border-b-4 border-[#C70039]">
 
             <img
                 className="cursor-pointer object-cover object-center w-full h-56 hover:scale-110 transition  duration-1000 ease-in-out"
@@ -32,14 +32,18 @@ const FSingleClass = ({ item }) => {
                 <h1 className=" mx-3 text-xl font-semibold text-white flex justify-center items-center gap-2 -ml-2"><span className="text-2xl font-extrabold"><MdSportsGymnastics /></span> {className}</h1>
             </div>
 
-
             <div className="p-3 flex flex-col gap-2 ">
                 <div className=" overflow-hidden h-24">
                     <p className="text-justify  dark:text-gray-400 capitalize"><strong>total number of bookings: </strong> {count}</p>
                     <p className="text-justify text-gray-700 dark:text-gray-400 ">{classDetails}</p>
+
                 </div>
 
-
+                <div className="flex justify-center my-1">
+                    <Link to={`/all-classes`} className="px-6 py-2 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-[#C70039] rounded-lg focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80 text-center">
+                        See More
+                    </Link>
+                </div>
                 {/* <div className="flex gap-2 flex-wrap mb-2">
                     {trainer &&
                         trainer.slice(0, 5).map((i, idx) => (

@@ -138,7 +138,7 @@ const CommonDashboard = () => {
                 <button onClick={handleLogout1}
                     className="px-8 ml-5 py-3 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-700 transform bg-blue-600 rounded-lg hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80"
                 >
-                    <span className='text-xl text-white'><CiLogout /></span>
+                    <span className='text-xl text-white flex justify-center items-center gap-2'><CiLogout /> Logout</span>
                 </button>
             </div>
         </div>

@@ -156,7 +156,7 @@ const Navbar = () => {
                                             userData?.role === 'admin' ? <NavLink
                                                 to="/dashboard/subscribe"
                                                 className={({ isActive }) =>
-                                                    `inline-block px-2 py-2 mx-3 mt-2 text-gray-700 transition-colors duration-700 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-green-500 dark:hover:bg-gray-700 ${isActive ? "bg-[#C70039] text-white" : ""
+                                                    `inline-block px-2 py-2 mx-3 mt-2 text-white transition-colors duration-700 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-green-500 dark:hover:bg-gray-700 ${isActive ? "bg-[#C70039] text-white" : ""
                                                     }`
                                                 }
                                             >

@@ -8,7 +8,7 @@ const Trainer = ({ trainer }) => {
     const location = useLocation();
     const { _id, photoURL, name, age, experience, skill, availableDays, availableTime, biography, slotName, slotTime, selectClass, socialMedia } = trainer;
     return (
-        <div className=''>
+        <div data-aos="fade-up" data-aos-duration="1500" className=''>
             <div className="card w-full overflow-hidden bg-white rounded-lg shadow-xl dark:bg-gray-800 border-b-4 border-blue-500" >
                 <div className="w-full h-[400px]  overflow-hidden">
                     <img

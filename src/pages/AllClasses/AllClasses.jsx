@@ -55,8 +55,13 @@ const AllClasses = () => {
         refetch()
     }, [search])
 
+    if (!allData) {
+        return <LoadingSpinner></LoadingSpinner>
+    } if (!searchData) {
+        return <LoadingSpinner></LoadingSpinner>
+    }
 
-    if (isPending || isPendingL) {
+    if (isPending || isPendingL || loading) {
         return <LoadingSpinner></LoadingSpinner>
     }
     // console.log(searchData)
@@ -123,7 +128,9 @@ const AllClasses = () => {
 
                 </div>
             </div >
-
+            <div>
+                <h1 className='text-3xl mb-5 font-bold text-[#C70039] text-center'> You can book any trainer</h1>
+            </div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3'>
                 {
                     newClass.map((item, idx) => <SingleClass key={idx} item={item}></SingleClass>)

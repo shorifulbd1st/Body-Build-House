@@ -113,7 +113,7 @@ const Balance = () => {
                 </div>
                 <div className='w-1/2'>
                     <h2 className="text-center text-xl font-bold mb-4">Balance Summary</h2>
-                    <ResponsiveContainer width="100%" height={200}>
+                    <ResponsiveContainer width="100%" height={300}>
                         <PieChart>
                             <Pie
                                 data={pieChartData}
@@ -134,7 +134,7 @@ const Balance = () => {
 
             </div>
             <div>
-                <section class="container px-4 mx-auto">
+                <section class="container px-4 mx-auto ">
                     <div class="flex items-center gap-x-3">
                         <h2 class="text-lg font-medium text-gray-800 dark:text-white">Latest Transaction</h2>
                         {/* <span class="px-3 py-1 text-xs text-blue-600 bg-blue-100 rounded-full dark:bg-gray-800 dark:text-blue-400">{subscribe.length} users</span> */}

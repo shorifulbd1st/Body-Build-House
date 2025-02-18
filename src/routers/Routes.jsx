@@ -30,6 +30,7 @@ import ActivityLog from "../pages/Dashboard/Member/ActivityLog";
 import Profile from "../components/Shared/Profile";
 import ManageSlot from "../pages/Dashboard/Trainer/ManageSlot";
 import ProfilePage from "../pages/Dashboard/Member/ProfilePage";
+import ClassDetails from "../components/Shared/ClassDetails";
 
 const router = createBrowserRouter([
     {
@@ -64,6 +65,10 @@ const router = createBrowserRouter([
             {
                 path: '/all-classes',
                 element: <AllClasses></AllClasses>
+            },
+            {
+                path: '/class-details/:id',
+                element: <ClassDetails></ClassDetails>
             },
             {
                 path: '/community',

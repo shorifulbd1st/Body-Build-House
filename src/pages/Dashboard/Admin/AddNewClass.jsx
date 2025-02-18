@@ -52,7 +52,7 @@ const AddNewClass = () => {
     };
 
     return (
-        <section className="max-w-4xl p-6 border-2 border-blue-500 mx-auto bg-white rounded-md shadow-md dark:bg-gray-800">
+        <section className="max-w-4xl mt-10 p-6 border-2 border-blue-500 mx-auto bg-white rounded-md shadow-md dark:bg-gray-800">
             <h2 className="text-xl underline decoration-red-600 font-semibold text-gray-700 capitalize dark:text-white text-center">
                 Add New Class
             </h2>

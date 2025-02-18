@@ -17,7 +17,7 @@ const SingleClass = ({ item }) => {
     // console.log('classID: ', _id)
 
     return (
-        <div className="card w-full max-w-sm overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800  border-b-4 border-blue-500">
+        <div data-aos="fade-up" data-aos-duration="1500" className="card w-full max-w-sm overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800  border-b-4 border-blue-500">
 
             <img
                 className="cursor-pointer object-cover object-center w-full h-56 hover:scale-110 transition  duration-1000 ease-in-out"

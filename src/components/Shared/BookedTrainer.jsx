@@ -5,7 +5,7 @@ import { useQuery } from '@tanstack/react-query';
 import { AuthContext } from '../../providers/AuthProvider';
 import LoadingSpinner from './LoadingSpinner';
 import TrainerBooking from '../../pages/Trainer/TrainerBooking';
-import { div } from 'motion/react-client';
+import { div, h1 } from 'motion/react-client';
 import TrainerProfile from '../../pages/Dashboard/Member/TrainerProfile';
 
 const BookedTrainer = () => {
@@ -41,7 +41,7 @@ const BookedTrainer = () => {
 
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-5 '>
                 {
-                    bookTrainer.map((trainer, idx) => <TrainerProfile key={idx} trainer={trainer}></TrainerProfile>)
+                    bookTrainer.length > 0 ? bookTrainer.map((trainer, idx) => <TrainerProfile key={idx} trainer={trainer}></TrainerProfile>) : <h1 className='text-2xl font-bold text-red-500'>You haven't booked any trainers yet.</h1>
                 }
             </div>
         </div>

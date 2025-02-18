@@ -8,10 +8,10 @@ const Dashboard = () => {
     // console.log(user)
     return (
         <div className='max-h-screen'>
-            <aside className="flex flex-col h-full px-4 py-8 overflow-y-auto bg-white border-r-2  dark:bg-gray-900 dark:border-gray-700">
+            <aside className="bg-[#0A273D] flex flex-col h-full px-4 py-8 overflow-y-auto border-r-2  dark:bg-gray-900 dark:border-gray-700">
 
                 <h1 className="text-center flex">
-                    <span className="text-2xl font-semibold text-center text-transparent bg-clip-text bg-[#C70039] drop-shadow-lg">
+                    <span className="text-3xl font-semibold text-center text-transparent bg-clip-text text-white  drop-shadow-lg">
                         Body Build House
                     </span>
                 </h1>
@@ -33,7 +33,7 @@ const Dashboard = () => {
                             <NavLink
                                 to="/dashboard/subscribe"
                                 className={({ isActive }) =>
-                                    `flex items-center px-4 py-2 text-gray-700 transition-colors duration-300 transform rounded-lg dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 ${isActive ? "bg-gray-100 dark:bg-gray-800" : ""
+                                    `flex items-center px-4 py-2 text-gray-700 transition-colors duration-300 transform rounded-lg hover:bg-white hover:text-black ${isActive ? "text-white bg-green-500" : "text-white"
                                     }`
                                 }
                             >
@@ -57,7 +57,7 @@ const Dashboard = () => {
                             <NavLink
                                 to="/dashboard/all-trainer"
                                 className={({ isActive }) =>
-                                    `flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-lg dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700 ${isActive ? "bg-gray-100 dark:bg-gray-800 dark:text-gray-200" : ""
+                                    `flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-lg hover:bg-white hover:text-black ${isActive ? "text-white bg-green-500" : "text-white"
                                     }`
                                 }
                             >
@@ -87,7 +87,7 @@ const Dashboard = () => {
                             <NavLink
                                 to="/dashboard/apply-trainer"
                                 className={({ isActive }) =>
-                                    `flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-lg dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700 ${isActive ? "bg-gray-100 dark:bg-gray-800 dark:text-gray-200" : ""
+                                    `flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-lg hover:bg-white hover:text-black ${isActive ? "text-white bg-green-500" : "text-white"
                                     }`
                                 }
                             >
@@ -118,7 +118,8 @@ const Dashboard = () => {
                             <NavLink
                                 to="/dashboard/balance"
                                 className={({ isActive }) =>
-                                    `flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-lg dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700 ${isActive ? "bg-gray-100 dark:bg-gray-800 dark:text-gray-200" : ""
+                                    `flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-lg 
+                                hover:bg-white hover:text-black ${isActive ? "text-white bg-green-500" : "text-white"
                                     }`
                                 }
                             >
@@ -142,7 +143,7 @@ const Dashboard = () => {
                             <NavLink
                                 to="/dashboard/add-class"
                                 className={({ isActive }) =>
-                                    `flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-lg dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700 ${isActive ? "bg-gray-100 dark:bg-gray-800 dark:text-gray-200" : ""
+                                    `flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-lg hover:bg-white hover:text-black ${isActive ? "text-white bg-green-500" : "text-white"
                                     }`
                                 }
                             >
@@ -173,7 +174,7 @@ const Dashboard = () => {
                             <NavLink
                                 to="/dashboard/add-forum"
                                 className={({ isActive }) =>
-                                    `flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-lg dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700 ${isActive ? "bg-gray-100 dark:bg-gray-800 dark:text-gray-200" : ""
+                                    `flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-lg hover:bg-white hover:text-black ${isActive ? "text-white bg-green-500" : "text-white"
                                     }`
                                 }
                             >
@@ -199,6 +200,36 @@ const Dashboard = () => {
                                     />
                                 </svg>
                                 <span className="mx-4 font-medium">Add Forum</span>
+                            </NavLink>
+                            <NavLink
+                                to="/dashboard/profile"
+                                className={({ isActive }) =>
+                                    `flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-lg hover:bg-white hover:text-black ${isActive ? "text-white bg-green-500" : "text-white"
+                                    }`
+                                }
+                            >
+                                <svg
+                                    className="w-5 h-5"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z"
+                                        stroke="currentColor"
+                                        strokeWidth="2"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                    />
+                                    <path
+                                        d="M12 14C8.13401 14 5 17.134 5 21H19C19 17.134 15.866 14 12 14Z"
+                                        stroke="currentColor"
+                                        strokeWidth="2"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                    />
+                                </svg>
+                                <span className="mx-4 font-medium">Profile</span>
                             </NavLink>
                         </div>
                         <div>

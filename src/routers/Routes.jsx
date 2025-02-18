@@ -29,8 +29,8 @@ import BookedTrainer from "../components/Shared/BookedTrainer";
 import ActivityLog from "../pages/Dashboard/Member/ActivityLog";
 import Profile from "../components/Shared/Profile";
 import ManageSlot from "../pages/Dashboard/Trainer/ManageSlot";
-import ProfilePage from "../pages/Dashboard/Member/ProfilePage";
 import ClassDetails from "../components/Shared/ClassDetails";
+import ProfilePage from "../components/Shared/ProfilePage";
 
 const router = createBrowserRouter([
     {
@@ -147,10 +147,10 @@ const router = createBrowserRouter([
                 path: 'activity-log',
                 element: <ActivityLog></ActivityLog>
             },
-            // {
-            //     path: 'profile',
-            //     element: <Profile></Profile>
-            // },
+            {
+                path: 'profile',
+                element: <ProfilePage></ProfilePage>
+            },
             {
                 path: 'manage-slot',
                 element: <ManageSlot></ManageSlot>

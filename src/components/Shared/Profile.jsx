@@ -42,8 +42,8 @@ const Profile = () => {
         //         </div>
         //     </div>
         // </div>
-        <div className="w-11/12 mx-auto flex justify-center items-center my-8">
-            <div className="w-full lg:max-w-2xl overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">
+        <div className="w-11/12 mx-auto flex justify-center items-center my-8 ">
+            <div className="w-full lg:max-w-2xl overflow-hidden bg-white rounded-lg border border-red-600 shadow-lg dark:bg-gray-800">
                 <div className="flex justify-center items-center p-5">
                     <div className="h-48 w-48 sm:h-64 sm:w-64 lg:h-96 lg:w-96">
                         <img

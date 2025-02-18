@@ -17,7 +17,7 @@ const CommonDashboard = () => {
                 <NavLink
                     to="/"
                     className={({ isActive }) =>
-                        `flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-lg dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-200 hover:text-gray-700 ${isActive ? "bg-gray-100 dark:bg-gray-800 dark:text-gray-200" : ""
+                        `flex items-center px-4 py-2 mt-5 text-gray-600 transition-colors duration-300 transform rounded-lg hover:bg-white hover:text-black ${isActive ? "text-white bg-green-500" : "text-white"
                         }`
                     }
                 >
@@ -136,9 +136,9 @@ const CommonDashboard = () => {
                     <span className="mx-4 font-medium">Community</span>
                 </NavLink> */}
                 <button onClick={handleLogout1}
-                    className="px-8 ml-5 py-3 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-700 transform bg-blue-600 rounded-lg hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80"
+                    className="px-8 ml-5 mt-5 py-3 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-700 transform bg-blue-600 rounded-lg hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80"
                 >
-                    <span className='text-xl text-white flex justify-center items-center gap-2'><CiLogout /> Logout</span>
+                    <span className='text-xl text-white flex justify-center items-center gap-2'> <span className='text-white'><CiLogout /></span> Logout</span>
                 </button>
             </div>
         </div>

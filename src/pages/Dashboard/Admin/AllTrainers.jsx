@@ -48,7 +48,7 @@ const AllTrainers = () => {
 
     return (
         <div className='w-11/12 mx-auto my-8'>
-            <section class="container px-4 mx-auto">
+            <section  class="container px-4 mx-auto">
                 <div class="flex items-center gap-x-3">
                     <h2 class="text-lg font-medium text-gray-800 dark:text-white">Total Trainer</h2>
                     <span class="px-3 py-1 text-xs text-blue-600 bg-blue-100 rounded-full dark:bg-gray-800 dark:text-blue-400">{trainData.length} users</span>

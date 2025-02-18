@@ -7,37 +7,50 @@ import { Link } from "react-router-dom";
 const Slider = () => {
     const sliderRef = useRef(null);
     const thumbnailRef = useRef(null);
+
+    // const sliderItems = [
+    //     {
+    //         img: 'https://images.pexels.com/photos/6740821/pexels-photo-6740821.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+
+    //     },
+    //     {
+    //         img: 'https://images.pexels.com/photos/2204196/pexels-photo-2204196.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+
+    //     },
+    //     {
+    //         img: 'https://images.pexels.com/photos/3917659/pexels-photo-3917659.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+
+    //     },
+    //     {
+    //         img: 'https://images.pexels.com/photos/28636779/pexels-photo-28636779/free-photo-of-pair-of-kettlebells-on-artificial-grass-gym-floor.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+
+    //     },
+    // ];
+
+    // Function to move slider
     const sliderItems = [
         {
-            img: 'https://images.pexels.com/photos/5327551/pexels-photo-5327551.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-            title: "Strength Training",
-            type: "Workout Program"
-        },
-        {
-            img: 'https://images.pexels.com/photos/2261483/pexels-photo-2261483.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-            title: "Doing Barbell",
-            type: "Wellness Routine"
-        },
-        {
-            img: 'https://images.pexels.com/photos/13885346/pexels-photo-13885346.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-            title: "Weight Loss ",
-            type: "Workout Program"
-
-        },
-        {
-            img: 'https://images.pexels.com/photos/685531/pexels-photo-685531.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-            title: "HIIT Power Session",
-            type: "Endurance Program"
+            img: 'https://images.pexels.com/photos/6740821/pexels-photo-6740821.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+            title: 'Focused Workout Session',
+            description: 'A dedicated athlete training intensely in the gym, pushing limits for peak performance.',
         },
         {
             img: 'https://images.pexels.com/photos/2204196/pexels-photo-2204196.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-            title: "Pilates Core Workout",
-            type: "Fitness Class"
+            title: 'Outdoor Running Exercise',
+            description: 'A fit individual jogging on a scenic road, promoting a healthy and active lifestyle.',
+        },
+        {
+            img: 'https://images.pexels.com/photos/3917659/pexels-photo-3917659.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+            title: 'Strength Training Routine',
+            description: 'A determined woman lifting dumbbells, demonstrating dedication to fitness and strength training.',
+        },
+        {
+            img: 'https://images.pexels.com/photos/28636779/pexels-photo-28636779/free-photo-of-pair-of-kettlebells-on-artificial-grass-gym-floor.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+            title: 'Essential Gym Equipment',
+            description: 'A pair of kettlebells placed on artificial grass, symbolizing strength and endurance training.',
         },
     ];
 
-
-    // Function to move slider
     const moveSlider = (direction) => {
         const sliderList = sliderRef.current.querySelector(".list");
         const thumbnailList = thumbnailRef.current;
@@ -82,10 +95,10 @@ const Slider = () => {
                     <div className="item" key={index}>
                         <img src={item.img} alt={item.type} />
                         <div className="content">
-                            <div className="title text-xl">{item.title}</div>
-                            <div className="type text-xl">{item.type}</div>
-                            <div className="mt-5">
-                                <Link to="/rooms" className="px-4 w-full text-center py-2.5 mt-5 text-sm font-medium tracking-wide  text-white capitalize transition-colors duration-300 transform bg-[#C70039] rounded-md hover:bg-[#C70039] focus:outline-none focus:ring focus:ring-green-300 focus:ring-opacity-40 sm:mt-0 sm:mx-2">SEE MORE</Link>
+                            <div className="title text-xl text-[#C70039] lg:text-4xl">{item.title}</div>
+                            <div className="type text-xl ">{item.description}</div>
+                            <div className="mt-10">
+                                <Link to="/all-classes" className="px-4 w-full text-center py-2.5 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-green-600 rounded-md hover:bg-green-500 focus:outline-none focus:ring focus:ring-green-300 focus:ring-opacity-40 sm:mt-0 sm:mx-2">SEE MORE</Link>
                             </div>
                         </div>
                     </div>

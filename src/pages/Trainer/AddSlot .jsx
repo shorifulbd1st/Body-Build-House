@@ -25,7 +25,7 @@ const AddSlot = () => {
     if (loading || !userData) {
         return <LoadingSpinner />;
     }
-    console.log(userData.availableTime)
+    // console.log(userData.availableTime)
 
     const customStyles = {
         control: (provided) => ({

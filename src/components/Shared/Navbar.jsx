@@ -9,7 +9,9 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const { user, handleLogout } = useContext(AuthContext);
     const axiosSecure = useAxiosSecure();
+
     const toggleMenu = useCallback(() => setIsOpen(!isOpen), [isOpen]);
+
     const [userData, setUserData] = useState(null);
     useEffect(() => {
         const userFun = async () => {
@@ -20,29 +22,27 @@ const Navbar = () => {
     }, [user?.email, axiosSecure])
     // if (!userData) {
     //     return <LoadingSpinner></LoadingSpinner>
+
     // }
     // console.log(userData.role)
     return (
-        <div className="sticky top-0 z-[900]">
-            <nav className="relative bg-white shadow dark:bg-gray-800">
+        <div className="sticky top-0 z-[900] ">
+            <nav className="relative text-white shadow dark:bg-gray-800 bg-[#0A273D]">
                 <div className="w-11/12 py-4 mx-auto">
                     <div className="lg:flex justify-between">
                         {/* Logo and Brand Name */}
                         <div className="flex items-center justify-between">
                             <div className="relative flex justify-center items-center">
                                 <img
-                                    className="w-12"
+                                    className="w-12 rounded-full mr-1"
                                     src="https://i.ibb.co.com/cyZC6hW/ai-generated-8243469-640.jpg"
                                     alt="Hotel Rose Logo"
                                     loading="lazy"
                                 />
                                 <h1 className="text-center flex">
-                                    <span className="text-2xl font-semibold text-center text-transparent bg-clip-text bg-[#C70039] drop-shadow-lg">
+                                    <a href="/" className="text-2xl cursor-pointer font-semibold text-center text-transparent bg-clip-text  drop-shadow-lg text-white">
                                         Body Build House
-                                    </span>
-
-
-
+                                    </a>
                                 </h1>
                             </div>
 
@@ -57,7 +57,7 @@ const Navbar = () => {
                                     {isOpen ? (
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
-                                            className="w-8 h-8"
+                                            className="w-8 h-8 text-white"
                                             fill="none"
                                             viewBox="0 0 24 24"
                                             stroke="currentColor"
@@ -72,7 +72,7 @@ const Navbar = () => {
                                     ) : (
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
-                                            className="w-8 h-8"
+                                            className="w-8 h-8 text-white"
                                             fill="none"
                                             viewBox="0 0 30 30"
                                             stroke="currentColor"
@@ -91,7 +91,7 @@ const Navbar = () => {
 
                         {/* Navigation Links and User Actions */}
                         <div
-                            className={`absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-700 ease-in-out bg-white dark:bg-gray-800 lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:bg-transparent lg:w-auto lg:flex lg:items-center ${isOpen
+                            className={`absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-700 ease-in-out bg-gray-800 lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:bg-transparent lg:w-auto lg:flex lg:items-center ${isOpen
                                 ? "translate-x-0 opacity-100"
                                 : "opacity-0 -translate-x-full lg:opacity-100 lg:translate-x-0"
                                 }`}
@@ -100,7 +100,7 @@ const Navbar = () => {
                                 <NavLink
                                     to="/"
                                     className={({ isActive }) =>
-                                        `inline-block px-2 py-2 mx-3 mt-2 text-gray-700 transition-colors duration-700 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-green-500 dark:hover:bg-gray-700 ${isActive ? "bg-[#C70039] text-white" : ""
+                                        `inline-block px-2 py-2 mx-3 mt-2  transition-colors duration-700 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-green-500 text-white dark:hover:bg-gray-700 ${isActive ? "bg-[#C70039]" : ""
                                         }`
                                     }
                                 >
@@ -109,7 +109,7 @@ const Navbar = () => {
                                 <NavLink
                                     to="/all-trainer"
                                     className={({ isActive }) =>
-                                        `inline-block px-2 py-2 mx-3 mt-2 text-gray-700 transition-colors duration-700 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-green-500 dark:hover:bg-gray-700 ${isActive ? "bg-[#C70039] text-white" : ""
+                                        `inline-block px-2 py-2 text-white mx-3 mt-2 transition-colors duration-700 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-green-500 dark:hover:bg-gray-700 ${isActive ? "bg-[#C70039] text-white" : ""
                                         }`
                                     }
                                 >
@@ -118,7 +118,7 @@ const Navbar = () => {
                                 <NavLink
                                     to="/all-classes"
                                     className={({ isActive }) =>
-                                        `inline-block px-2 py-2 mx-3 mt-2 text-gray-700 transition-colors duration-700 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-green-500 dark:hover:bg-gray-700 ${isActive ? "bg-[#C70039] text-white" : ""
+                                        `inline-block px-2 py-2 mx-3 mt-2 transition-colors duration-700 transform rounded-md text-white lg:mt-0 dark:text-gray-200 hover:bg-green-500 dark:hover:bg-gray-700 ${isActive ? "bg-[#C70039]" : ""
                                         }`
                                     }
                                 >
@@ -127,7 +127,7 @@ const Navbar = () => {
                                 <NavLink
                                     to="/community"
                                     className={({ isActive }) =>
-                                        `inline-block px-2 py-2 mx-3 mt-2 text-gray-700 transition-colors duration-700 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-green-500 dark:hover:bg-gray-700 ${isActive ? "bg-[#C70039] text-white" : ""
+                                        `inline-block px-2 py-2 mx-3 mt-2 transition-colors duration-700 transform rounded-md text-white lg:mt-0 dark:text-gray-200 hover:bg-green-500 dark:hover:bg-gray-700 ${isActive ? "bg-[#C70039]" : ""
                                         }`
                                     }
                                 >
@@ -137,7 +137,7 @@ const Navbar = () => {
                                     <NavLink
                                         to="/profile"
                                         className={({ isActive }) =>
-                                            `inline-block px-2 py-2 mx-3 mt-2 text-gray-700 transition-colors duration-700 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-green-500 dark:hover:bg-gray-700 ${isActive ? "bg-[#C70039] text-white" : ""
+                                            `inline-block px-2 py-2 mx-3 mt-2 text-white transition-colors duration-700 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-green-500 dark:hover:bg-gray-700 ${isActive ? "bg-[#C70039]" : ""
                                             }`
                                         }
                                     >
@@ -147,7 +147,7 @@ const Navbar = () => {
                                         userData?.role === 'member' ? <NavLink
                                             to="/dashboard/user-profile"
                                             className={({ isActive }) =>
-                                                `inline-block px-2 py-2 mx-3 mt-2 text-gray-700 transition-colors duration-700 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-green-500 dark:hover:bg-gray-700 ${isActive ? "bg-[#C70039] text-white" : ""
+                                                `inline-block px-2 py-2 mx-3 mt-2 text-white transition-colors duration-700 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-green-500 dark:hover:bg-gray-700 ${isActive ? "bg-[#C70039]" : ""
                                                 }`
                                             }
                                         >

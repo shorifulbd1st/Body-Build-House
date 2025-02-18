@@ -40,8 +40,8 @@ header a:hover {
 /* slider section  */
 
 .slider {
-    height: 90vh;
-    margin-top: -60px;
+    height: 82vh;
+    margin-top: 0px;
     width: 100vw;
     overflow: hidden;
     position: relative;
@@ -76,13 +76,14 @@ header a:hover {
 
 .slider .list .item .content .title,
 .slider .list .item .content .type {
-    font-size: 2em;
+    /* font-size: 3em; */
     font-weight: bold;
     line-height: 1.3em;
+
 }
 
 .slider .list .item .type {
-    color: #14ff72cb;
+    /* color: #14ff72cb; */
 }
 
 .slider .list .item .button {
@@ -91,6 +92,7 @@ header a:hover {
     grid-template-rows: 40px;
     gap: 5px;
     margin-top: 20px;
+
 }
 
 .slider .list .item .button button {
@@ -102,11 +104,13 @@ header a:hover {
     background: #14ff72cb;
     transition: 0.4s;
     letter-spacing: 2px;
+
 }
 
 
 .slider .list .item .button button:hover {
     letter-spacing: 3px;
+
 }
 
 .slider .list .item .button button:nth-child(2) {
@@ -122,7 +126,7 @@ header a:hover {
 /* Thumbnail Section  */
 .thumbnail {
     position: absolute;
-    bottom: 50px;
+    bottom: 10px;
     left: 60%;
     width: max-content;
     z-index: 10;
@@ -132,7 +136,7 @@ header a:hover {
 
 .thumbnail .item {
     width: 100px;
-    height: 150px;
+    height: 100px;
     flex-shrink: 0;
     position: relative;
 }
@@ -327,6 +331,6 @@ header a:hover {
     }
 
     .slider .list .item .content .title {
-        /* font-size: 20px; */
+        /* font-size: 30px; */
     }
 }

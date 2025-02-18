@@ -33,13 +33,11 @@ const Community = () => {
         else {
             const like = false;
             const res = await axiosSecure.patch(`/forum-update/${id}`, { like })
-
             refetch();
         }
     }
     return (
-        <div className='w-11/12 mx-auto my-5 '>
-
+        <div className='w-11/12 mx-auto my-5'>
             <div className='grid grid-cols-1 lg:grid-cols-3 gap-4'>
                 {
                     allForum.map((item, idx) =>
@@ -86,7 +84,8 @@ const Community = () => {
                                         disabled={!user}
                                     >
                                         <p className="mx-1 flex justify-center items-center gap-3">
-                                            <span className="text-2xl"><BiDislike /></span> {item.downVote}
+                                            <span className="text-2xl"><BiDislike /></span>
+                                            {/* {item.downVote} */}
                                         </p>
                                     </button>
                                     <button
@@ -98,7 +97,9 @@ const Community = () => {
                                         <p className="mx-1 flex justify-center items-center gap-3">
                                             <span className="text-2xl"><BiLike /></span> {item.upVote}
                                         </p>
+
                                     </button>
+                                    {/* <button className={`${item.vote ? 'bg-green-400' : 'bg-red-600'}`} >hello</button> */}
 
 
                                 </div>

@@ -18,7 +18,7 @@ const ProfilePage = () => {
     if (isPending || loading) {
         return <LoadingSpinner></LoadingSpinner>
     }
-    console.log(userData)
+    // console.log(userData)
     return (
         <div className='w-11/12 mx-auto my-8'>
             <div className="w-full max-w-xs overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">

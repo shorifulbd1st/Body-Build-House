@@ -2,11 +2,11 @@ import React from 'react'
 
 const FeaturedSection = () => {
     return (
-        <div className='w-11/12 mx-auto my-5'>
+        <div className='w-11/12 mx-auto mb-5 mt-3'>
             <div>
                 <div className='lg:w-8/12 mx-auto flex flex-col justify-center items-center'>
                     <h2 className='text-md font-extrabold capitalize lg:text-3xl text-[#C70039]'>How We Help You Achieve Your Fitness Goals</h2>
-                    <p className='lg:w-[90%] text-md lg:text-lg font-semibold text-center text-gray-500'>"How We Help You Achieve Your Fitness Goals" emphasizes personalized plans, expert guidance, and proven strategies to empower your journey toward a healthier lifestyle.</p>
+                    <p className='lg:w-[70%] text-md lg:text-lg font-semibold text-center text-gray-500'>"How We Help You Achieve Your Fitness Goals" emphasizes personalized plans, expert guidance, and proven strategies to empower your journey toward a healthier lifestyle.</p>
                 </div>
                 <div className='my-5'>
                     <p className='text-md lg:text-xl font-semibold italic pacifico-regular text-[#229954]'>Your Fitness Journey Starts Here</p>

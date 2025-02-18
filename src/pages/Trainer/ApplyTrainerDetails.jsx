@@ -64,11 +64,11 @@ const ApplyTrainerDetails = () => {
             status: 'reject'
         }
         const res = axiosSecure.post('/review', info)
-        if (res.data.insertedId) {
-            notify('success', 'Review successful for reject')
-            closeModal();
-            navigate('/')
-        }
+        // if (res.data.insertedId) {
+        notify('success', 'Review successful for reject')
+        closeModal();
+        navigate('/')
+        // }
 
     }
     return (

@@ -44,7 +44,7 @@ const TrainerProfile = ({ trainer }) => {
             review,
 
         }
-        console.log(info)
+        // console.log(info)
         const res = axiosSecure.post('/testimonial', info)
         // if (res.data.insertedId) {
         notify('success', 'Review successful for testimonial')

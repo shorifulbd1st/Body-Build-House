@@ -1,7 +1,7 @@
 <div align="center">
  <h1>Body Build House</h1>
   <a href="https://body-build-house.web.app/" target="_blank">
-    <img src="https://i.ibb.co.com/bMLMnRN5/body-build-house-web-app-2.png" width="400px" alt="Body Build House"/> 
+    <img src="https://i.ibb.co.com/fYkcnSK2/screencapture-body-build-house-web-app-2025-02-19-16-55-07.png" width="400px" alt="Body Build House"/> 
   </a>
  
 </div>

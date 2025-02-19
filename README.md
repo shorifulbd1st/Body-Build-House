@@ -203,4 +203,4 @@ Welcome to **Body Build House**, The fitness industry is undergoing a massive tr
 
 - Shoriful Islam (Lead Developer)
 - Lead Developer & Maintainer
-- Connect with me on [_GitHub_](https://github.com/shorifulbd1st) & [_Facebook_](https://www.facebook.com/shorifulbd1st)
+- Connect with me on [_GitHub_](https://github.com/shorifulbd1st) & [_Facebook_](https://www.facebook.com/shoriful1st)

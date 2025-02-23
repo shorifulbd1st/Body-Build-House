@@ -9,7 +9,7 @@
 
 ## 📜 Project Overview
 
-Welcome to **Body Build House**, The fitness industry is undergoing a massive transformation, and our company is at the helm of this revolution. We are committed to empowering individuals to lead healthier and more active lives through innovative solutions that blend cutting-edge technology with a passion for wellness. By fostering a community-driven platform, we aim to inspire, motivate, and support users on their fitness journeys like never before.
+Welcome to **Body Build House**, Body Build House is a comprehensive fitness platform that connects users with professional trainers to achieve their fitness goals. Users can book trainers, apply for training, track sessions, and leave reviews. Trainers can manage slots, post content, and engage with the community. Admins oversee trainers, classes, and payments. With a seamless experience for both users and trainers, Body Build House makes personal fitness accessible, interactive, and efficient. 🚀
 
 ---
 

@@ -4,7 +4,12 @@ import { Tooltip } from "react-tooltip";
 import { AuthContext } from "../../providers/AuthProvider";
 import useAxiosSecure from "../../hooks/useAxiosSecure";
 import LoadingSpinner from "./LoadingSpinner";
+const themes = [
 
+    'light',
+    'dark',
+
+]
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const { user, handleLogout } = useContext(AuthContext);
@@ -25,6 +30,16 @@ const Navbar = () => {
 
     // }
     // console.log(userData.role)
+    const [theme, setTheme] = useState(
+        localStorage.getItem('theme') ? localStorage.getItem('theme') : 'light'
+    )
+
+    useEffect(() => {
+        localStorage.setItem('theme', theme)
+        const localTheme = localStorage.getItem('theme')
+        document.querySelector('html').setAttribute('data-theme', localTheme)
+    }, [theme])
+
     return (
         <div className="sticky top-0 z-[900] ">
             <nav className="relative text-white shadow dark:bg-gray-800 bg-[#0A273D]">
@@ -227,6 +242,22 @@ const Navbar = () => {
                                     </div>
                                 )}
                             </div>
+                            {/* <div className='flex-none'>
+
+
+                                <select
+                                    name='theme'
+                                    className={`py-2 px-1  rounded border-2 focus-none outline-none ${theme === 'light' ? 'text-black' : 'text-white'}`}
+                                    onChange={e => setTheme(e.target.value)}
+                                    id=''
+                                >
+                                    {themes.map(theme => (
+                                        <option key={theme} value={theme}>
+                                            {theme[0].toUpperCase() + theme.slice(1)}
+                                        </option>
+                                    ))}
+                                </select>
+                            </div> */}
                         </div>
                     </div>
                 </div>

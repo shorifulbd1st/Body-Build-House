@@ -63,22 +63,17 @@ Welcome to **Body Build House**, Body Build House is a comprehensive fitness pla
 
 ---
 
-## ✨ Features
+## ✨ Key Features
 
-* Choose the trainer you like, build your body fitness, and stay healthy.
-* A user can book any trainer of their choice.
-* A user can choose a trainer based on the trainer's experience.
-* A user can apply for a train.
-* The user can see the details of all the trains booked on his dashboard.
-* Users will be able to review the trainers they have booked.
-* A trainer can book multiple slots.
-* The trainer will be able to update and delete his slots.
-* A trainer can post different types of content in their community.
-* The trainer will have a dashboard where they can manage their slots.
-* Admin can remove any trainer.
-* Admin can add new classes.
-* Admin can post various types of posts in the community.
-* Admin will be able to see all payment history.
+- **Trainer Selection & Booking:** Users can book trainers of their choice based on experience and expertise.
+- **Training Management:** Users can apply for training and view all their booked sessions on their dashboard.
+- **Trainer Functionality:** Trainers can manage multiple slots, update/delete schedules, and share content within the community.
+- **Reviews & Community Engagement:** Users can review trainers, while trainers and admins can post various content.
+- **Admin Control:** Admins can add new classes, manage trainers, moderate content, and monitor payment history.
+- **Personalized Training Plans:** Users receive tailored fitness plans based on their goals and preferences.
+- **Real-Time Progress Tracking:** Track workout and performance data in real-time for better goal management.
+- **Payment Integration:** Secure online payment system for booking training sessions and class payments.
+- **Live Classes & Sessions:** Trainers can host live training sessions for users to join in real time.
 
 ---
 
